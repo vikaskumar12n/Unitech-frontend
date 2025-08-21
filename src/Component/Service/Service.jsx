@@ -5,7 +5,7 @@ return(
     <>
         <div className="bg-gray-100 py-16 mt-10">
   <div className="container mx-auto px-4">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 items-start">
 
     
       <div className="text-left">
