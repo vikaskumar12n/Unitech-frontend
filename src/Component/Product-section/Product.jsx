@@ -1,14 +1,14 @@
 import SectionHeading from "../../Services/HeadingSection/Heading";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+// import { useEffect } from "react";
 
 
 const Product = () => {
-  useEffect(() => {
-  AOS.init({ duration: 800, once: false });
-  AOS.refresh();  
-}, []);
+//   useEffect(() => {
+//   AOS.init({ duration: 800, once: false });
+//   AOS.refresh();  
+// }, []);
   return (
     <>
       <div className="container mx-auto px-4 py-8 bg-gray-100">
@@ -16,9 +16,10 @@ const Product = () => {
           
           {/* ROW 1 */}
           <div className="bg-white shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col" 
-          data-aos="fade-up"
+          
           >
-            <img src="/Room-AC.jpg" alt="Room Air Conditioner" className="w-full h-60 object-cover" />
+            <img src="/Room-AC.jpg" data-aos="zoom-in"
+  alt="Room Air Conditioner" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-2 text-cyan-700">ROOM AIR CONDITIONERS</h3>
               <p className="text-gray-600 mb-2">
@@ -31,8 +32,8 @@ const Product = () => {
           </div>
 
           <div className= "bg-white shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col"
-           data-aos="fade-up">
-            <img src="/Water-Purifier.jpg" alt="Water Purifier" className="w-full h-60 object-cover" />
+           >
+            <img src="/Water-Purifier.jpg"  data-aos="zoom-in" alt="Water Purifier" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-2 text-cyan-700">WATER PURIFIERS</h3>
               <p className="text-gray-600 mb-2">
@@ -45,8 +46,8 @@ const Product = () => {
           </div>
 
           <div className="bg-white shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col"
-           data-aos="fade-up">
-            <img src="/Air-Purifier.jpg" alt="Air Purifier" className="w-full h-60 object-cover" />
+           >
+            <img src="/Air-Purifier.jpg"  data-aos="zoom-in" alt="Air Purifier" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-2 text-cyan-700">AIR PURIFIERS</h3>
               <p className="text-gray-600 mb-2">
@@ -59,8 +60,8 @@ const Product = () => {
           </div>
 
           <div className="bg-white shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col"
-           data-aos="fade-up">
-            <img src="/Air-Cooler.jpg" alt="Air Cooler" className="w-full h-60 object-cover" />
+           >
+            <img src="/Air-Cooler.jpg"  data-aos="zoom-in" alt="Air Cooler" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-2 text-cyan-700">AIR COOLERS</h3>
               <p className="text-gray-600 mb-2">
@@ -74,8 +75,8 @@ const Product = () => {
 
           {/* ROW 2 */}
           <div className="bg-white shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  mt-10 overflow-hidden flex-1 min-w-[250px] flex flex-col"
-           data-aos="fade-up">
-            <img src="/cold storage.jpg" alt="Cold Storage" className="w-full h-60 object-cover" />
+           >
+            <img src="/cold storage.jpg"  data-aos="zoom-in" alt="Cold Storage" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-2 text-cyan-700">COLD STORAGE</h3>
               <p className="text-gray-600 mb-2">
@@ -88,8 +89,8 @@ const Product = () => {
           </div>
 
           <div className="bg-white mt-10 shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col"
-           data-aos="fade-up">
-            <img src="/water-coolers.png" alt="Water Cooler" className="w-full h-60 object-cover" />
+           >
+            <img src="/water-coolers.png"  data-aos="zoom-in" alt="Water Cooler" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-2 text-cyan-700">WATER COOLER</h3>
               <p className="text-gray-600 mb-2">
@@ -102,8 +103,8 @@ const Product = () => {
           </div>
 
           <div className="bg-white mt-10 shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col"
-           data-aos="fade-up">
-            <img src="/11781.jpg" alt="Verticool AC" className="w-full h-60 object-cover" />
+           >
+            <img src="/11781.jpg"  data-aos="zoom-in" alt="Verticool AC" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-2 text-cyan-700">VERTICOOL AIR CONDITIONER</h3>
               <p className="text-gray-600 mb-2">
@@ -116,8 +117,8 @@ const Product = () => {
           </div>
 
           <div className="bg-white mt-10 shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col"
-           data-aos="fade-up">
-            <img src="/product-thumb-4.jpg" alt="Refrigerator" className="w-full h-60 object-cover" />
+           >
+            <img src="/product-thumb-4.jpg"  data-aos="zoom-in" alt="Refrigerator" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-2 text-cyan-700">REFRIGERATOR</h3>
               <p className="text-gray-600 mb-2">
@@ -133,8 +134,8 @@ const Product = () => {
            {/* ROW-3 */}
           <div className="flex flex-col md:flex-row gap-6  mt-10  flex-wrap w-full">
             <div className="bg-white shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col"
-             data-aos="fade-up">
-              <img src="/Domestic-ac.jpg" alt="Careers" className="w-full h-60 object-cover"/>
+             >
+              <img src="/Domestic-ac.jpg"  data-aos="zoom-in" alt="Careers" className="w-full h-60 object-cover"/>
               <div className=" p-4 flex flex-col flex-1">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Domestic
 Air-Conditioners</h3>
@@ -148,8 +149,8 @@ Air-Conditioners</h3>
             </div>
 
             <div className="bg-white shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col"
-             data-aos="fade-up">
-              <img src="/commercial-ac.jpg" alt="Press" className="w-full h-60 object-cover"/>
+             >
+              <img src="/commercial-ac.jpg"  data-aos="zoom-in" alt="Press" className="w-full h-60 object-cover"/>
               <div className=" p-4 flex flex-col flex-1">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Commercial
 Air-Conditioners</h3>
@@ -163,8 +164,8 @@ Air-Conditioners</h3>
             </div>
 
             <div className="bg-white shadow-[4px_4px_6px_rgba(0,0,0,0.2)]   overflow-hidden flex-1 min-w-[250px] flex flex-col"
-             data-aos="fade-up">
-              <img src="/Ventilation-systems.jpg" alt="Investors" className="w-full h-60 object-cover"/>
+             >
+              <img src="/Ventilation-systems.jpg"  data-aos="zoom-in" alt="Investors" className="w-full h-60 object-cover"/>
               <div className=" p-4 flex flex-col flex-1">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Ventilation Systems</h3>
                 <div className="list-disc list-inside text-gray-700 mb-4">
@@ -177,8 +178,8 @@ Air-Conditioners</h3>
             </div>
 
             <div className="bg-white shadow-[4px_4px_6px_rgba(0,0,0,0.2)]  overflow-hidden flex-1 min-w-[250px] flex flex-col"
-             data-aos="fade-up">
-              <img src="/Cold-Rooms.jpg" alt="Social Initiatives" className="w-full h-60 object-cover"/>
+             >
+              <img src="/Cold-Rooms.jpg"  data-aos="zoom-in" alt="Social Initiatives" className="w-full h-60 object-cover"/>
               <div className=" p-4 flex flex-col flex-1">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Cold-Rooms</h3>
                 <p className="text-gray-700 mb-4">
