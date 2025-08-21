@@ -5,7 +5,7 @@ import "./Slider.css";
 
 const slides = [
   {
-    image: "/public/slide4.jpg",
+    image: "/slide4.jpg",
     heading: "Welcome FABAIR",
     subheading: "We Build Your Dream",
     description:

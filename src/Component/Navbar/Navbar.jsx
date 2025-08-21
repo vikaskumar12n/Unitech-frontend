@@ -31,7 +31,7 @@ const Navbar = () => {
         
         <div className="flex items-center p-4">
           <img
-            src="/public/logo.png"
+            src="/logo.png"
             alt="Blue Star Logo"
             className="h-12 w-auto"   
           />
