@@ -1,6 +1,8 @@
-import Slider from '../Slider/Slider'
-import Service from '../Service/Service'
-import Product from '../Product-section/Product'
+import Slider from './Slider'
+import Service from './Service'
+import Product from './Product'
+import ServicesSection from './Services1'
+import StatsSection from './StateData'
 
 const Home = () => {
     return (
@@ -8,6 +10,8 @@ const Home = () => {
             <Slider />
             <Service />
             <Product />
+            <StatsSection/>
+            <ServicesSection/>
             
         </>
     )

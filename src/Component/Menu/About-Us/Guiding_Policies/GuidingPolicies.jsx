@@ -62,12 +62,21 @@ const GuidingPolicies = () => {
 
   return (
     <>
-      <div className="relative w-full h-[350px] mt-15 overflow-hidden">
-        <img
-          src="about-banner.jpg"
-          alt="Company Buildings"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <div className="relative w-full h-[500px] overflow-hidden">
+ 
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover"
+  >
+    <source src="/hero-video.webm" type="video/webm" />
+    <source src="/hero-video.mp4" type="video/mp4" />
+    
+  </video>
+ 
+  <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
           <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
             <h2 className="text-base md:text-lg font-semibold">

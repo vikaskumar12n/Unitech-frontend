@@ -1,16 +1,24 @@
- 
+ import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const CompanyDetails = () => {
+    useEffect(() => {
+  AOS.init({ duration: 800, once: false });
+  AOS.refresh();  
+}, []);
   return (
     <div className="bg-white p-8">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-light text-blue-800 mb-6">COMPANY PROFILE</h2>
+        <h2 className="text-3xl font-light text-blue-800 mb-6" data-aos="fade-right">COMPANY PROFILE</h2>
         <div className="flex flex-col md:flex-row gap-8">
           <img
+          data-aos="fade-right"
             src="/our-company-profile.jpg"  
             alt="Company Building Profile"
-            className="w-full md:w-1/2 h-100 rounded-lg shadow-md"
+            className="w-full md:w-1/2 h-100 rounded-lg shadow-md" 
           />
-          <div className="text-gray-700 leading-relaxed text-base">
+          <div className="text-gray-700 leading-relaxed text-base" data-aos="fade-up">
             <p className="mb-4">
               Blue Star is India&apos;s leading Air Conditioning, Commercial Refrigeration and MEP (Mechanical, Electrical, Plumbing and Fire-fighting) contracting company with over 80 years of experience. The Company&apos;s philosophy is rooted in the principles of &apos;Trust&apos; and &apos;Excellence&apos;, which have served as the guiding force behind its remarkable journey of growth. Renowned for its customer-centric ethos, Blue Star is recognised for delivering innovative, value-driven products and solutions that strongly resonate in the market.
             </p>

@@ -4,5 +4,11 @@ body {
   @apply m-0 p-0;
 }
 .menu{
+    background: white;
+     box-shadow: 0px 0px 5px inset rgb(177, 169, 169);
+     border: none;
+     
+}
+.top_section{
     background: #3d5870;
 }
