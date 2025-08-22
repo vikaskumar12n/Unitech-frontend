@@ -2,7 +2,7 @@
 const SectionHeading = ({ title }) => {
   return (
     <div className="text-center py-5 px-4 md:px-100">
-      <h2 className=" whitespace-nowrap text-4xl  md:text-4xl font-semibold mb-4">
+      <h2 className="  text-4xl  md:text-4xl font-semibold mb-4">
         {title}
       </h2>
       <div className="flex  justify-center items-center">
