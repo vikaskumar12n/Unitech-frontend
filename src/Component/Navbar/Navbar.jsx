@@ -19,7 +19,7 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   // MenuBar states
-  const [openDropdown, setOpenDropdown] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
@@ -177,48 +177,50 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Desktop Menu */}
-          <ul className="hidden md:flex space-x-7 justify-center text-white text-xs">
-            {menuItems.map((item, index) => (
-              <li key={index} className="relative group">
-                <button
-                  className="hover:text-gray-300 text-xs"
-                  onMouseEnter={() => setOpenDropdown(index)}
-                >
-                  {item.name}
-                </button>
+        <ul className="hidden md:flex space-x-7 justify-center text-xs">
+  {menuItems.map((item, index) => (
+<li
+  key={index}
+  className="relative group text-white hover:text-gray-300 transition duration-300"
+  onMouseEnter={() => setOpenDropdown(index)}  
+  onClick={() => setOpenDropdown(null)}  
+  onMouseLeave={()=> setOpenDropdown(false)}
+>
+  <button className="text-xs">
+    {item.name}
+  </button>
 
-                {item.dropdown && openDropdown === index && (
-                  <ul
-                    className="absolute top-full left-0 mt-2 w-48 menu text-white shadow-lg z-50"
-                    onMouseEnter={() => setOpenDropdown(index)}
-                    onMouseLeave={() => setOpenDropdown(null)}
-                  >
-                    {item.dropdown.map((subItem, subIndex) => (
-                      <li key={subIndex}>
-                        <Link
-                          to={
-                            subItem.link && subItem.link !== "#"
-                              ? subItem.link
-                              : "/"
-                          }
-                          className="block py-2 px-4 text-sm cursor-pointer hover:bg-blue-600 transition duration-300 ease-in-out"
-                        >
-                          {subItem.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
+  {item.dropdown && (
+    <ul
+      className={`absolute top-full mt-2 w-56 text-gray-800 bg-white rounded-lg shadow-lg z-50
+                 transition duration-300 ease-in-out transform
+                 ${openDropdown === index ? "visible opacity-100" : "invisible opacity-0"}`}
+    >
+      {item.dropdown.map((subItem, subIndex) => (
+        <li key={subIndex} className="last:rounded-b-lg first:rounded-t-lg">
+          <Link
+            to={subItem.link || "/"}
+            className="block py-3 px-4 text-sm cursor-pointer hover:bg-blue-100 transition duration-300 ease-in-out text-blue-700"
+            onClick={() => setOpenDropdown(null)}  
+          >
+            {subItem.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )}
+</li>
+
+
+  ))}
+</ul>
 
           {/* Mobile Hamburger */}
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`text-2xl ${
-                mobileMenuOpen ? "text-white" : "text-black"
+                mobileMenuOpen ? "text-black" : "text-black"
               } absolute  top-[-3.5rem] right-4`}
             >
               {mobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -227,40 +229,45 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <ul className="md:hidden mt-3 space-y-2 text-left text-white">
-            {menuItems.map((item, index) => (
-              <li key={index} className="relative">
-                <button
-                  className="block w-full text-left py-2 text-xs font-semibold hover:text-gray-300"
-                  onClick={() =>
-                    item.dropdown
-                      ? setOpenDropdown(openDropdown === index ? null : index)
-                      : setMobileMenuOpen(false)
-                  }
-                >
-                  {item.name}
-                </button>
+       {mobileMenuOpen && (
+  <ul className="md:hidden mt-3 space-y-2 text-left text-white">
+    {menuItems.map((item, index) => (
+      <li
+  key={index}
+  className="relative group text-white hover:text-gray-300 transition duration-300"
+>
+  <button
+    className="text-xs"
+    onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
+  >
+    {item.name}
+  </button>
 
-                {item.dropdown && openDropdown === index && (
-                  <ul className="mt-1 bg-blue-800 text-white rounded-md">
-                    {item.dropdown.map((subItem, subIndex) => (
-                      <li key={subIndex}>
-                        <a
-                          href={subItem.link || "/"}
-                          className="block px-4 py-2 hover:bg-blue-700 cursor-pointer"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        )}
+  {item.dropdown && (
+    <ul
+      className={`absolute top-full mt-2 w-56 text-gray-800 bg-white rounded-lg shadow-lg z-50
+                 transition duration-300 ease-in-out transform
+                 ${openDropdown === index ? "visible opacity-100" : "invisible opacity-0"}`}
+    >
+      {item.dropdown.map((subItem, subIndex) => (
+        <li key={subIndex} className="last:rounded-b-lg first:rounded-t-lg">
+          <Link
+            to={subItem.link || "/"}
+            className="block py-3 px-4 text-sm cursor-pointer hover:bg-blue-100 transition duration-300 ease-in-out text-blue-700"
+            onClick={() => setOpenDropdown(null)}  
+          >
+            {subItem.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )}
+</li>
+
+    ))}
+  </ul>
+)}
+
       </div>
     </nav>
   );
