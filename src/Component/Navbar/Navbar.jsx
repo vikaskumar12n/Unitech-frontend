@@ -171,7 +171,7 @@ const Navbar = () => {
 
       {/* MenuBar */}
       <div
-        className={`fixed w-full px-6 py-4 shadow-md z-50 transition-colors duration-300 ${
+        className={`fixed w-full px-6 py-4  z-50 transition-colors duration-300 ${
           mobileMenuOpen ? "bg-blue-900" : "bg-transparent"
         } ${isDesktop ? "menu" : ""}`}
       >
