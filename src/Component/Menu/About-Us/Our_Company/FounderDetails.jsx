@@ -34,7 +34,7 @@ const FounderSection = () => {
             <h3 className="text-lg font-bold text-blue-800">
               [Ad Banner Text Here]
             </h3>
-            <p className="text-sm text-gray-600 my-2">
+            <p className="text-sm text-gray-600 text-justify my-2">
               where others saw just a few bamboo sticks, he envisioned a world-class engineering business.
             </p>
             <a href="#" className="text-blue-600 underline">

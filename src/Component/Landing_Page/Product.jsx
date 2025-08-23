@@ -12,6 +12,10 @@ const Product = () => {
   return (
     <>
       <div className="container mx-auto px-4 pb-10 bg-gray-100">
+ 
+     
+      <div className="absolute inset-0 bg-black/10 bg-opacity-40"></div>
+
         <div className="flex flex-col md:flex-row gap-6 p-4 flex-wrap">
           <div className=" mt-0 px-20">
             <SectionHeading title="Our Products" />
@@ -88,9 +92,9 @@ const Product = () => {
 
           <div
             className="bg-white rounded-2xl border border-gray-200 hover:border-gray-400 shadow-md hover:shadow-xs transition-transform duration-300 hover:scale-102 overflow-hidden flex-1 min-w-[250px] flex flex-col"
-          >
-            <img src="/Air-Purifier.jpg" data-aos="fade-up"
-              data-aos-duration="1200"
+            data-aos="fade-up"
+            data-aos-duration="800"          >
+            <img src="/Air-Purifier.jpg" 
               data-aos-anchor-placement="top-center " alt="Air Purifier" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up">AIR PURIFIERS</h3>
@@ -113,7 +117,7 @@ const Product = () => {
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up"
                 data-aos-duration="1200">AIR COOLERS</h3>
-              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify leading-relaxed text-base text-justify" data-aos="fade-up"
+              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify  " data-aos="fade-up"
                 data-aos-duration="1200">
                 Sleek and elegant air coolers packed with smart features to provide efficient cooling.
               </p>
@@ -133,7 +137,7 @@ const Product = () => {
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up"
                 data-aos-duration="1200">COLD STORAGE</h3>
-              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify leading-relaxed text-base text-justify" data-aos="fade-down">
+              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify    " data-aos="fade-up">
                 Reliable solutions to store perishables safely and maintain optimal temperature.
               </p>
               <a href="/cold-storage" data-aos="fade-up"
@@ -151,7 +155,7 @@ const Product = () => {
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up"
                 data-aos-duration="1200">WATER COOLER</h3>
-              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify" data-aos="fade-down">
+              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify" data-aos="fade-up">
                 Efficient and sleek water coolers for homes and offices.
               </p>
               <a href="/water-cooler" data-aos="fade-up"
@@ -169,7 +173,7 @@ const Product = () => {
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up"
                 data-aos-duration="1200">VERTICOOL AIR CONDITIONER</h3>
-              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify" data-aos="fade-down">
+              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify" data-aos="fade-up">
                 Smart air conditioners designed for maximum cooling and energy efficiency.
               </p>
               <a href="/products/verticool-ac" data-aos="fade-up"
@@ -187,7 +191,7 @@ const Product = () => {
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up"
                 data-aos-duration="1200">REFRIGERATOR</h3>
-              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify" data-aos="fade-down">
+              <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify" data-aos="fade-up">
                 Leaders in commercial refrigeration with freezers, coolers, and dispensers.
               </p>
               <a href="/refrigerator" data-aos="fade-up"
@@ -282,6 +286,7 @@ const Product = () => {
           </div>
 
         </div>
+  
       </div>
     </>
   );

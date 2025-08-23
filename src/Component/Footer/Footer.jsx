@@ -10,9 +10,9 @@ const Footer = () => {
 
         <div className="flex flex-col items-start">
           <div className="mb-4">
-            <img src="/logo.png" alt="Fabair Cooling Solutions Logo" className="h-16" />
+            <img src="/logo.png" alt="Fabair Cooling Solutions Logo" className="h-10" />
           </div>
-          <p className="text-sm leading-relaxed mb-4">
+          <p className="text-sm leading-relaxed text-justify mb-4">
             Fabair Cooling Solutions is a Bangalore based specialist organisation and Service provider of
             Heating, Ventilation, Air conditioning and refrigeration (HVACR) solutions Started in the year 2018.
           </p>
@@ -94,7 +94,7 @@ const Footer = () => {
             <li className="flex items-start">
               <i className="fas fa-map-marker-alt text-white mt-1 mr-3"></i>
               <div>
-                <strong className="block">ADDRESS :</strong>
+                <strong className="block text-justify">ADDRESS :</strong>
                 <p>No. 23, 1st Cross, 1st Main, Lal Bagh Main Rd, next to Phoenix Hospital, Bengaluru, Karnataka 560027</p>
               </div>
             </li>

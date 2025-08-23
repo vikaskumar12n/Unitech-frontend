@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaPhoneAlt, FaEnvelope,  FaInfoCircle, FaBoxOpen, FaHeadset,  FaNewspaper, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaBars, FaSortDown, FaHome, FaTimes, FaPhoneAlt, FaEnvelope, FaInfoCircle, FaBoxOpen, FaHeadset, FaNewspaper, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-   
+
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -32,65 +32,73 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
- 
-const menuItems = [
-  {
-    name: "ABOUT US",
-    icon: <FaInfoCircle className="inline-block mr-2 text-blue-600" />,
-    dropdown: [
-      { name: "Our Company", link: "/about-us" },
-      { name: "Governance Structure", link: "/governance-structure" },
-      { name: "Guiding Policies", link: "/guiding-policies" },
-    ],
-  },
-  {
-    name: "PRODUCTS",
-    icon: <FaBoxOpen className="inline-block mr-2 text-blue-600" />,
-    dropdown: [
-      { name: "Overview", link: "/overview" },
-      { name: "Room Air Conditioners", link: "/" },
-      { name: "Cassette Air Conditioner", link: "/" },
-      { name: "Verticool Air Conditioner", link: "/" },
-      { name: "Central Air Conditioner", link: "/" },
-      { name: "Heat Pumps", link: "/" },
-      { name: "Commercial Refrigrater", link: "/" },
-      { name: "Cold Storage", link: "/" },
-      { name: "Water Coolers", link: "/" },
-      { name: "Speciality Product", link: "/" },
-    ],
-  }, 
-  {
-    name: "CUSTOMER SERVICE",
-    icon: <FaHeadset className="inline-block mr-2 text-blue-600" />,
-    dropdown: [
-      { name: "Service Solution", link: "/" },
-      { name: "Certifications", link: "/" },
-      { name: "Warranty Registration", link: "/" },
-      { name: "Installation and Service Costs", link: "/" },
-      { name: "Buy Extended warranty & AMC", link: "/" },
-      { name: "Service Escalation", link: "/" },
-    ],
-  }, 
- 
-  {
-    name: "SOLUTIONS",
-    icon: <FaNewspaper className="inline-block mr-2 text-blue-600" />,
-    dropdown: [
-      { name: "Press Releases", link: "/" },
-      { name: "Press Clippings", link: "/" },
-      { name: "Investors", link: "/" },
-    ],
-  },
-   {
-    name: "CONTACT US",
-    icon: <FaNewspaper className="inline-block mr-2 text-blue-600" />,
-    dropdown: [
-      { name: "Press Releases", link: "/" },
-      { name: "Press Clippings", link: "/" },
-      { name: "Investors", link: "/" },
-    ],
-  },
-];
+
+
+  const menuItems = [
+    {
+      name: "HOME",
+      li: <FaSortDown />,
+      link: "/",
+      icon: <FaHome className="inline-block mb-1 text-sm text-blue-600" />,
+    },
+    {
+      name: "ABOUT US",
+      li: <FaSortDown />,
+      icon: <FaInfoCircle className="inline-block mb-1 text-sm text-blue-600" />,
+      dropdown: [
+        { name: "Our Company", link: "/about-us" },
+        { name: "Governance Structure", link: "/governance-structure" },
+        { name: "Guiding Policies", link: "/guiding-policies" },
+      ],
+    },
+    {
+      name: "PRODUCTS",
+      li: <FaSortDown />,
+      icon: <FaBoxOpen className="inline-block mb-1 text-sm text-blue-600" />,
+      dropdown: [
+        { name: "Overview", link: "/overview" },
+        { name: "Room Air Conditioners", link: "/" },
+        { name: "Cassette Air Conditioner", link: "/" },
+        { name: "Verticool Air Conditioner", link: "/" },
+        { name: "Central Air Conditioner", link: "/" },
+        { name: "Heat Pumps", link: "/" },
+        { name: "Commercial Refrigrater", link: "/" },
+        { name: "Cold Storage", link: "/" },
+        { name: "Water Coolers", link: "/" },
+        { name: "Speciality Product", link: "/" },
+      ],
+    },
+    {
+      name: "CUSTOMER SERVICE",
+      li: <FaSortDown />,
+      icon: <FaHeadset className="inline-block mb-1 text-sm text-blue-600" />,
+      dropdown: [
+        { name: "Service Solution", link: "/" },
+        { name: "Certifications", link: "/" },
+        { name: "Warranty Registration", link: "/" },
+        { name: "Installation and Service Costs", link: "/" },
+        { name: "Buy Extended warranty & AMC", link: "/" },
+        { name: "Service Escalation", link: "/" },
+      ],
+    },
+
+    {
+      name: "SOLUTIONS",
+      li: <FaSortDown />,
+      icon: <FaNewspaper className="inline-block mb-1 text-sm text-blue-600" />,
+      dropdown: [
+        { name: "Press Releases", link: "/" },
+        { name: "Press Clippings", link: "/" },
+        { name: "Investors", link: "/" },
+      ],
+    },
+    {
+      name: "CONTACT US",
+      li: <FaSortDown />,
+      link: "/contact",
+      icon: <FaNewspaper className="inline-block mb-1 text-sm text-blue-600" />,
+    },
+  ];
 
   return (
     <nav
@@ -98,40 +106,49 @@ const menuItems = [
         }`}
     >
       {/* Top Navbar */}
-      <div className="top_section text-white h-12 text-xs py-2 px-4 flex justify-between items-center">
-        {/* Left Section - Contact Info */}
-        <div className="flex items-center space-x-4">
-          <a href="tel:+919890989098" className="flex items-center">
-            <FaPhoneAlt className="text-blue-500 mr-2" />
-            <span>+919890989098</span>
-          </a>
-          <span className="h-4 border-l border-gray-600"></span>
-          <a href="mailto:info@myholidays.com" className="flex items-center">
-            <FaEnvelope className="text-blue-500 mr-2" />
-            <span>info@myholidays.com</span>
-          </a>
-        </div>
+<div
+  className="top_section text-white h-12 text-xs py-2 px-4 flex justify-between items-center relative overflow-hidden"
+>
+  {/* Background Layers */}
+  <div className="absolute top-0 left-0 w-1/2 h-full bg-white"></div>
+  <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-300"></div>
+  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-blue-300 rounded-full"></div>
 
-        {/* Right Section - Social Links */}
-        <div className="hidden sm:flex items-center space-x-4">
+  {/* Left Section - Contact Info */}
+  <div className="flex items-center space-x-4 relative z-10">
+    <a href="tel:+919890989098" className="flex items-center">
+      <FaPhoneAlt className="text-blue-300 mr-2 text-2xl" />
+      <span>+919890989098</span>
+    </a>
+    <span className="h-4 border-l border-gray-600"></span>
+    <a href="mailto:info@myholidays.com" className="flex items-center">
+      <FaEnvelope className="text-blue-300 mr-2 text-2xl" />
+      <span>info@myholidays.com</span>
+    </a>
+  </div>
 
-          <a href="#" className="flex items-center hover:text-blue-400">
-            <span className="h-4 border-l border-gray-600 mr-4"></span>
-            <FaLinkedin className="text-blue-500 mr-1" />
-            <span className="hidden sm:inline">LinkedIn</span>
-          </a>
-          <a href="#" className="flex items-center hover:text-blue-400">
-            <span className="h-4 border-l border-gray-600 mr-4"></span>
-            <FaFacebook className="text-blue-500 mr-1" />
-            <span className="hidden sm:inline">Facebook</span>
-          </a>
-          <a href="#" className="flex items-center hover:text-blue-400">
-            <span className="h-4 border-l border-gray-600 mr-4"></span>
-            <FaInstagram className="text-blue-500 mr-1" />
-            <span className="hidden sm:inline">Instagram</span>
-          </a>
-        </div>
-      </div>
+  {/* Right Section - Social Links */}
+  <div className="hidden sm:flex items-center space-x-4 relative z-10">
+    <a href="#" className="flex items-center hover:text-white">
+      <span className="h-4 border-l border-gray-600 mr-4"></span>
+      <FaLinkedin className="text-black mr-1" />
+      <span className="hidden sm:inline">LinkedIn</span>
+    </a>
+    <a href="#" className="flex items-center hover:text-white">
+      <span className="h-4 border-l border-gray-600 mr-4"></span>
+      <FaFacebook className="text-black mr-1" />
+      <span className="hidden sm:inline">Facebook</span>
+    </a>
+    <a href="#" className="flex items-center hover:text-white">
+      <span className="h-4 border-l border-gray-600 mr-4"></span>
+      <FaInstagram className="text-black mr-1" />
+      <span className="hidden sm:inline">Instagram</span>
+    </a>
+  </div>
+</div>
+
+
+
       {/* MenuBar */}
       <div
         className={`fixed w-full  py-4  z-50 transition-colors duration-300 ${mobileMenuOpen ? "bg-blue-900" : "bg-transparent"
@@ -139,49 +156,63 @@ const menuItems = [
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Desktop Menu */}
-      <div className="items-center hidden md:flex">
-  <img
-    src="/logo.png"  
-    alt="Logo"
-    className="h-12 w-auto"
-  />
-</div>
+          <div className="items-center hidden md:flex">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="h-12 w-auto"
+            />
+          </div>
           <ul className="hidden md:flex space-x-7 justify-center text-xs">
-  {menuItems.map((item, index) => (
-    <li
-      key={index}
-      className="relative group text-black text-2xl font-bold hover:text-blue-400 transition duration-300"
-      onMouseEnter={() => setOpenDropdown(index)}
-      onClick={() => setOpenDropdown(null)}
-      onMouseLeave={() => setOpenDropdown(false)}
-    >
-      <button className="relative group text-black text-sm font-semibold transition duration-300">
-        {item.icon} {item.name}
-         <span className="absolute left-0 -bottom-1 h-1 w-0 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-      </button>
-
-      {item.dropdown && (
-        <ul
-          className={`absolute top-full mt-2 w-56 text-gray-800 bg-white rounded-lg shadow-lg z-50
-          transition duration-300 ease-in-out transform
-          ${openDropdown === index ? "visible opacity-100" : "invisible opacity-0"}`}
-        >
-          {item.dropdown.map((subItem, subIndex) => (
-            <li key={subIndex} className="last:rounded-b-lg first:rounded-t-lg">
-              <Link
-                to={subItem.link || "/"}
-                className="block py-3 px-4 text-sm cursor-pointer hover:bg-blue-100 transition duration-300 ease-in-out text-black"
+            {menuItems.map((item, index) => (
+              <li
+                key={index}
+                className="relative group text-black text-2xl font-bold hover:text-blue-400 transition duration-300"
+                onMouseEnter={() => setOpenDropdown(index)}
                 onClick={() => setOpenDropdown(null)}
+                onMouseLeave={() => setOpenDropdown(false)}
               >
-                {subItem.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </li>
-  ))}
-</ul>
+
+                {item.link ? (
+                  <Link
+                    to={item.link}
+                    className="relative group text-black text-sm font-semibold transition duration-300 "
+                  >
+                    {item.icon} {item.name}
+                    <span className="absolute w-full left-1/2 -translate-x-1/2 -bottom-1 h-1  bg-blue-400 transition-all duration-300 scale-x-0 group-hover:scale-x-100 origin-center"></span>
+                  </Link>
+                ) : (
+                  <button className="relative group text-black text-sm font-semibold transition duration-300 cursor-default inline-block">
+                    <span className="flex items-center gap-1">
+                      {item.icon} {item.name} {item.li}
+                    </span>
+                    <span className="absolute  w-full left-1/2 -translate-x-1/2 -bottom-1 h-1  bg-blue-400 transition-all duration-300 scale-x-0 group-hover:scale-x-100 origin-center"></span>
+                  </button>
+                )}
+
+
+                {item.dropdown && (
+                  <ul
+                    className={`absolute top-full mt-2 w-56 text-gray-800 bg-white rounded-lg shadow-lg z-50
+                transition duration-300 ease-in-out transform
+                ${openDropdown === index ? "visible opacity-100" : "invisible opacity-0"}`}
+                  >
+                    {item.dropdown.map((subItem, subIndex) => (
+                      <li key={subIndex} className="last:rounded-b-lg first:rounded-t-lg">
+                        <Link
+                          to={subItem.link || "/"}
+                          className="block py-3 px-4 text-sm cursor-pointer hover:bg-blue-100 transition duration-300 ease-in-out text-black"
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
 
 
           {/* Mobile Hamburger */}

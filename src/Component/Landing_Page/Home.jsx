@@ -3,7 +3,7 @@ import Service from './Service'
 import Product from './Product'
 import ServicesSection from './Services1'
 import StatsSection from './StateData'
-
+// import Feedback from './Feedback/Feedback2'
 const Home = () => {
     return (
         <>
@@ -12,7 +12,7 @@ const Home = () => {
             <Product />
             <StatsSection/>
             <ServicesSection/>
-            
+            {/* <Feedback/> */}
         </>
     )
 }

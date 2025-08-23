@@ -20,7 +20,7 @@ const ChairmanEmeritus = () => {
           </div>
 
       
-          <div className="flex-1 text-gray-700 leading-relaxed">
+          <div className="flex-1 text-gray-700 leading-relaxed text-justify">
             <h3 className="text-xl font-bold text-gray-900 mb-2">ChairMan Name – CHAIRMAN</h3>
             <p className="mb-4">
              ChairMan Name holds an MBA from the Harvard Graduate School of Business Administration, an Electrical Engineering degree from MIT, USA, and a BSc (Honours) from Mumbai University. With a distinguished career spanning over 47 years at Blue Star, Mr Advani served as its Chairman for 33 years. Under his leadership, the Company’s revenue grew more than 400-fold and became a recognised leader in the Air Conditioning and Commercial Refrigeration industry in India.

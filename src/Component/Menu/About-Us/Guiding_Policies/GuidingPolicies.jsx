@@ -2,6 +2,7 @@ import { FaLocationArrow } from "react-icons/fa";
  import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 const GuidingPolicies = () => {
      useEffect(() => {
     AOS.init({ duration: 800, once: false });
@@ -91,7 +92,11 @@ const GuidingPolicies = () => {
           </div>
         </div>
       </div>
-
+ <nav className="flex items-center p-4 bg-gray-100 text-gray-500">
+      <Link to="/" className="text-blue-500 hover:underline">Home</Link>
+      <span className="mx-2">/</span>
+      <span className="text-gray-900">About US</span>
+    </nav>
       <div className="px-8 py-10 flex flex-col items-center mb-30" data-aos="fade-right" >
         <div className="flex flex-col gap-4 w-full md:w-3/4 lg:w-2/3"  >
           {policyLinks.map((policy, index) => (
