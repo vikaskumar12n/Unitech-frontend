@@ -39,7 +39,7 @@ const StatsSection = () => {
     }, []);
     return (
  <div
-  className="relative w-full pt-25 px-4 sm:px-8 text-center bg-fixed bg-center bg-cover"
+  className="relative w-full pt-25  px-4 sm:px-8 text-center bg-fixed bg-center bg-cover"
   style={{
     backgroundImage: "url('/state banner.jpg')",
   }}

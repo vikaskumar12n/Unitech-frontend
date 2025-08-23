@@ -14,7 +14,7 @@ const Product = () => {
       <div className="container mx-auto px-4 pb-10 bg-gray-100">
  
      
-      <div className="absolute inset-0 bg-black/10 bg-opacity-40"></div>
+      <div className="absolute   bg-black/10 bg-opacity-40"></div>
 
         <div className="flex flex-col md:flex-row gap-6 p-4 flex-wrap">
           <div className=" mt-0 px-20">
