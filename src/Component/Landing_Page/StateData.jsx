@@ -4,13 +4,11 @@ import { FaUserFriends, FaCheck, FaTachometerAlt, FaHammer } from 'react-icons/f
 import AOS from "aos";
 import "aos/dist/aos.css";
 import CountUp from "react-countup";
-
-import SectionHeading from "../../Services/HeadingSection/Heading";
-
+ 
 const statsData = [
     {
         icon: FaTachometerAlt,
-        value: 100,
+        value: 20,
         label: "Years Of Experience",
         suffix: "+",
     },
@@ -41,21 +39,15 @@ const StatsSection = () => {
     }, []);
     return (
  <div
-  className="relative w-full py-20 px-4 sm:px-8 text-center bg-fixed bg-center bg-cover"
+  className="relative w-full pt-25 px-4 sm:px-8 text-center bg-fixed bg-center bg-cover"
   style={{
     backgroundImage: "url('/state banner.jpg')",
   }}
 >
             <div className="absolute inset-0 bg-black/70" ></div>
 
-            <div className="relative z-10 text-white container mx-auto   top-[-3.2rem]">
-                <div className="px-20 mt-0 text-white ">
-                    <SectionHeading title="Our State" />
-                </div>
-
-                <h2 className="text-2xl sm:text-1xl md:text-2xl font-bold mb-12">
-                    Together we can envision, inspire and transform your business
-                </h2>
+            <div className="relative z-10 text-white container mx-auto   top-[-3.2rem]"> 
+                
 
                 <div className=" px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 " data-aos="zoom-in"
             data-aos-delay="200">
@@ -74,7 +66,7 @@ const StatsSection = () => {
                                     <CountUp
                                         start={0}
                                         end={stat.value}
-                                        duration={3}
+                                        duration={20}
                                         suffix={stat.suffix} />
                                 </h2>
                             </h3>

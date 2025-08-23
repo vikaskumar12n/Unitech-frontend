@@ -6,12 +6,12 @@ const ServicesSection = () => {
   <div className="max-w-6xl mx-auto">
     {/* Heading */}
     <div className="px-10 mt-0 w-full text-center mb-12">
-      <SectionHeading title="About Our Brand" />
+      <SectionHeading title="Our Brand" />
     </div>  
 
-    <div className="flex flex-col md:flex-row items-start gap-8">
+    <div className="flex flex-col md:flex-row items-start gap-8"  data-aos="fade-right" data-aos-delay="600 ">
       {/* Left Column: Mission & Vision */}
-     <div className="flex-1 space-y-6" data-aos="zoom-in " data-aos-delay="600 ">
+     <div className="flex-1 space-y-6">
   {/* Mission Card */}
   <div className="bg-white p-6 rounded-2xl shadow-[4px_4px_10px_rgba(0,0,0,0.2),-4px_-4px_10px_rgba(0,0,0,0.1)] hover:shadow-[6px_6px_15px_rgba(0,0,0,0.25),-6px_-6px_15px_rgba(0,0,0,0.15)] transition-shadow duration-300">
     <h3 className="text-2xl font-semibold mb-4 text-blue-600">Our Mission</h3>
@@ -32,14 +32,14 @@ const ServicesSection = () => {
 
       {/* Right Column: Text + Certifications */}
       <div className="flex-1">
-        <p className="text-lg sm:text-xl mb-8" data-aos="zoom-in " data-aos-delay="600 ">
+        <p className="text-lg sm:text-xl mb-8" data-aos="fade-left " data-aos-delay="600 ">
           At <span className="">YourCompany</span>, we believe in combining innovation, 
           quality, and sustainability to provide the best products for our customers. 
           Since our founding in 2015, we have strived to bring excellence in every product we deliver.
         </p>
 
       {/* Certifications / Awards */}
-<div className="flex flex-wrap gap-4 justify-left" data-aos="zoom-in " data-aos-delay="600 ">
+<div className="flex flex-wrap gap-4 justify-left" data-aos="fade-left" data-aos-delay="600 ">
   <div className="border-2 border-blue-500 text-blue-500 px-6 py-4 rounded-lg transition-all duration-300  hover:shadow-[inset_0_0_10px_blue] ">
     ISO 9001 Certified
   </div>

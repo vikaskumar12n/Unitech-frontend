@@ -13,7 +13,7 @@ const Product = () => {
     <>
       <div className="container mx-auto px-4 pb-10 bg-gray-100">
         <div className="flex flex-col md:flex-row gap-6 p-4 flex-wrap">
-        <div className="px-20 mt-0">
+        <div className=" mt-0 px-20">
             <SectionHeading title="Our Products"  />
         </div>
           {/* ROW 1 */}
