@@ -19,7 +19,7 @@ return(
 
       <div className="text-left"  data-aos="fade-right"
           data-aos-delay="400">
-        <h1 className="text-4xl lg:text-3xl font-bold text-gray-800 mb-6">
+        <h1 className="lg:text-4xl text-gray-600  leading-relaxed text-base text-justify mb-6">
           We&apos;re Glad You&apos;re Here – 
           Let’s Keep You Comfortable
           Year-Round!
@@ -40,7 +40,7 @@ return(
           <h3 className="font-semibold text-lg text-gray-700">Reliable Service Assurance</h3>
         </div>
 
-        <p className="text-gray-600 leading-relaxed mb-6">
+        <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify">
           South India’s most trusted team of HVAC engineers, known for delivering safe, energy-efficient, and smart air conditioning solutions. We ensure consistent service quality, timely support, and long-lasting system performance for every home and business. Reach us at:
         </p>
 
