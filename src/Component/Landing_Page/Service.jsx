@@ -19,7 +19,7 @@ return(
 
       <div className="text-left"  data-aos="fade-right"
           data-aos-delay="400">
-        <h1 className="lg:text-4xl text-gray-600  leading-relaxed text-base text-justify mb-6">
+        <h1 className="lg:text-4xl text-black  leading-relaxed text-base text-justify mb-6">
           We&apos;re Glad You&apos;re Here – 
           Let’s Keep You Comfortable
           Year-Round!
@@ -30,17 +30,17 @@ return(
             <path d="M12 2l-2 7 9 3-9 3 2 7z" />
             <circle cx="12" cy="15" r="3" />
           </svg>
-          <h3 className="font-semibold text-lg text-gray-700">Skilled HVAC Engineers</h3>
+          <h3 className="font-semibold text-lg text-black">Skilled HVAC Engineers</h3>
         </div>
 
         <div className="flex items-center mb-6">
           <svg className="w-8 h-8 text-blue-500 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
           </svg>
-          <h3 className="font-semibold text-lg text-gray-700">Reliable Service Assurance</h3>
+          <h3 className="font-semibold text-lg text-black">Reliable Service Assurance</h3>
         </div>
 
-        <p className="text-gray-600 mb-2 leading-relaxed text-base text-justify">
+        <p className="text-black mb-2 leading-relaxed text-base text-justify">
           South India’s most trusted team of HVAC engineers, known for delivering safe, energy-efficient, and smart air conditioning solutions. We ensure consistent service quality, timely support, and long-lasting system performance for every home and business. Reach us at:
         </p>
 
@@ -52,7 +52,7 @@ return(
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9.81 15.3A12 12 0 0 0 16.6 16.6l1.2-1.25a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
             </div>
-            <p className="text-gray-700">
+            <p className="text-black">
               <a href="tel:7619607157">7619607157</a> / <a href="tel:7619607156">7619607156</a>
             </p>
           </div>
@@ -65,7 +65,7 @@ return(
                 <polyline points="22 6 12 13 2 6" />
               </svg>
             </div>
-            <p className="text-gray-700">
+            <p className="text-black">
               <a href="mailto:care@blowair.in">care@blowair.in</a>
             </p>
           </div>
