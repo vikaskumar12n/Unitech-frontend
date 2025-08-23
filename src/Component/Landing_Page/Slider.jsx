@@ -104,15 +104,15 @@ const Slider = () => {
         <div
           data-aos="fade-down"
           data-aos-delay="600"
-          className="flex flex-col sm:flex-row gap-4 mt-5 ms-20"
+          className="flex flex-col sm:flex-row gap-4 mt-5 ms-30"
         >
-          <button className="bg-blue-500 text-white px-6 py-2 rounded transition duration-300
+          <button className="bg-blue-500 w-50 text-white px-6 py-2 rounded transition duration-300
                    hover:bg-transparent hover:border hover:border-blue-500 hover:text-white
                    hover:shadow-[inset_0_0_30px_black]">
             READ MORE
           </button>
 
-          <button className="bg-blue-500 text-white px-6 py-2 rounded transition duration-300 ml-4
+          <button className="bg-blue-500 w-50 text-white px-6 py-2 rounded transition duration-300 
                    hover:bg-transparent hover:border hover:border-blue-500 hover:text-white
                    hover:shadow-[inset_0_0_30px_black]">
             Contact Us

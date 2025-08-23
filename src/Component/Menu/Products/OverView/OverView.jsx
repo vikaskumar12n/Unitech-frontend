@@ -1,13 +1,27 @@
+ import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const GuidingPolicies = () => {
+  useEffect(()=>{
+    AOS.init({duration:800,once:false});
+    AOS.refresh()
+  },[])
   return (
-    <>
-      {/* Banner Section */}
-      <div className="relative w-full h-[350px] mt-15 overflow-hidden">
-        <img
-          src="about-banner.jpg"
-          alt="Company Buildings"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+   
+       <>
+        <div className="relative w-full h-[500px] overflow-hidden">
+ 
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover"
+  >
+    <source src="/hero-video.webm" type="video/webm" />
+    <source src="/hero-video.mp4" type="video/mp4" />
+    
+  </video>
         <div className="absolute bottom-0 left-0 w-[50%] md:w-[20%] px-4">
           <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/80 text-white">
             <h2 className="text-base md:text-lg font-semibold">
@@ -18,7 +32,7 @@ const GuidingPolicies = () => {
       </div>
 
   
-      <div className="px-8 py-10 flex flex-col items-center mb-30">
+      <div className="px-8 py-10 flex flex-col items-center mb-30" data-aos="fade-right">
         <div className="w-full md:w-3/4 lg:w-2/3 text-justify">
           <h3 className="text-lg font-semibold mb-4 text-blue-700">Overview</h3>
           <p className="text-gray-700 leading-relaxed text-sm md:text-base">

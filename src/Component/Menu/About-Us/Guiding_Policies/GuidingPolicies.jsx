@@ -1,6 +1,12 @@
 import { FaLocationArrow } from "react-icons/fa";
-
+ import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const GuidingPolicies = () => {
+     useEffect(() => {
+    AOS.init({ duration: 800, once: false });
+    AOS.refresh();  
+  }, []);
   const policyLinks = [
     {
       title: "Policy on Environmental Sustainability and Green Energy Initiatives",
@@ -86,8 +92,8 @@ const GuidingPolicies = () => {
         </div>
       </div>
 
-      <div className="px-8 py-10 flex flex-col items-center mb-30">
-        <div className="flex flex-col gap-4 w-full md:w-3/4 lg:w-2/3">
+      <div className="px-8 py-10 flex flex-col items-center mb-30" data-aos="fade-right" >
+        <div className="flex flex-col gap-4 w-full md:w-3/4 lg:w-2/3"  >
           {policyLinks.map((policy, index) => (
             <li key={index} className="flex items-center gap-2">
               <span className="text-xs text-blue-600">

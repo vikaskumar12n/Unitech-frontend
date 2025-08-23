@@ -170,7 +170,7 @@ const menuItems = [
             <li key={subIndex} className="last:rounded-b-lg first:rounded-t-lg">
               <Link
                 to={subItem.link || "/"}
-                className="block py-3 px-4 text-base cursor-pointer hover:bg-blue-100 transition duration-300 ease-in-out text-blue-700"
+                className="block py-3 px-4 text-sm cursor-pointer hover:bg-blue-100 transition duration-300 ease-in-out text-black"
                 onClick={() => setOpenDropdown(null)}
               >
                 {subItem.name}
