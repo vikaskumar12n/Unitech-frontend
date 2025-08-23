@@ -1,6 +1,13 @@
 import './Service.css';
 import SectionHeading from '../../Services/HeadingSection/Heading';
+import { useEffect } from 'react';
+ import AOS from "aos";
+import "aos/dist/aos.css";
 const Service = () => {
+useEffect(()=>{
+  AOS.init({duration:800,once:false});
+  AOS.refresh()
+})
 return(
     <>
         <div className="bg-gray-100 mt-2">
@@ -10,7 +17,8 @@ return(
         </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 items-start">
 
-      <div className="text-left">
+      <div className="text-left"  data-aos="fade-right"
+          data-aos-delay="400">
         <h1 className="text-4xl lg:text-3xl font-bold text-gray-800 mb-6">
           We&apos;re Glad You&apos;re Here – 
           Let’s Keep You Comfortable
@@ -68,20 +76,24 @@ return(
 <div className="grid grid-cols-12 gap-4">
    
   <img
+  data-aos="zoom-in"
     src="/service1.jpg"
     className="col-span-7 h-auto rounded-md shadow-md"
   />
  <img
+ data-aos="zoom-in"
   src="/service2.jpg"
   className="col-span-5 h-auto rounded-md shadow-md mt-15 sm:mt-25"
 />
 
   
   <img
+  data-aos="zoom-in"
     src="/services3.jpg"
     className="col-span-5 h-auto rounded-md shadow-md"
   />
   <img
+  data-aos="zoom-in"
     src="/services4.jpg"
     className="col-span-7 h-auto rounded-md shadow-md"
   />
