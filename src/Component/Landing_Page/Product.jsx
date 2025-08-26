@@ -11,13 +11,13 @@ const Product = () => {
   }, []);
   return (
     <>
-      <div className="container mx-auto  pb-10 bg-gray-100">
+      <div className="container mx-auto pb-10 bg-gray-100 px-4 md:px-8">
  
      
       <div className="absolute  bg-black/10 bg-opacity-40"></div>
 
-        <div className="flex flex-col md:flex-row gap-6 p-4 flex-wrap">
-       <div className="px-25 mt-0">
+        <div className="flex flex-wrap -mx-2 gap-6 w-full">
+       <div className="px-10 mt-0">
             <SectionHeading title="Our Product" 
                        className="font-extrabold text-center text-black text-1xl md:text-2xl  mt-10" 
 
@@ -25,7 +25,7 @@ const Product = () => {
         </div>
           {/* ROW 1 */}
           <div
-            className="bg-white rounded-2xl border border-gray-200 hover:border-gray-400 shadow-md hover:shadow-xs transition-transform duration-300 hover:scale-102 overflow-hidden flex-1 min-w-[250px] flex flex-col"
+            className="w-full sm:w-1/2 lg:w-1/3 px-2 bg-white rounded-2xl border border-gray-200 hover:border-gray-400 shadow-md hover:shadow-xs transition-transform duration-300 hover:scale-102 overflow-hidden flex flex-col"
           >
             <img
               src="/Room-AC.jpg"
