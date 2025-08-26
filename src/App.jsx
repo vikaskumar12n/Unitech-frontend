@@ -10,6 +10,9 @@ import GovernanceStructure from './Component/Menu/About-Us/Governance_Structure/
 import GuidingPolicies from './Component/Menu/About-Us/Guiding_Policies/GuidingPolicies';
 import Overview from './Component/Menu/Products/OverView/OverView';
 // import MouseFollower from './Services/MouseFollow';
+import Product from './Component/Menu/Products/ProductDetails/Product';
+import ContactUsPage from './Component/Menu/ContactUs/ContactUsPage';
+import HVACDesign from './Component/Menu/Solution/SolutionParent';
 function App() {
   return (
     <> 
@@ -22,6 +25,9 @@ function App() {
       <Route path='/governance-structure' element={<GovernanceStructure/>}/>
       <Route path='/guiding-policies' element={<GuidingPolicies/>}/>
       <Route path='/overview' element={<Overview/>}/>
+      <Route path='/product' element={<Product/>}/>
+      <Route path='/contactus' element={<ContactUsPage/>}/>
+      <Route path='/solution' element={<HVACDesign/>}/>
      
 
        

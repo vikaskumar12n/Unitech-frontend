@@ -10,7 +10,7 @@ const slides = [
     description:
       "Fabair Cooling Solutions is a Bangalore based specialist organisation and service provider of HVACR solutions started in 2018.",
     subheadingColor: "text-white",
-    headingColor: "text-white text-shadow-lg ",
+    headingColor: "text-white font-extrabold  text-shadow-lg ",
     descriptionColor: "bg-black/10 text-white   ",
   },
   {
@@ -20,7 +20,7 @@ const slides = [
     description:
       "Delivering innovative HVAC solutions with advanced technology.",
     subheadingColor: "text-white text-shadow-lg",
-    headingColor: "text-white text-bold text-shadow-lg",
+    headingColor: "text-white font-extrabold  text-shadow-lg",
     descriptionColor: " bg-black/10 text-white text-bold text-shadow-lg",
   },
   {
@@ -30,7 +30,7 @@ const slides = [
     description:
       "Providing professional and trusted services to clients across Bangalore.",
     subheadingColor: "text-whiet text-bold text-shadow-lg",
-    headingColor: "text-white text-shadow-lg",
+    headingColor: "text-white font-extrabold  text-shadow-lg",
     descriptionColor: " bg-black/10 text-white text-shadow-lg",
   },
 ];
@@ -106,15 +106,15 @@ const Slider = () => {
           data-aos-delay="600"
           className="flex flex-col sm:flex-row gap-4 mt-5 ms-20"
         >
-          <button className="bg-blue-500 w-50 text-white px-6 py-2 rounded transition duration-300
+          <button className="bg-blue-500 w-50 text-white text-extrabold  px-6 py-2 rounded transition duration-300
                    hover:bg-transparent hover:border hover:border-blue-500 hover:text-white
-                   hover:shadow-[inset_0_0_30px_black]">
+                   hover:shadow-[inset_0_0_30px_gray]">
             READ MORE
           </button>
 
-          <button className="bg-blue-500 w-50 text-white px-6 py-2 rounded transition duration-300 
+          <button className="bg-blue-500 w-50 text-white  text-extrabold px-6 py-2 rounded transition duration-300 
                    hover:bg-transparent hover:border hover:border-blue-500 hover:text-white
-                   hover:shadow-[inset_0_0_30px_black]">
+                   hover:shadow-[inset_0_0_30px_gray]">
             Contact Us
           </button>
 

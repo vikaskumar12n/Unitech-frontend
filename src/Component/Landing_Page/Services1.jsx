@@ -13,7 +13,9 @@ const ServicesSection = () => {
       <div className="relative max-w-6xl mx-auto text-black  ">
        
         <div className="px-10 mt-0 w-full text-center mb-10 ">
-          <SectionHeading title="Our Brand" className="text-black" />
+          <SectionHeading title="Our Brand"
+           className="font-extrabold text-center text-black text-1xl md:text-2xl mt-10" 
+            />
         </div>
 
         <div

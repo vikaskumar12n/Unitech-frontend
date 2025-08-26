@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaBars, FaSortDown, FaHome, FaTimes, FaPhoneAlt, FaEnvelope, FaInfoCircle, FaBoxOpen, FaHeadset, FaNewspaper, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaBars, FaSortDown, FaTimes, FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -39,12 +39,12 @@ const Navbar = () => {
       name: "HOME",
       li: <FaSortDown />,
       link: "/",
-      icon: <FaHome className="inline-block mb-1 text-sm text-blue-600" />,
+      // icon: <FaHome className="inline-block mb-1 text-sm text-blue-600" />,
     },
     {
       name: "ABOUT US",
       li: <FaSortDown />,
-      icon: <FaInfoCircle className="inline-block mb-1 text-sm text-blue-600" />,
+      // icon: <FaInfoCircle className="inline-block mb-1 text-sm text-blue-600" />,
       dropdown: [
         { name: "Our Company", link: "/about-us" },
         { name: "Governance Structure", link: "/governance-structure" },
@@ -54,10 +54,10 @@ const Navbar = () => {
     {
       name: "PRODUCTS",
       li: <FaSortDown />,
-      icon: <FaBoxOpen className="inline-block mb-1 text-sm text-blue-600" />,
+      // icon: <FaBoxOpen className="inline-block mb-1 text-sm text-blue-600" />,
       dropdown: [
         { name: "Overview", link: "/overview" },
-        { name: "Room Air Conditioners", link: "/" },
+        { name: "Room Air Conditioners", link: "/product" },
         { name: "Cassette Air Conditioner", link: "/" },
         { name: "Verticool Air Conditioner", link: "/" },
         { name: "Central Air Conditioner", link: "/" },
@@ -68,35 +68,32 @@ const Navbar = () => {
         { name: "Speciality Product", link: "/" },
       ],
     },
-    {
-      name: "CUSTOMER SERVICE",
-      li: <FaSortDown />,
-      icon: <FaHeadset className="inline-block mb-1 text-sm text-blue-600" />,
-      dropdown: [
-        { name: "Service Solution", link: "/" },
-        { name: "Certifications", link: "/" },
-        { name: "Warranty Registration", link: "/" },
-        { name: "Installation and Service Costs", link: "/" },
-        { name: "Buy Extended warranty & AMC", link: "/" },
-        { name: "Service Escalation", link: "/" },
-      ],
-    },
+    // {
+    //   name: "CUSTOMER SERVICE",
+    //   li: <FaSortDown />,
+    //   // icon: <FaHeadset className="inline-block mb-1 text-sm text-blue-600" />,
+    //   dropdown: [
+    //     { name: "Service Solution", link: "/" },
+    //     { name: "Certifications", link: "/" },
+    //     { name: "Warranty Registration", link: "/" },
+    //     { name: "Installation and Service Costs", link: "/" },
+    //     { name: "Buy Extended warranty & AMC", link: "/" },
+    //     { name: "Service Escalation", link: "/" },
+    //   ],
+    // },
 
     {
       name: "SOLUTIONS",
       li: <FaSortDown />,
-      icon: <FaNewspaper className="inline-block mb-1 text-sm text-blue-600" />,
-      dropdown: [
-        { name: "Press Releases", link: "/" },
-        { name: "Press Clippings", link: "/" },
-        { name: "Investors", link: "/" },
-      ],
+      // icon: <FaNewspaper className="inline-block mb-1 text-sm text-blue-600" />,
+      link: "/solution"
+      
     },
     {
       name: "CONTACT US",
       li: <FaSortDown />,
-      link: "/contact",
-      icon: <FaNewspaper className="inline-block mb-1 text-sm text-blue-600" />,
+      link: "/contactus",
+      // icon: <FaNewspaper className="inline-block mb-1 text-sm text-blue-600" />,
     },
   ];
 
@@ -107,7 +104,7 @@ const Navbar = () => {
     >
       {/* Top Navbar */}
 <div
-  className="top_section text-white h-12 text-xs py-2 px-4 flex justify-between items-center relative overflow-hidden"
+  className="top_section text-white h-9 text-xs py-2 px-4 flex justify-between items-center relative overflow-hidden"
 >
   {/* Background Layers */}
   <div className="absolute top-0 left-0 w-1/2 h-full bg-white"></div>
@@ -116,15 +113,17 @@ const Navbar = () => {
 
   {/* Left Section - Contact Info */}
   <div className="flex items-center space-x-4 relative z-10">
-    <a href="tel:+919890989098" className="flex items-center">
+    
+    <Link href="tel:+919890989098" className="flex items-center">
       <FaPhoneAlt className="text-blue-300 mr-2 text-2xl" />
       <span>+919890989098</span>
-    </a>
+    </Link>
     <span className="h-4 border-l border-gray-600"></span>
-    <a href="mailto:info@myholidays.com" className="flex items-center">
+    
+    <Link href="mailto:info@myholidays.com" className="flex  items-center">
       <FaEnvelope className="text-blue-300 mr-2 text-2xl" />
       <span>info@myholidays.com</span>
-    </a>
+    </Link>
   </div>
 
   {/* Right Section - Social Links */}

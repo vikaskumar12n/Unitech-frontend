@@ -17,9 +17,12 @@ const Product = () => {
       <div className="absolute  bg-black/10 bg-opacity-40"></div>
 
         <div className="flex flex-col md:flex-row gap-6 p-4 flex-wrap">
-          <div className=" mt-0 px-20">
-            <SectionHeading title="Our Products" />
-          </div>
+       <div className="px-25 mt-0">
+            <SectionHeading title="Our Product" 
+                       className="font-extrabold text-center text-black text-1xl md:text-2xl  mt-10" 
+
+             />
+        </div>
           {/* ROW 1 */}
           <div
             className="bg-white rounded-2xl border border-gray-200 hover:border-gray-400 shadow-md hover:shadow-xs transition-transform duration-300 hover:scale-102 overflow-hidden flex-1 min-w-[250px] flex flex-col"
@@ -39,7 +42,7 @@ const Product = () => {
               <p className="text- mb-2 leading-relaxed text-base text-justify" data-aos="fade-up"
                 data-aos-duration="1200">
                 The most technologically advanced and energy-efficient air conditioning
-                solutions for small spaces.
+              
               </p>
               <a
                 href="/room-ac"
@@ -100,7 +103,7 @@ const Product = () => {
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up">AIR PURIFIERS</h3>
               <p className="text- mb-2 leading-relaxed text-base text-justify" data-aos="fade-up"
                 data-aos-duration="1200">
-                An array of purifiers built with superior technology for clean and healthy air in your home.
+                An array of purifiers built with superior technology for clean  
               </p>
               <a href="/air-purifier"  data-aos="fade-up"
       data-aos-duration="1200" className="text-blue-600 font-semibold hover:underline inline-flex items-center mt-auto">
@@ -119,7 +122,7 @@ const Product = () => {
                 data-aos-duration="1200">AIR COOLERS</h3>
               <p className="text- mb-2 leading-relaxed text-base text-justify  " data-aos="fade-up"
                 data-aos-duration="1200">
-                Sleek and elegant air coolers packed with smart features to provide efficient cooling.
+                Sleek and elegant air coolers packed with smart features  
               </p>
               <a href="/air-cooler" data-aos="fade-up"
                 data-aos-duration="1200" className="text-blue-600 font-semibold hover:underline inline-flex items-center mt-auto">
@@ -138,7 +141,7 @@ const Product = () => {
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up"
                 data-aos-duration="1200">COLD STORAGE</h3>
               <p className="text- mb-2 leading-relaxed text-base text-justify    " data-aos="fade-up">
-                Reliable solutions to store perishables safely and maintain optimal temperature.
+                Reliable solutions to store perishables safely and maintain 
               </p>
               <a href="/cold-storage" data-aos="fade-up"
                 data-aos-duration="1200" className="text-blue-600 font-semibold hover:underline inline-flex items-center mt-auto">
@@ -172,9 +175,9 @@ const Product = () => {
               data-aos-duration="1200" alt="Verticool AC" className="w-full h-60 object-cover" />
             <div className="p-4 flex flex-col flex-1">
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up"
-                data-aos-duration="1200">VERTICOOL AIR CONDITIONER</h3>
+                data-aos-duration="1200">AIR CONDITIONER</h3>
               <p className="text- mb-2 leading-relaxed text-base text-justify" data-aos="fade-up">
-                Smart air conditioners designed for maximum cooling and energy efficiency.
+                Smart air conditioners designed for maximum cooling and energy 
               </p>
               <a href="/products/verticool-ac" data-aos="fade-up"
                 data-aos-duration="1200" className="text-blue-600 font-semibold hover:underline inline-flex items-center mt-auto">
@@ -192,7 +195,7 @@ const Product = () => {
               <h3 className="text-lg font-semibold mb-2 text-cyan-700" data-aos="fade-up"
                 data-aos-duration="1200">REFRIGERATOR</h3>
               <p className="text- mb-2 leading-relaxed text-base text-justify" data-aos="fade-up">
-                Leaders in commercial refrigeration with freezers, coolers, and dispensers.
+                Leaders in commercial refrigeration with freezers
               </p>
               <a href="/refrigerator" data-aos="fade-up"
                 data-aos-duration="1200" className="text-blue-600 font-semibold hover:underline inline-flex items-center mt-auto">
@@ -200,14 +203,17 @@ const Product = () => {
               </a>
             </div>
           </div>
- <div className=" mt-0 px-20">
-            <SectionHeading title="Products We Deals In" />
+ <div className=" mt-0 px-10">
+            <SectionHeading title="Products We Deals In" 
+                       className="font-extrabold text-center text-black text-1xl md:text-2xl  mt-10" 
+
+              />
           </div>
            
           {/* ROW-3 */}
           <div className="flex flex-col md:flex-row gap-6  mt-10  flex-wrap w-full">
             <div
-              className="bg-white rounded-2xl border border-gray-200 hover:border-gray-400 hover:border-gray-400 shadow-md hover:shadow-xs transition-transform duration-300 hover:scale-102 overflow-hidden flex-1 min-w-[250px] flex flex-col"
+              className="bg-white rounded-2xl border border-gray-200 hover:border-gray-400  shadow-md hover:shadow-xs transition-transform duration-300 hover:scale-102 overflow-hidden flex-1 min-w-[250px] flex flex-col"
             >
               <img src="/Domestic-ac.jpg" data-aos="fade-up"
                 data-aos-duration="1200" alt="Careers" className="w-full h-60 object-cover" />
@@ -217,7 +223,7 @@ const Product = () => {
                   Air-Conditioners</h3>
                 <p className="text- mb-2 leading-relaxed text-base text-justify" data-aos="fade-up"
                   data-aos-duration="1200">
-                  We are an authorized dealer of Samsung and voltas commercial Air-conditioners and their products..
+                  We are an authorized dealer of Samsung and voltas commercial.
                 </p>
                 <a href="#" data-aos="fade-up"
                   data-aos-duration="1200" className="text-blue-600 hover:underline flex items-center mt-auto">
@@ -236,7 +242,7 @@ const Product = () => {
                   data-aos-duration="1200">Commercial
                   Air-Conditioners</h3>
                 <div className="list-disc list-inside text- mb-2 leading-relaxed text-base text-justify" data-aos="fade-up"  data-aos-duration="1200">
-                  We have authorized dealerships of brands like Samsung and Voltas. For selling and maintaining of..
+                  We have authorized dealerships of brands like Samsung and Voltas. 
                 </div>
                 <a href="#" data-aos="fade-up"
                   data-aos-duration="1200" className="text-blue-600 hover:underline flex items-center mt-auto">
@@ -255,7 +261,7 @@ const Product = () => {
                   data-aos-duration="1200">Ventilation Systems</h3>
                 <div className="list-disc list-inside text- mb-2 leading-relaxed text-base text-justify" data-aos="fade-up"
                   data-aos-duration="1200">
-                  ventilation systems can be forced systems by using devices such as window fan to allow air movement..
+                  ventilation systems can be forced systems by using devices .
                 </div>
                 <a href="#" data-aos="fade-up"
                   data-aos-duration="1200" className="text-blue-600 hover:underline flex items-center mt-auto">
@@ -274,7 +280,7 @@ const Product = () => {
                   data-aos-duration="1200">Cold-Rooms</h3>
                 <p className="text- mb-2 leading-relaxed text-base text-justify" data-aos="fade-up"
                   data-aos-duration="1200">
-                  Contributing to society’s welfare beyond profits, through impactful initiatives.
+                  Contributing to society’s welfare beyond profits .
                 </p>
                 <a href="#" data-aos="fade-up"
                   data-aos-duration="1200" className="text-blue-600 hover:underline flex items-center mt-auto">

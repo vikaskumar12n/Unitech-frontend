@@ -13,7 +13,10 @@ return(
         <div className="bg-gray-100 mt-2">
   <div className="container mx-auto px-4">
       <div className="px-20 mt-0">
-            <SectionHeading title="Our Services"  />
+            <SectionHeading title="Our Services" 
+           className="font-extrabold text-center text-black text-1xl md:text-2xl  mt-10" 
+
+           />
         </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 items-start">
 
@@ -40,9 +43,21 @@ return(
           <h3 className="font-semibold text-lg text-black">Reliable Service Assurance</h3>
         </div>
 
-        <p className="text-black mb-2 leading-relaxed text-base text-justify">
-          South India’s most trusted team of HVAC engineers, known for delivering safe, energy-efficient, and smart air conditioning solutions. We ensure consistent service quality, timely support, and long-lasting system performance for every home and business. Reach us at:
-        </p>
+     <p className="text-black mb-2 leading-relaxed text-base text-justify">
+  South India’s most trusted team of HVAC engineers, known for delivering safe, energy-efficient, and smart air conditioning solutions. 
+  We ensure consistent service quality, timely support, and long-lasting system performance for every home and business. 
+  <br /> 
+  With years of expertise in designing, installing, and maintaining advanced HVAC systems, we specialize in providing tailor-made cooling 
+  and heating solutions that perfectly match your requirements. From residential apartments to large commercial spaces, 
+  our dedicated team focuses on comfort, cost-efficiency, and sustainability. 
+  <br /> 
+  We partner with leading global brands to bring you cutting-edge technologies that ensure low energy consumption, 
+  reduced carbon footprint, and smart automation for hassle-free operation. 
+  <br /> 
+  Our 24/7 customer support and proactive maintenance services ensure that your systems run smoothly all year round. 
+  Choosing us means choosing reliability, innovation, and a promise of superior performance. 
+  
+</p>
 
         <div className="flex items-center gap-8">
           {/* Phone */}
