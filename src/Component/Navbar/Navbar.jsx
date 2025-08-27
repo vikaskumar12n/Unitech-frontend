@@ -115,7 +115,7 @@ const Navbar = () => {
   <div className="flex items-center space-x-4 relative z-10">
     
     <Link href="tel:+919890989098" className="flex items-center">
-      <FaPhoneAlt className="text-blue-300 mr-2 text-2xl" />
+      <FaPhoneAlt className="text-blue-300 mr-1  text-2xl" />
       <span>+919890989098</span>
     </Link>
     <span className="h-4 border-l border-gray-600"></span>
