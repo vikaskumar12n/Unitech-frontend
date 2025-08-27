@@ -3,6 +3,13 @@
 body {
   @apply m-0 p-0;
 }
+.bg-color{
+ background-color: #383086;
+
+}
+.text-color{
+   color: #383086;
+}
 .menu{
     background: white;
      box-shadow: 0px 0px 5px inset rgb(177, 169, 169);
@@ -13,3 +20,27 @@ body {
     background: whitesmoke;
     color: black;
 }
+
+/* testmonial */
+ .custom-dots {
+          bottom: -50px;
+        }
+        .custom-dots li button:before {
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.5);
+          opacity: 1;
+        }
+        .custom-dots li.slick-active button:before {
+          color: #60a5fa;
+          opacity: 1;
+        }
+
+
+
+         @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.8s ease-out forwards;
+        }

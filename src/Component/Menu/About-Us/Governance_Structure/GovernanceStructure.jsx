@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+// import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai"
 import ChairmanEmeritus from "./CorporateManagement";
 import { Link } from "react-router-dom";
 
 const GovernanceStructure = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded] = useState(false);
   const [selectedItem, setSelectedItem] = useState("CORPORATE MANAGEMENT");
   const menuItems = [
     { name: "CORPORATE MANAGEMENT", type: "component", component: <ChairmanEmeritus /> },
@@ -22,8 +22,7 @@ const GovernanceStructure = () => {
 
   return (
     <>
-
-      <div className="relative w-full h-[500px] overflow-hidden">
+   <div className="relative w-full h-[500px] overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
@@ -34,22 +33,26 @@ const GovernanceStructure = () => {
         >
           <source src="/hero-video.webm" type="video/webm" />
           <source src="/hero-video.mp4" type="video/mp4" />
-
         </video>
-
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
+        
+        {/* Enhanced Overlay with Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        
+        {/* Banner Content */}
+        <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">Governance Structure</h1>
+          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl drop-shadow-md">Discover our journey, values, and commitment to excellence</p>
+        </div>
+        
+        {/* Menu Toggle */}
+          <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
           <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
-            <h2 className="text-base md:text-lg font-semibold">GOVERNANCE STRUCTURE</h2>
-            <button
-              className="text-lg md:text-xl px-2 py-1 rounded"
-              onClick={() => setExpanded(!expanded)}
-            >
-              {expanded ? <AiOutlineClose /> : <AiOutlineMenu />}
-            </button>
+            <h2 className="text-base md:text-lg font-semibold">Governance Structure</h2>
+           
           </div>
         </div>
       </div>
+      
 
 
       <div
@@ -71,7 +74,7 @@ const GovernanceStructure = () => {
         </div>
       </div>
       <nav className="flex items-center p-4 bg-gray-100 text-gray-500">
-        <Link to="/" className="text-blue-500 hover:underline">Home</Link>
+        <Link to="/" className="text-color hover:underline">Home</Link>
         <span className="mx-2">/</span>
         <span className="text-gray-900">About US</span>
       </nav>

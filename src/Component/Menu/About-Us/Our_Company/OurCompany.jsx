@@ -1,22 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import CompanyDetails from "./CompanyDetails";
 import FounderSection from "./FounderDetails";
 import { Link } from "react-router-dom";
+import { FaChevronRight } from "react-icons/fa";
 
 const OurCompany = () => {
   const [expanded, setExpanded] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("Company Profile"); // default
+  const [selectedItem, setSelectedItem] = useState("Company Profile");
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentContent, setCurrentContent] = useState(<CompanyDetails />);
 
   const menuItems = [
     { name: "Company Profile", component: <CompanyDetails /> },
     { name: "Founder", component: <FounderSection /> },
-    // { name: "The Blue Star Way", component: <div>The Blue Star Way Content...</div> },
-    // { name: "History", component: <div>History Content...</div> },
-    // { name: "Our Expertise", component: <div>Expertise Content...</div> },
-    // { name: "Vision", component: <div>Vision Content...</div> },
-    // { name: "Milestones", component: <div>Milestones Content...</div> },
   ];
+
+  useEffect(() => {
+    if (selectedItem) {
+      setIsAnimating(true);
+      const timer = setTimeout(() => {
+        const selectedComponent = menuItems.find(item => item.name === selectedItem)?.component || <CompanyDetails />;
+        setCurrentContent(selectedComponent);
+        setIsAnimating(false);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedItem]);
+
+  const handleMenuItemClick = (itemName) => {
+    setSelectedItem(itemName);
+    setExpanded(false);
+  };
 
   return (
     <>
@@ -32,11 +47,19 @@ const OurCompany = () => {
         >
           <source src="/hero-video.webm" type="video/webm" />
           <source src="/hero-video.mp4" type="video/mp4" />
-
         </video>
-
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
+        
+        {/* Enhanced Overlay with Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        
+        {/* Banner Content */}
+        <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">Our Company</h1>
+          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl drop-shadow-md">Discover our journey, values, and commitment to excellence</p>
+        </div>
+        
+        {/* Menu Toggle */}
+          <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
           <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
             <h2 className="text-base md:text-lg font-semibold">OUR COMPANY</h2>
             <button
@@ -48,36 +71,54 @@ const OurCompany = () => {
           </div>
         </div>
       </div>
-
-      {/* Dropdown Menu */}
+      
+      {/* Enhanced Dropdown Menu */}
       <div
-        className={`overflow-hidden bg-[#2d3e50] text-gray-200 transition-all duration-500 ease-in-out ${expanded ? "max-h-[500px] py-6" : "max-h-0 py-0"
-          }`}
+        className={`overflow-hidden bg-gradient-to-r from-blue-700 to-cyan-700 text-gray-200 transition-all duration-500 ease-in-out ${expanded ? "max-h-[500px] py-6 shadow-lg" : "max-h-0 py-0"}`}
       >
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-10 px-6">
-          {menuItems.map((item, idx) => (
-            <button
-              key={idx}
-              onClick={() => {
-                setSelectedItem(item.name);
-
-              }}
-              className={`text-sm block text-left hover:text-white cursor-pointer ${selectedItem === item.name ? "font-bold text-white" : ""
-                }`}
-            >
-              {item.name}
-            </button>
-          ))}
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {menuItems.map((item, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleMenuItemClick(item.name)}
+                className={`flex items-center p-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:bg-white/10 ${selectedItem === item.name ? "bg-white/20 font-bold text-white shadow-md" : ""}`}
+              >
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mr-3 ${selectedItem === item.name ? "bg-white text-blue-700" : "bg-white/20"}`}>
+                  <span className="font-bold">{idx + 1}</span>
+                </div>
+                <span className="text-left">{item.name}</span>
+                {selectedItem === item.name && <FaChevronRight className="ml-auto" />}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
-      <nav className="flex items-center p-4 bg-gray-100 text-gray-500">
-      <Link to="/" className="text-blue-500 hover:underline">Home</Link>
-      <span className="mx-2">/</span>
-      <span className="text-gray-900">About US</span>
-    </nav>
-      {/* Dynamic Content */}
-      <div className="px-8 py-10">
-        {menuItems.find((item) => item.name === selectedItem)?.component}
+      
+      {/* Enhanced Breadcrumb */}
+      <nav className="flex items-center p-4 bg-gray-100 border-b border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center text-sm">
+            <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium flex items-center transition-colors duration-300">
+              Home
+            </Link>
+            <span className="mx-2 text-gray-400">
+              <FaChevronRight className="text-xs" />
+            </span>
+            <span className="text-gray-700 font-medium">About Us</span>
+            <span className="mx-2 text-gray-400">
+              <FaChevronRight className="text-xs" />
+            </span>
+            <span className="text-gray-900 font-semibold">{selectedItem}</span>
+          </div>
+        </div>
+      </nav>
+      
+      {/* Dynamic Content with Animation */}
+      <div className="container mx-auto px-4 py-10">
+        <div className={`transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+          {currentContent}
+        </div>
       </div>
     </>
   );

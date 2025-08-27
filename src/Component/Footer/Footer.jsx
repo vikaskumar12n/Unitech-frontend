@@ -1,119 +1,157 @@
-
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaChevronRight } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="bg-[#0b1030] text-gray-300 py-12">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-
+    <footer className="bg-gradient-to-br from-[#0a0e2b] to-[#1a237e] text-gray-200 py-5 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxZTI5N2IiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-20"></div>
+      
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+        {/* Company Info */}
         <div className="flex flex-col items-start">
-          <div className="mb-4">
-            <img src="/logo.png" alt="Fabair Cooling Solutions Logo" className="h-10" />
+          <div className="mb-4 flex items-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
+              <span className="text-white font-bold text-xl">U</span>
+            </div>
+            <h2 className="text-xl font-bold text-white">Unitech</h2>
           </div>
-          <p className="text-sm leading-relaxed text-justify mb-4">
-            Fabair Cooling Solutions is a Bangalore based specialist organisation and Service provider of
+          <p className="text-sm leading-relaxed text-justify mb-6 text-gray-300">
+            Unitec limited is a lucknow based specialist organisation and Service provider of
             Heating, Ventilation, Air conditioning and refrigeration (HVACR) solutions Started in the year 2018.
           </p>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-white  text-2xl">
-            <FaFacebook/>
+            <a href="#" className="text-gray-300 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 text-2xl">
+              <FaFacebook />
             </a>
-            <a href="#" className="hover:text-white text-2xl">
+            <a href="#" className="text-gray-300 hover:text-pink-500 transition-all duration-300 transform hover:scale-110 text-2xl">
               <FaInstagramSquare />
             </a>
-            <a href="#" className="hover:text-white text-2xl">
+            <a href="#" className="text-gray-300 hover:text-blue-300 transition-all duration-300 transform hover:scale-110 text-2xl">
               <FaLinkedin />
-
             </a>
-            <a href="#" className="hover:text-white text-2xl">
+            <a href="#" className="text-gray-300 hover:text-green-400 transition-all duration-300 transform hover:scale-110 text-2xl">
               <FaWhatsappSquare />
             </a>
           </div>
         </div>
-
-
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4 border-b-2 border-blue-500 pb-1 w-fit">
+        {/* Services */}
+        <div className="p-5">
+          <h3 className="text-lg font-bold text-white mb-4">
             OUR SERVICES
           </h3>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Service Solution</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Certifications</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Warranty Registeration</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Installation and Service Costs</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> servicing</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Buy Extended warranty & AMC</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Service Escalation</a></li>
+          <ul className="space-y-3">
+            {[
+              "Service Solution",
+              "Certifications",
+              "Warranty Registration",
+              "Installation and Service Costs",
+              "Servicing",
+              "Buy Extended warranty & AMC",
+              "Service Escalation"
+            ].map((service, index) => (
+              <li key={index}>
+                <a href="#" className="hover:text-blue-300 flex items-center group transition-all duration-300">
+                  <FaChevronRight className="text-blue-500 text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span className="group-hover:underline">{service}</span>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
-
-
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4 border-b-2 border-blue-500 pb-1 w-fit">
+        {/* Products */}
+        <div className="p-5">
+          <h3 className="text-lg font-bold text-white mb-4">
             PRODUCTS
           </h3>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Room Air Conditioners</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Cassette Air Conditioner</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Verticool Air Conditioner</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Heat Pumps</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Commercial Refrigrater</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Cold Storage</a></li>
-            <li><a href="#" className="hover:text-white flex items-center"><i className="fas fa-chevron-right text-xs mr-2"></i> Water Coolers</a></li>
+          <ul className="space-y-3">
+            {[
+              "Room Air Conditioners",
+              "Cassette Air Conditioner",
+              "Verticool Air Conditioner",
+              "Heat Pumps",
+              "Commercial Refrigerator",
+              "Cold Storage",
+              "Water Coolers"
+            ].map((product, index) => (
+              <li key={index}>
+                <a href="#" className="hover:text-blue-300 flex items-center group transition-all duration-300">
+                  <FaChevronRight className="text-blue-500 text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span className="group-hover:underline">{product}</span>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
-
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4 border-b-2 border-blue-500 pb-1 w-fit">
+        {/* Contact */}
+        <div className="p-5">
+          <h3 className="text-lg font-bold text-white mb-4">
             CONTACT US
           </h3>
-          <ul className="space-y-4 text-sm">
-            <li className="flex items-start">
-              <i className="fas fa-mobile-alt text-white mt-1 mr-3"></i>
+          <ul className="space-y-5">
+            <li className="flex items-start group">
+              <div className="w-10 h-10 rounded-full text-white bg-opacity-20 flex items-center justify-center mr-3 group-hover:bg-blue-500 transition-all duration-300">
+                <FaPhone className="text-blue-400 group-hover:text-white" />
+              </div>
               <div>
-                <strong className="block">MOBILE :</strong>
-                <span>+91 9535409630</span>
+                <strong className="block text-white">MOBILE</strong>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300">+91 9535409630</span>
               </div>
             </li>
-            <li className="flex items-start">
-              <i className="fab fa-whatsapp text-white mt-1 mr-3"></i>
+            <li className="flex items-start group">
+              <div className="w-10 h-10 rounded-full  bg-opacity-20 flex items-center justify-center mr-3 group-hover:bg-blue-500 transition-all duration-300">
+                <FaWhatsappSquare className="text-green-400 group-hover:text-white" />
+              </div>
               <div>
-                <strong className="block">WHATSAPP :</strong>
-                <span>+91 8951929938</span>
+                <strong className="block text-white">WHATSAPP</strong>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300">+91 8951929938</span>
               </div>
             </li>
-            <li className="flex items-start">
-              <i className="fas fa-envelope text-white mt-1 mr-3"></i>
+            <li className="flex items-start group">
+              <div className="w-10 h-10 rounded-full bg-opacity-20 flex items-center justify-center mr-3 group-hover:bg-blue-500 transition-all duration-300">
+                <FaEnvelope className="text-red-400 group-hover:text-white" />
+              </div>
               <div>
-                <strong className="block">EMAIL :</strong>
-                <span>projects@fabair.in</span>
+                <strong className="block text-white">EMAIL</strong>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300">projects@fabair.in</span>
               </div>
             </li>
-            <li className="flex items-start">
-              <i className="fas fa-map-marker-alt text-white mt-1 mr-3"></i>
+            <li className="flex items-start ms-3 group">
+              <div className="w-10 h-10 rounded-full bg-opacity-20 flex items-center justify-center mr-3 group-hover:bg-blue-500 transition-all duration-300">
+                <FaMapMarkerAlt className="text-purple-400 group-hover:text-white" />
+              </div>
               <div>
-                <strong className="block text-justify">ADDRESS :</strong>
-                <p>No. 23, 1st Cross, 1st Main, Lal Bagh Main Rd, next to Phoenix Hospital, Bengaluru, Karnataka 560027</p>
+                <strong className="block  text-white">ADDRESS</strong>
+                <p className="text-gray-300 group-hover:text-white transition-colors duration-300 text-sm">
+                  2nd floor, 1F/957, Vardan Khand, Sector 1, Gomti Nagar, Lucknow, Uttar Pradesh 226010
+                </p>
               </div>
             </li>
           </ul>
         </div>
       </div>
-
-      <hr className="my-8 border-gray-700" />
-
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-        <p>© Copyright 2025</p>
-        <div className="space-x-6 me-5 mt-2 md:mt-0">
-          <a href="#" className="hover:text-white">About</a>
-          <a href="#" className="hover:text-white">Help Desk</a>
-          <a href="#" className="hover:text-white">Privacy Policy</a>
+      
+      <div className="container mx-auto px-4 mt-10 relative z-10">
+        <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mb-6"></div>
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <p className="mb-2 md:mb-0">© Copyright 2025 || Developed By Vikas Bind</p>
+          <div className="flex space-x-6">
+            {["About", "Help Desk", "Privacy Policy"].map((item, index) => (
+              <a 
+                key={index} 
+                href="#" 
+                className="hover:text-white transition-colors duration-300 relative group"
+              >
+                {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
   );
 };
-
 export default Footer;

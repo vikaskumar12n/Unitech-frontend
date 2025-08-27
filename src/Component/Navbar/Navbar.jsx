@@ -48,7 +48,7 @@ const Navbar = () => {
       dropdown: [
         { name: "Our Company", link: "/about-us" },
         { name: "Governance Structure", link: "/governance-structure" },
-        { name: "Guiding Policies", link: "/guiding-policies" },
+        // { name: "Guiding Policies", link: "/guiding-policies" },
       ],
     },
     {
@@ -56,7 +56,7 @@ const Navbar = () => {
       li: <FaSortDown />,
       // icon: <FaBoxOpen className="inline-block mb-1 text-sm text-blue-600" />,
       dropdown: [
-        { name: "Overview", link: "/overview" },
+         
         { name: "Room Air Conditioners", link: "/product" },
         { name: "Cassette Air Conditioner", link: "/" },
         { name: "Verticool Air Conditioner", link: "/" },
@@ -104,43 +104,43 @@ const Navbar = () => {
     >
       {/* Top Navbar */}
 <div
-  className="top_section text-white h-9 text-xs py-2 px-4 flex justify-between items-center relative overflow-hidden"
+  className="top_section  h-9 text-xs py-2 px-4 flex justify-between items-center relative overflow-hidden"
 >
   {/* Background Layers */}
   <div className="absolute top-0 left-0 w-1/2 h-full bg-white"></div>
-  <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-300"></div>
-  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-blue-300 rounded-full"></div>
+  <div className="absolute top-0 right-0 w-1/2 h-full bg-color"></div>
+  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-color rounded-full"></div>
 
   {/* Left Section - Contact Info */}
   <div className="flex items-center space-x-4 relative z-10">
     
     <Link href="tel:+919890989098" className="flex items-center">
-      <FaPhoneAlt className="text-blue-300 mr-1  text-2xl" />
+      <FaPhoneAlt className="text-color mr-1  text-2xl" />
       <span>+919890989098</span>
     </Link>
     <span className="h-4 border-l border-gray-600"></span>
     
     <Link href="mailto:info@myholidays.com" className="flex  items-center">
-      <FaEnvelope className="text-blue-300 mr-2 text-2xl" />
+      <FaEnvelope className="text-color mr-2 text-2xl" />
       <span>info@myholidays.com</span>
     </Link>
   </div>
 
   {/* Right Section - Social Links */}
   <div className="hidden sm:flex items-center space-x-4 relative z-10">
-    <a href="#" className="flex items-center hover:text-white">
-      <span className="h-4 border-l border-gray-600 mr-4"></span>
-      <FaLinkedin className="text-black mr-1" />
+    <a href="#" className="flex items-center text-white hover:text-white">
+      <span className="h-4 border-l border-white mr-4"></span>
+      <FaLinkedin className="text-white mr-1" />
       <span className="hidden sm:inline">LinkedIn</span>
     </a>
-    <a href="#" className="flex items-center hover:text-white">
-      <span className="h-4 border-l border-gray-600 mr-4"></span>
-      <FaFacebook className="text-black mr-1" />
+    <a href="#" className="flex items-center text-white hover:text-white">
+      <span className="h-4 border-l border-white mr-4"></span>
+      <FaFacebook className="text-white mr-1" />
       <span className="hidden sm:inline">Facebook</span>
     </a>
-    <a href="#" className="flex items-center hover:text-white">
-      <span className="h-4 border-l border-gray-600 mr-4"></span>
-      <FaInstagram className="text-black mr-1" />
+    <a href="#" className="flex items-center text-white hover:text-white">
+      <span className="h-4 border-l border-white mr-4"></span>
+      <FaInstagram className="text-white mr-1" />
       <span className="hidden sm:inline">Instagram</span>
     </a>
   </div>
@@ -150,23 +150,29 @@ const Navbar = () => {
 
       {/* MenuBar */}
       <div
-        className={`fixed w-full  py-4  z-50 transition-colors duration-300 ${mobileMenuOpen ? "bg-blue-900" : "bg-transparent"
+        className={`fixed w-full  py-4  z-50 transition-colors duration-300 ${mobileMenuOpen ? "bg-color" : "bg-transparent"
           } ${isDesktop ? "menu" : ""}`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Desktop Menu */}
-          <div className="items-center hidden md:flex">
+          {/* <div className="items-center hidden md:flex">
             <img
               src="/logo.png"
               alt="Logo"
               className="h-12 w-auto"
             />
+          </div> */}
+           <div className="mb-4 flex items-center">
+            <div className="w-12 h-12 bg-gradient-to-r bg-color rounded-lg flex items-center justify-center mr-3">
+              <span className="text-white font-bold text-xl">U</span>
+            </div>
+            <h2 className="text-4xl font-bold text-black">Unitech</h2>
           </div>
           <ul className="hidden md:flex space-x-7 justify-center text-xs">
             {menuItems.map((item, index) => (
               <li
                 key={index}
-                className="relative group text-black text-2xl font-bold hover:text-blue-400 transition duration-300"
+                className="relative group text-black text-2xl font-bold hover:text-color transition duration-300"
                 onMouseEnter={() => setOpenDropdown(index)}
                 onClick={() => setOpenDropdown(null)}
                 onMouseLeave={() => setOpenDropdown(false)}
@@ -178,14 +184,14 @@ const Navbar = () => {
                     className="relative group text-black text-sm font-semibold transition duration-300 "
                   >
                     {item.icon} {item.name}
-                    <span className="absolute w-full left-1/2 -translate-x-1/2 -bottom-1 h-1  bg-blue-400 transition-all duration-300 scale-x-0 group-hover:scale-x-100 origin-center"></span>
+                    <span className="absolute w-full left-1/2 -translate-x-1/2 -bottom-1 h-1  bg-color transition-all duration-300 scale-x-0 group-hover:scale-x-100 origin-center"></span>
                   </Link>
                 ) : (
                   <button className="relative group text-black text-sm font-semibold transition duration-300 cursor-default inline-block">
                     <span className="flex items-center gap-1">
                       {item.icon} {item.name} {item.li}
                     </span>
-                    <span className="absolute  w-full left-1/2 -translate-x-1/2 -bottom-1 h-1  bg-blue-400 transition-all duration-300 scale-x-0 group-hover:scale-x-100 origin-center"></span>
+                    <span className="absolute  w-full left-1/2 -translate-x-1/2 -bottom-1 h-1  bg-color transition-all duration-300 scale-x-0 group-hover:scale-x-100 origin-center"></span>
                   </button>
                 )}
 
@@ -227,44 +233,58 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <ul className="md:hidden mt-3 space-y-2 text-left text-white">
-            {menuItems.map((item, index) => (
-              <li
-                key={index}
-                className="relative group text-white hover:text-gray-300 transition duration-300"
+      
+{mobileMenuOpen && (
+  <ul className="md:hidden mt-3 space-y-2 text-left text-white">
+    {menuItems.map((item, index) => (
+      <li key={index} className="relative group">
+        {item.link ? (
+          // Direct Link for items with link
+          <Link
+            to={item.link}
+            className="block text-xs py-2 px-3 hover:bg-blue-700 rounded"
+            onClick={() => setMobileMenuOpen(false)} // close menu after click
+          >
+            {item.name}
+          </Link>
+        ) : (
+          // Dropdown toggle for items without link
+          <>
+            <button
+              className="w-full flex justify-between items-center text-xs py-2 px-3 hover:bg-blue-700 rounded"
+              onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
+            >
+              {item.name} {item.li}
+            </button>
+            {item.dropdown && (
+              <ul
+                className={`mt-2 ml-2 bg-white text-gray-800 rounded-lg shadow-lg transition-all duration-300 ${
+                  openDropdown === index ? "block" : "hidden"
+                }`}
               >
-                <button
-                  className="text-xs"
-                  onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
-                >
-                  {item.name}
-                </button>
-
-                {item.dropdown && (
-                  <ul
-                    className={`absolute top-full mt-2 w-56 text-gray-800 bg-white rounded-lg shadow-lg z-50
-                 transition duration-300 ease-in-out transform
-                 ${openDropdown === index ? "visible opacity-100" : "invisible opacity-0"}`}
-                  >
-                    {item.dropdown.map((subItem, subIndex) => (
-                      <li key={subIndex} className="last:rounded-b-lg first:rounded-t-lg">
-                        <Link
-                          to={subItem.link || "/"}
-                          className="block py-3 px-4 text-sm cursor-pointer hover:bg-blue-100 transition duration-300 ease-in-out text-blue-700"
-                          onClick={() => setOpenDropdown(null)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-
-            ))}
-          </ul>
+                {item.dropdown.map((subItem, subIndex) => (
+                  <li key={subIndex}>
+                    <Link
+                      to={subItem.link || "/"}
+                      className="block py-2 px-4 text-sm hover:bg-blue-100"
+                      onClick={() => {
+                        setOpenDropdown(null);
+                        setMobileMenuOpen(false); // close mobile menu
+                      }}
+                    >
+                      {subItem.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </>
         )}
+      </li>
+    ))}
+  </ul>
+)}
+
 
       </div>
     </nav>

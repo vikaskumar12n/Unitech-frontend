@@ -1,9 +1,10 @@
-// src/components/ServiceSlider.jsx
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ServiceCard from "./SolutionSlideChild"; 
 import SectionHeading from "../../../Services/HeadingSection/Heading";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useState } from "react";
 
 // Service Data
 const services = [
@@ -11,40 +12,75 @@ const services = [
     id: 1,
     title: "Air Quality Check",
     description:
-      "Lorem ipsum dolor consectetur adipiscing Fusce varius euismod lacus eget feugiat..",
+      "Professional air quality assessment to ensure healthy indoor environment for your home or office.",
     image: "/Air-Quality-Check.jpg",
   },
   {
     id: 2,
     title: "PIR Ducting",
     description:
-      "Lorem ipsum dolor consectetur adipiscing Fusce varius euismod lacus eget feugiat..",
+      "High-performance PIR ducting solutions for superior thermal insulation and energy efficiency.",
     image: "/PIR-Ducting.jpg",
   },
   {
     id: 3,
     title: "Basement Ventilation",
     description:
-      "Lorem ipsum dolor consectetur adipiscing Fusce varius euismod lacus eget feugiat..",
+      "Specialized basement ventilation systems to prevent moisture buildup and improve air quality.",
     image: "/Basement-Ventilation.jpg",
   },
   {
     id: 4,
     title: "STP Ventilation",
     description:
-      "Lorem ipsum dolor consectetur adipiscing Fusce varius euismod lacus eget feugiat..",
+      "Efficient ventilation solutions for Sewage Treatment Plants to ensure optimal operation.",
     image: "/STP-Ventilation.jpg",
   },
   {
     id: 5,
     title: "Air Balancing",
     description:
-      "Lorem ipsum dolor consectetur adipiscing Fusce varius euismod lacus eget feugiat..",
-    image: "/Air-Balancing.jpg", },
-   
+      "Precision air balancing services for optimal HVAC performance and energy efficiency.",
+    image: "/Air-Balancing.jpg",
+  },
 ];
 
+// Custom Arrow Components
+const CustomPrevArrow = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-prev-arrow z-10`}
+      style={{ ...style, display: "block", left: "10px" }}
+      onClick={onClick}
+    >
+      <div className="w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-cyan-600 hover:bg-white transition-colors duration-300">
+        <FaChevronLeft />
+      </div>
+    </div>
+  );
+};
+
+const CustomNextArrow = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-next-arrow z-10`}
+      style={{ ...style, display: "block", right: "10px" }}
+      onClick={onClick}
+    >
+      <div className="w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-cyan-600 hover:bg-white transition-colors duration-300">
+        <FaChevronRight />
+      </div>
+    </div>
+  );
+};
+
 const ServiceSlider = () => {
+  const [sliderRef, setSliderRef] = useState(null);
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -53,6 +89,8 @@ const ServiceSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
     responsive: [
       {
         breakpoint: 1024,  
@@ -69,32 +107,64 @@ const ServiceSlider = () => {
         },
       },
     ],
+    customPaging: function() {
+      return (
+        <div className="w-3 h-3 rounded-full bg-gray-300 mx-1 transition-all duration-300 hover:bg-cyan-900"></div>
+      );
+    },
   };
-
+  
   return (
-   <section className="py-12  bg-gray-100 sm:py-16 overflow-x-hidden">
-  <div className="max-w-7xl mx-auto px-4">
-    <div className="mb-10">
-      <SectionHeading
-        title="VIEW MORE SERVICES"
-        className="font-extrabold text-center text-black text-lg sm:text-2xl"
-      />
-    </div>
-
-    <Slider {...settings}>
-      {services.map((service) => (
-        <div key={service.id} className="px-1 sm:px-2 w-full box-border">
-          <ServiceCard
-            image={service.image}
-            title={service.title}
-            description={service.description}
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxZTI5N2IiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="mb-12 text-center">
+          <SectionHeading
+            title="VIEW MORE SERVICES"
+            className="font-extrabold text-center text-color text-2xl sm:text-3xl mb-4"
           />
+          <p className="text-black max-w-2xl mx-auto">
+            Explore our comprehensive range of HVAC solutions designed to meet your specific needs
+          </p>
         </div>
-      ))}
-    </Slider>
-  </div>
-</section>
-
+        
+        <div className="relative">
+          <Slider ref={setSliderRef} {...settings}>
+            {services.map((service) => (
+              <div key={service.id} className="px-3 sm:px-4 w-full box-border">
+                <ServiceCard
+                  image={service.image}
+                  title={service.title}
+                  description={service.description}
+                />
+              </div>
+            ))}
+          </Slider>
+          
+          {/* Custom Navigation Buttons */}
+          <div className="flex justify-center mt-8 space-x-4">
+            <button 
+              className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center  hover:bg-cyan-50 transition-colors duration-300"
+              onClick={() => sliderRef?.slickPrev()}
+            >
+              <FaChevronLeft />
+            </button>
+            <button 
+              className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-color hover:bg-cyan-50 transition-colors duration-300"
+              onClick={() => sliderRef?.slickNext()}
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      {/* Decorative Elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+    </section>
   );
 };
 
