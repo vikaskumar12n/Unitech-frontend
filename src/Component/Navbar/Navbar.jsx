@@ -56,7 +56,7 @@ const Navbar = () => {
       li: <FaSortDown />,
       // icon: <FaBoxOpen className="inline-block mb-1 text-sm text-blue-600" />,
       dropdown: [
-         
+
         { name: "Room Air Conditioners", link: "/product" },
         { name: "Cassette Air Conditioner", link: "/" },
         { name: "Verticool Air Conditioner", link: "/" },
@@ -87,7 +87,7 @@ const Navbar = () => {
       li: <FaSortDown />,
       // icon: <FaNewspaper className="inline-block mb-1 text-sm text-blue-600" />,
       link: "/solution"
-      
+
     },
     {
       name: "CONTACT US",
@@ -103,190 +103,206 @@ const Navbar = () => {
         }`}
     >
       {/* Top Navbar */}
-<div
-  className="top_section  h-9 text-xs py-2 px-4 flex justify-between items-center relative overflow-hidden"
->
-  {/* Background Layers */}
-  <div className="absolute top-0 left-0 w-1/2 h-full bg-white"></div>
-  <div className="absolute top-0 right-0 w-1/2 h-full bg-color"></div>
-  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-color rounded-full"></div>
+      <div className="top_section h-9 text-xs py-2 px-4 flex justify-between items-center relative overflow-hidden sticky top-0 z-50"
+      >
+        {/* Background Layers */}
+        <div className="absolute top-0 left-0 w-1/2 h-full bg-white"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-color"></div>
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-color rounded-full"></div>
 
-  {/* Left Section - Contact Info */}
-  <div className="flex items-center space-x-4 relative z-10">
-    
-    <Link href="tel:+919890989098" className="flex items-center">
-      <FaPhoneAlt className="text-color mr-1  text-2xl" />
-      <span>+919890989098</span>
-    </Link>
-    <span className="h-4 border-l border-gray-600"></span>
-    
-    <Link href="mailto:info@myholidays.com" className="flex  items-center">
-      <FaEnvelope className="text-color mr-2 text-2xl" />
-      <span>info@myholidays.com</span>
-    </Link>
-  </div>
+        {/* Left Section - Contact Info */}
+        <div className="flex items-center space-x-4 relative z-10">
 
-  {/* Right Section - Social Links */}
-  <div className="hidden sm:flex items-center space-x-4 relative z-10">
-    <a href="#" className="flex items-center text-white hover:text-white">
-      <span className="h-4 border-l border-white mr-4"></span>
-      <FaLinkedin className="text-white mr-1" />
-      <span className="hidden sm:inline">LinkedIn</span>
-    </a>
-    <a href="#" className="flex items-center text-white hover:text-white">
-      <span className="h-4 border-l border-white mr-4"></span>
-      <FaFacebook className="text-white mr-1" />
-      <span className="hidden sm:inline">Facebook</span>
-    </a>
-    <a href="#" className="flex items-center text-white hover:text-white">
-      <span className="h-4 border-l border-white mr-4"></span>
-      <FaInstagram className="text-white mr-1" />
-      <span className="hidden sm:inline">Instagram</span>
-    </a>
-  </div>
-</div>
+          <Link href="tel:+919890989098" className="flex items-center">
+            <FaPhoneAlt className="text-color mr-1  text-2xl" />
+            <span>+919890989098</span>
+          </Link>
+          <span className="h-4 border-l border-gray-600"></span>
+
+          <Link href="mailto:info@myholidays.com" className="flex  items-center">
+            <FaEnvelope className="text-color mr-2 text-2xl" />
+            <span>info@myholidays.com</span>
+          </Link>
+        </div>
+
+        {/* Right Section - Social Links */}
+        <div className="hidden sm:flex items-center space-x-4 relative z-10">
+          <a href="#" className="flex items-center text-white hover:text-white">
+            <span className="h-4 border-l border-white mr-4"></span>
+            <FaLinkedin className="text-white mr-1" />
+            <span className="hidden sm:inline">LinkedIn</span>
+          </a>
+          <a href="#" className="flex items-center text-white hover:text-white">
+            <span className="h-4 border-l border-white mr-4"></span>
+            <FaFacebook className="text-white mr-1" />
+            <span className="hidden sm:inline">Facebook</span>
+          </a>
+          <a href="#" className="flex items-center text-white hover:text-white">
+            <span className="h-4 border-l border-white mr-4"></span>
+            <FaInstagram className="text-white mr-1" />
+            <span className="hidden sm:inline">Instagram</span>
+          </a>
+        </div>
+      </div>
 
 
 
       {/* MenuBar */}
       <div
-        className={`fixed w-full  py-4  z-50 transition-colors duration-300 ${mobileMenuOpen ? "bg-color" : "bg-transparent"
-          } ${isDesktop ? "menu" : ""}`}
-      >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Desktop Menu */}
-          {/* <div className="items-center hidden md:flex">
-            <img
-              src="/logo.png"
-              alt="Logo"
-              className="h-12 w-auto"
-            />
-          </div> */}
-           <div className="mb-4 flex items-center">
-            <div className="w-12 h-12 bg-gradient-to-r bg-color rounded-lg flex items-center justify-center mr-3">
-              <span className="text-white font-bold text-xl">U</span>
-            </div>
-            <h2 className="text-4xl font-bold text-black">Unitech</h2>
-          </div>
-          <ul className="hidden md:flex space-x-7 justify-center text-xs">
-            {menuItems.map((item, index) => (
-              <li
-                key={index}
-                className="relative group text-black text-2xl font-bold hover:text-color transition duration-300"
-                onMouseEnter={() => setOpenDropdown(index)}
-                onClick={() => setOpenDropdown(null)}
-                onMouseLeave={() => setOpenDropdown(false)}
-              >
-
-                {item.link ? (
-                  <Link
-                    to={item.link}
-                    className="relative group text-black text-sm font-semibold transition duration-300 "
-                  >
-                    {item.icon} {item.name}
-                    <span className="absolute w-full left-1/2 -translate-x-1/2 -bottom-1 h-1  bg-color transition-all duration-300 scale-x-0 group-hover:scale-x-100 origin-center"></span>
-                  </Link>
-                ) : (
-                  <button className="relative group text-black text-sm font-semibold transition duration-300 cursor-default inline-block">
-                    <span className="flex items-center gap-1">
-                      {item.icon} {item.name} {item.li}
-                    </span>
-                    <span className="absolute  w-full left-1/2 -translate-x-1/2 -bottom-1 h-1  bg-color transition-all duration-300 scale-x-0 group-hover:scale-x-100 origin-center"></span>
-                  </button>
-                )}
-
-
-                {item.dropdown && (
-                  <ul
-                    className={`absolute top-full mt-2 w-56 text-gray-800 bg-white rounded-lg shadow-lg z-50
-                transition duration-300 ease-in-out transform
-                ${openDropdown === index ? "visible opacity-100" : "invisible opacity-0"}`}
-                  >
-                    {item.dropdown.map((subItem, subIndex) => (
-                      <li key={subIndex} className="last:rounded-b-lg first:rounded-t-lg">
-                        <Link
-                          to={subItem.link || "/"}
-                          className="block py-3 px-4 text-sm cursor-pointer hover:bg-blue-100 transition duration-300 ease-in-out text-black"
-                          onClick={() => setOpenDropdown(null)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-
-
-          {/* Mobile Hamburger */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`text-2xl ${mobileMenuOpen ? "text-white" : "text-white"
-                } absolute  top-[-2.2rem] right-4`}
-            >
-              {mobileMenuOpen ? <FaTimes /> : <FaBars />}
-            </button>
-          </div>
+  className={`fixed w-full py-4 z-50 transition-all duration-500 ease-in-out backdrop-blur-lg ${
+    mobileMenuOpen 
+      ? "bg-gradient-to-r from-blue-900/95 to-indigo-900/95 shadow-2xl" 
+      : "bg-transparent"
+  } ${isDesktop ? "menu" : ""}`}
+>
+  <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
+    {/* Logo Section */}
+    <div className="flex items-center space-x-3 group">
+      <div className="relative">
+        <div className="w-12 h-12 bg-gradient-to-r bg-color rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+          <span className="text-white font-bold text-xl">U</span>
         </div>
-
-        {/* Mobile Menu */}
-      
-{mobileMenuOpen && (
-  <ul className="md:hidden mt-3 space-y-2 text-left text-white">
-    {menuItems.map((item, index) => (
-      <li key={index} className="relative group">
-        {item.link ? (
-          // Direct Link for items with link
-          <Link
-            to={item.link}
-            className="block text-xs py-2 px-3 hover:bg-blue-700 rounded"
-            onClick={() => setMobileMenuOpen(false)} // close menu after click
-          >
-            {item.name}
-          </Link>
-        ) : (
-          // Dropdown toggle for items without link
-          <>
-            <button
-              className="w-full flex justify-between items-center text-xs py-2 px-3 hover:bg-blue-700 rounded"
-              onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
-            >
-              {item.name} {item.li}
-            </button>
-            {item.dropdown && (
-              <ul
-                className={`mt-2 ml-2 bg-white text-gray-800 rounded-lg shadow-lg transition-all duration-300 ${
-                  openDropdown === index ? "block" : "hidden"
-                }`}
-              >
-                {item.dropdown.map((subItem, subIndex) => (
-                  <li key={subIndex}>
-                    <Link
-                      to={subItem.link || "/"}
-                      className="block py-2 px-4 text-sm hover:bg-blue-100"
-                      onClick={() => {
-                        setOpenDropdown(null);
-                        setMobileMenuOpen(false); // close mobile menu
-                      }}
-                    >
-                      {subItem.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </>
-        )}
-      </li>
-    ))}
-  </ul>
-)}
-
-
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
       </div>
+      <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r bg-color">
+        Unitech
+      </h2>
+    </div>
+
+    {/* Desktop Menu */}
+    <ul className="hidden md:flex space-x-8">
+      {menuItems.map((item, index) => (
+        <li
+          key={index}
+          className="relative group"
+          onMouseEnter={() => setOpenDropdown(index)}
+          onMouseLeave={() => setOpenDropdown(false)}
+        >
+          {item.link ? (
+            <Link
+              to={item.link}
+              className="relative flex items-center space-x-1 py-2 text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-300"
+            >
+              <span>{item.icon}</span>
+              <span>{item.name}</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          ) : (
+            <button className="flex items-center space-x-1 py-2 text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-300">
+              <span>{item.icon}</span>
+              <span>{item.name}</span>
+              <span>{item.li}</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-300 group-hover:w-full"></span>
+            </button>
+          )}
+
+          {/* Dropdown Menu */}
+          {item.dropdown && (
+            <div
+              className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 transform ${
+                openDropdown === index
+                  ? "opacity-100 translate-y-0 visible"
+                  : "opacity-0 -translate-y-2 invisible"
+              }`}
+            >
+              <div className="py-2">
+                {item.dropdown.map((subItem, subIndex) => (
+                  <Link
+                    key={subIndex}
+                    to={subItem.link || "/"}
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-colors duration-200"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    {/* Mobile Menu Button */}
+    <div className="md:hidden">
+      <button
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className={`p-2 rounded-lg transition-all duration-300 ${
+          mobileMenuOpen
+            ? "bg-white/20 text-white"
+            : "text-gray-700 hover:bg-gray-100"
+        }`}
+      >
+        {mobileMenuOpen ? (
+          <FaTimes className="text-xl" />
+        ) : (
+          <FaBars className="text-xl" />
+        )}
+      </button>
+    </div>
+  </div>
+
+  {/* Mobile Menu */}
+  <div
+    className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+      mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+    }`}
+  >
+    <div className="px-4 pt-2 pb-4 space-y-1">
+      {menuItems.map((item, index) => (
+        <div key={index} className="py-1">
+          {item.link ? (
+            <Link
+              to={item.link}
+              className="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-colors duration-200"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <div className="flex items-center space-x-3">
+                <span>{item.icon}</span>
+                <span>{item.name}</span>
+              </div>
+            </Link>
+          ) : (
+            <>
+              <button
+                className="w-full flex justify-between items-center px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-colors duration-200"
+                onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
+              >
+                <div className="flex items-center space-x-3">
+                  <span>{item.icon}</span>
+                  <span>{item.name}</span>
+                </div>
+                <span>{item.li}</span>
+              </button>
+              {item.dropdown && (
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openDropdown === index ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  <div className="pl-8 py-2 space-y-1">
+                    {item.dropdown.map((subItem, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        to={subItem.link || "/"}
+                        className="block px-4 py-2 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-colors duration-200"
+                        onClick={() => {
+                          setOpenDropdown(null);
+                          setMobileMenuOpen(false);
+                        }}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
     </nav>
   );
 };
