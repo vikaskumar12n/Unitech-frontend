@@ -6,7 +6,7 @@ import { FaStar, FaQuoteLeft } from "react-icons/fa";
 import { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import '../../App.css'
 const testimonials = [
   {
     id: 1,
@@ -63,53 +63,37 @@ const TestimonialSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
-    centerMode: true,
-    centerPadding: "0px",
     slidesToShow: 3,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4500,
     speed: 700,
     pauseOnHover: true,
+    arrows: false,
     dotsClass: "slick-dots custom-dots",
-    arrows: false, // Hide arrows on mobile for cleaner look
     responsive: [
       {
-        breakpoint: 1280, // xl screens
-        settings: {
-          slidesToShow: 3,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 1024, // lg screens
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
           centerMode: false,
-          centerPadding: "20px",
         },
       },
       {
-        breakpoint: 768, // md screens
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           centerMode: false,
-          centerPadding: "40px", // Add some padding for preview
         },
       },
       {
-        breakpoint: 640, // sm screens
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           centerMode: false,
-          centerPadding: "20px",
-        },
-      },
-      {
-        breakpoint: 480, // xs screens
-        settings: {
-          slidesToShow: 1,
-          centerMode: false,
-          centerPadding: "15px",
         },
       },
     ],
@@ -118,6 +102,7 @@ const TestimonialSlider = () => {
   return (
     <div className="relative w-full py-8 sm:py-12 lg:py-16 px-3 sm:px-4 lg:px-8 overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50">
       {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
       <div className="absolute bottom-0 right-0 w-16 sm:w-24 lg:w-32 h-16 sm:h-24 lg:h-32 bg-purple-200 rounded-full filter blur-3xl opacity-30"></div>
       <div className="absolute top-5 sm:top-10 left-5 sm:left-10 w-12 sm:w-18 lg:w-24 h-12 sm:h-18 lg:h-24 bg-blue-200 rounded-full filter blur-3xl opacity-30"></div>
       
@@ -134,11 +119,11 @@ const TestimonialSlider = () => {
         </div>
         
         {/* Testimonial Slider */}
-        <div className="testimonial-slider" data-aos="fade-up" data-aos-delay="200">
+        <div className="testimonial-slider px-4 sm:px-0" data-aos="fade-up" data-aos-delay="200">
           <Slider {...settings}>
             {testimonials.map((item) => (
-              <div key={item.id} className="px-1 sm:px-2">
-                <div className="bg-white rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-5 lg:p-6 xl:p-7 h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100 mx-2">
+              <div key={item.id} className="px-2">
+                <div className="bg-white rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-5 lg:p-6 xl:p-7 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100">
                   {/* Quote Icon */}
                   <div className="flex justify-center mb-4 sm:mb-5">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-md">
@@ -148,14 +133,14 @@ const TestimonialSlider = () => {
                   
                   {/* Feedback Text */}
                   <div className="mb-5 sm:mb-6">
-                    <p className="text-gray-700 text-center leading-relaxed text-sm sm:text-base lg:text-base italic px-1 sm:px-0">
+                    <p className="text-gray-700 text-center leading-relaxed text-sm sm:text-base italic">
                       &quot;{item.feedback}&quot;
                     </p>
                   </div>
                   
                   {/* Rating Stars */}
                   <div className="flex justify-center mb-5 sm:mb-6">
-                    <div className="flex space-x-0.5 sm:space-x-1">
+                    <div className="flex space-x-1">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <FaStar 
                           key={i} 
@@ -197,7 +182,7 @@ const TestimonialSlider = () => {
         </div>
       </div>
 
-     
+    
     </div>
   );
 };
