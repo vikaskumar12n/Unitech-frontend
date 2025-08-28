@@ -75,7 +75,7 @@ const Product = () => {
       id: 1,
       title: "HEAVY DUTY INVERTER AC | D SERIES",
       description: "Industrial-grade performance with energy-efficient inverter technology for commercial applications.",
-      image: "/public/Product/room_air_condi/IC324DCUHD.webp",
+      image: "/Product/room_air_condi/IC324DCUHD.webp",
       rating: 5,
       price: "65,990",
       badge: "COMMERCIAL",
@@ -89,7 +89,7 @@ const Product = () => {
       id: 2,
       title: "HEAVY DUTY INVERTER AC | V SERIES | 1.7 TON",
       description: "Powerful 1.7 Ton inverter AC with advanced cooling for demanding commercial environments.",
-      image: "/public/Product/room_air_condi/ic319vcuhd_gallery-images-01_3.webp",
+      image: "/Product/room_air_condi/ic319vcuhd_gallery-images-01_3.webp",
       rating: 5,
       price: "58,990",
       badge: "POWERFUL",
@@ -103,7 +103,7 @@ const Product = () => {
       id: 3,
       title: "HEAVY DUTY FIXED SPEED AC | A SERIES | 2.2 TON",
       description: "High-capacity 2.2 Ton fixed speed AC designed for large commercial spaces and heavy-duty applications.",
-      image: "/public/Product/room_air_condi/fa226acuhd_gallery-images-01_2_2.webp",
+      image: "/Product/room_air_condi/fa226acuhd_gallery-images-01_2_2.webp",
       rating: 4,
       price: "52,990",
       features: [
@@ -116,7 +116,7 @@ const Product = () => {
       id: 4,
       title: "HEAVY DUTY FIXED SPEED AC | D SERIES | 1.6 TON",
       description: "Reliable 1.6 Ton fixed speed AC with consistent cooling performance for commercial applications.",
-      image: "/public/Product/room_air_condi/1_copy__1.png",
+      image: "/Product/room_air_condi/1_copy__1.png",
       rating: 4,
       price: "48,990",
       features: [
@@ -204,7 +204,7 @@ const Product = () => {
     switch(activeSection) {
       case 'residential': return "/Product/specificedetor ac.webp";
       case 'commercial': return "/Product/Heavy-Duty-Flagship-LP-1800x473.webp";
-      case 'premium': return "/public/Product/SEE-Flagship-LP-1800x473_bd7e883f-ded9-4e46-87ec-75c9990e959c.webp";
+      case 'premium': return "/Product/SEE-Flagship-LP-1800x473_bd7e883f-ded9-4e46-87ec-75c9990e959c.webp";
       default: return "/Product/specificedetor ac.webp";
     }
   };

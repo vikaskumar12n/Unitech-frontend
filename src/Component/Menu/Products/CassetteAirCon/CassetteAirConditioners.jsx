@@ -94,7 +94,7 @@ const CassetteAirConditioners = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-blue-100 to-transparent rounded-xl opacity-70"></div>
                                 <div className="relative bg-gray-50 rounded-xl p-4 border border-gray-200">
                                     <img
-                                        src="/public/Product/client_cassette-front-copy.png"
+                                        src="/Product/client_cassette-front-copy.png"
                                         alt="Cassette AC"
                                         className="w-full h-auto block rounded-lg"
                                     />
