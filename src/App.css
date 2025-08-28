@@ -44,3 +44,16 @@ body {
         .animate-fadeIn {
           animation: fadeIn 0.8s ease-out forwards;
         }
+
+
+
+        /* testmonial css*/
+          .custom-dots li button:before {
+          color: #818cf8;
+          opacity: 0.5;
+          font-size: 10px;
+        }
+        .custom-dots li.slick-active button:before {
+          color: #4f46e5;
+          opacity: 1;
+        }

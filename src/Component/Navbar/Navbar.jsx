@@ -164,7 +164,7 @@ const Navbar = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
       </div>
-      <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r bg-color">
+      <h2 className="text-3xl font-bold  text-color text-transparent bg-gradient-to-r .">
         Unitech
       </h2>
     </div>
