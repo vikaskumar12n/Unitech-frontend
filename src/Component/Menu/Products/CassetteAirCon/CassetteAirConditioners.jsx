@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CassetteAirConditioners = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -47,7 +48,19 @@ const CassetteAirConditioners = () => {
                     </div>
                 </div>
             </div>
-
+            <nav className="text-gray-600 text-sm my-4">
+                <ol className="flex items-center space-x-2">
+                    <li>
+                        <Link to="/" className="text-blue-600 hover:underline font-bold ms-10">
+                            Home
+                        </Link>
+                    </li>
+                    <li>/</li>
+                    <li className="text-gray-500 font-bold">Product</li>
+                    <li>/</li>
+                    <li className="text-gray-500 font-bold">Cassette Air Conditioners</li>
+                </ol>
+            </nav>
             {/* Main Content */}
             <div className="min-h-screen py-16 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
                 {/* Background Elements */}

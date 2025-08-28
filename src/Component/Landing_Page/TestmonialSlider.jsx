@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SectionHeading from "../../Services/HeadingSection/Heading";
+import SectionHeading from "../../Helpers/Heading";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import AOS from "aos";

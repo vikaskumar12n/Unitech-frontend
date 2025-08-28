@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaCalendarAlt, FaBuilding, FaHeart, FaLightbulb, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-import SectionHeading from "../../../../Services/HeadingSection/Heading";
+import SectionHeading from "../../../../Helpers/Heading";
 const FounderSection = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true, easing: "ease-out-cubic" });

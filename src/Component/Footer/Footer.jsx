@@ -42,10 +42,29 @@ const  Product=[
     ,{
      name:"Water Coolers" ,
      link:"/refrigeration"
-    },{
-     name:"Speciality Products" ,
-     link:"/refrigeration"
-    }
+    } 
+  ]
+
+  const  Services=[
+  {
+     name:"HVAC Designing" , 
+    } ,
+     {
+     name:"Residential Cooling Solutions" , 
+    } ,
+     {
+     name:"Commercial HVAC Systems" , 
+    } ,
+     {
+     name:"Sales" , 
+    } ,
+     {
+     name:"Retrofit" , 
+    } ,
+     {
+     name:"Maintenance Contract" , 
+    }  
+
   ]
   return (
     <footer className="bg-gradient-to-br from-[#1f1f1f] to-[#1f1f1f] text-gray-200 py-5 relative overflow-hidden">
@@ -86,20 +105,12 @@ const  Product=[
             OUR SERVICES
           </h3>
           <ul className="space-y-3">
-            {[
-              "Service Solution",
-              "Certifications",
-              "Warranty Registration",
-              "Installation and Service Costs",
-              "Servicing",
-              "Buy Extended warranty & AMC",
-              "Service Escalation"
-            ].map((service, index) => (
+              {Services?.map((service, index) => (
               <li key={index}>
-                <a href="#" className="hover:text-blue-300 flex items-center group transition-all duration-300">
+                <Link to="/solution" className="hover:text-blue-300 flex items-center group transition-all duration-300">
                   <FaChevronRight className="text-blue-500 text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  <span className="group-hover:underline">{service}</span>
-                </a>
+                  <span className="group-hover:underline">{service.name}</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -171,7 +182,7 @@ const  Product=[
       
       <div className="container mx-auto px-4 mt-10 relative z-10">
          <div className="mt-6 flex justify-center">
-    <div className="w-full h-1 mb-2 bg-gradient-to-r from-blue-900 to-purple-700 rounded-full"></div>
+    <div className="w-full h-1 mb-2 bg-gradient-to-r from-[#383086] to-[#383086] rounded-full"></div>
   </div>
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
           <p className="mb-2 md:mb-0">© Copyright 2025 || Developed By Vikas Bind</p>

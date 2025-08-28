@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaBuilding, FaLightbulb, FaUsers, FaIndustry, FaGlobe, FaAward, FaCog, FaChevronRight } from "react-icons/fa";
 import FounderSection from "./FounderDetails";
-import SectionHeading from "../../../../Services/HeadingSection/Heading";
+import SectionHeading from "../../../../Helpers/Heading";
 const CompanyDetails = () => {
     const [isVisible, setIsVisible] = useState(false);
     

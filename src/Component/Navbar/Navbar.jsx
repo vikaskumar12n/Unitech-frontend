@@ -72,7 +72,7 @@ const Navbar = () => {
           link: "/cassetteairconditioners"
         }, {
           name: "Verticool Air Conditioners",
-          link: "/refrigeration"
+          link: "/verticoolair"
         }
         , {
           name: "Central Air Conditioning",
@@ -207,7 +207,7 @@ const Navbar = () => {
                 {item.link ? (
                   <Link
                     to={item.link}
-                    className="relative flex items-center space-x-1 py-2 text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-300"
+                    className="relative flex items-center space-x-1 py-2 text-gray-700 font-bold group-hover:text-blue-600 transition-colors duration-300"
                   >
                     <span>{item.icon}</span>
                     <span>{item.name}</span>

@@ -1,0 +1,124 @@
+import { useEffect, useState } from "react";
+import VertiCoolCard from "./VertiCoolCard";
+
+const VertiCoolProduct = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <>
+      {/* Hero Section */}
+      <div className="relative w-full h-[500px] overflow-hidden">
+        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover">
+          <source src="/hero-video.webm" type="video/webm" />
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+            Verticool<span className="text-blue-500"> Air</span> Conditioners
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-200 mb-8">
+            Advanced cooling technology for commercial and residential spaces
+          </p>
+        </div>
+        <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
+          <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
+            <h2 className="text-base md:text-lg font-semibold">verticool Air Conditioners</h2>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Section */}
+      <div className="min-h-screen py-16 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/10 to-pink-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <div className={`text-center pt-10 pb-16 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Our <span className="text-color">Premium</span> Cooling Solutions
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Energy-efficient air conditioners designed for optimal performance and comfort
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4 pb-20 relative z-10 max-w-6xl mx-auto">
+          <VertiCoolCard
+            badgeText="BESTSELLER"
+            badgeColor="bg-red-200 text-orange-700"
+            title="G Series"
+            subtitle="Anti-Corrosive Gold Fins in Indoor & Blue Fins in Outdoor for Protection"
+            gradientFrom="from-blue-900"
+            gradientTo="to-indigo-700"
+            imgSrc="/Product/verti.jpg"
+            imgAlt="Cassette AC"
+            details={[
+              { label: "Type", value: "Inverter" },
+              { label: "Mount", value: "Ceiling" },
+            ]}
+            features={[
+              { label: "Energy Rating", value: "5 Star", color: "text-blue-600" },
+              { label: "Air Distribution", value: "360° Uniform", color: "" },
+              { label: "Operation", value: "Silent", color: "text-blue-600" },
+            ]}
+            price="₹70,000"
+            priceNote="*Price varies by capacity & features"
+            button1="View Details"
+            button2="Get Quote"
+          />
+
+          <VertiCoolCard
+            badgeText="PREMIUM"
+            badgeColor="bg-green-100 text-green-800"
+            title="Verticool Air Conditioners"
+            subtitle="Buy Unitech Verticool AC | 4 Ton | Floor Standing "
+            gradientFrom="from-indigo-700"
+            gradientTo="to-blue-900"
+            imgSrc="/Product/verti2.jpeg"
+            imgAlt="Ducted AC"
+            details={[
+              { label: "Type", value: "Inverter" },
+              { label: "Mount", value: "Concealed" },
+            ]}
+            features={[
+              { label: "Energy Rating", value: "5 Star", color: "text-blue-600" },
+              { label: "Air Distribution", value: "Zone Control", color: "" },
+              { label: "Operation", value: "Ultra Silent", color: "text-blue-600" },
+            ]}
+            price="₹85,000"
+            priceNote="*Price varies by capacity & features"
+            button1="View Details"
+            button2="Get Quote"
+          />
+        </div>
+          <div className="max-w-4xl mx-auto mt-16 px-4 relative z-10">
+                    <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
+                        <div className="text-center">
+                            <h3 className="text-2xl md:text-3xl font-bold mb-4">Need Help Choosing?</h3>
+                            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+                                Our cooling experts are here to help you find the perfect AC for your space
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105">
+                                    Get Expert Advice
+                                </button>
+                                <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                                    Schedule Site Visit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      </div>
+    </>
+  );
+};
+
+export default VertiCoolProduct;

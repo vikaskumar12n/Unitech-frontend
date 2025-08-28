@@ -1,4 +1,4 @@
-import SectionHeading from "../../Services/HeadingSection/Heading";
+import SectionHeading from "../../Helpers/Heading";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -16,7 +16,7 @@ const Product = () => {
       alt: "Room Air Conditioner",
       title: "ROOM AIR CONDITIONERS",
       desc: "The most technologically advanced and energy-efficient air conditioning.",
-      link: "/room-ac",
+      link: "/product",
       linkText: "View Product",
       gradient: "bg-color"
     },

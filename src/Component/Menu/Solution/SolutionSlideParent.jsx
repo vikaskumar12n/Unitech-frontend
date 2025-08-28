@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ServiceCard from "./SolutionSlideChild"; 
-import SectionHeading from "../../../Services/HeadingSection/Heading";
+import SectionHeading from "../../../Helpers/Heading";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState, useEffect } from "react";
 

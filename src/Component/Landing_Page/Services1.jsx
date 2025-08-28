@@ -1,4 +1,4 @@
-import SectionHeading from "../../Services/HeadingSection/Heading";
+import SectionHeading from "../../Helpers/Heading";
 import { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";

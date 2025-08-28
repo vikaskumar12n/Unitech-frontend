@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaSnowflake, FaBolt, FaLeaf, FaShieldAlt } from 'react-icons/fa';
 import ProductCard from '../Room-air-con/ProductCard';
+import { Link } from 'react-router-dom';
 // Enhanced ProductCard component
 // eslint-disable-next-line react/prop-types
 
@@ -281,6 +282,19 @@ const Refrigeration = () => {
                     </div>
                 </div>
             </div>
+             <nav className="text-gray-600 text-sm my-4">
+                  <ol className="flex items-center space-x-2">
+                    <li>
+                      <Link to="/" className="text-blue-600 hover:underline font-bold ms-10">
+                        Home
+                      </Link>
+                    </li>
+                    <li>/</li>
+                    <li className="text-gray-500 font-bold">Product</li>
+                    <li>/</li>
+                    <li className="text-gray-500 font-bold">Refrigeration</li>
+                  </ol>
+                </nav>
             <div className="min-h-screen pb-20  bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative overflow-hidden">
                 {/* Background Elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
