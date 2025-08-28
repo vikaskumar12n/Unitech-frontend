@@ -3,9 +3,52 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Footer = () => {
+
+
+
+const  Product=[
+    {
+     name:"Room Air Conditioners" ,
+     link:"/product"
+    },
+     {
+     name:"Air Coolers" ,
+     link:"/aircooler"
+    },
+     {
+     name:"Refrigeration" ,
+     link:"/refrigeration"
+    }, {
+     name:"Cassette Air Conditioners" ,
+     link:"/refrigeration"
+    } ,{
+     name:"Verticool Air Conditioners" ,
+     link:"/refrigeration"
+    }
+     ,{
+     name:"Central Air Conditioning" ,
+     link:"/refrigeration"
+    }
+     ,{
+     name:"Heat Pumps" ,
+     link:"/refrigeration"
+    }
+,{
+     name:"Cold Storages" ,
+     link:"/refrigeration"
+    } 
+    ,{
+     name:"Water Coolers" ,
+     link:"/refrigeration"
+    },{
+     name:"Speciality Products" ,
+     link:"/refrigeration"
+    }
+  ]
   return (
-    <footer className="bg-gradient-to-br from-[#383086] to-[#383086] text-gray-200 py-5 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-[#1f1f1f] to-[#1f1f1f] text-gray-200 py-5 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxZTI5N2IiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-20"></div>
       
@@ -67,20 +110,13 @@ const Footer = () => {
             PRODUCTS
           </h3>
           <ul className="space-y-3">
-            {[
-              "Room Air Conditioners",
-              "Cassette Air Conditioner",
-              "Verticool Air Conditioner",
-              "Heat Pumps",
-              "Commercial Refrigerator",
-              "Cold Storage",
-              "Water Coolers"
-            ].map((product, index) => (
+            {
+              Product?.map((item, index) => (
               <li key={index}>
-                <a href="#" className="hover:text-blue-300 flex items-center group transition-all duration-300">
+                <Link to={item.link} className="hover:text-blue-300 flex items-center group transition-all duration-300">
                   <FaChevronRight className="text-blue-500 text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  <span className="group-hover:underline">{product}</span>
-                </a>
+                  <span className="group-hover:underline">{item.name}</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -115,7 +151,7 @@ const Footer = () => {
               </div>
               <div>
                 <strong className="block text-white">EMAIL</strong>
-                <span className="text-gray-300 group-hover:text-white transition-colors duration-300">projects@fabair.in</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300">CodeCrafter@gmail.com</span>
               </div>
             </li>
             <li className="flex items-start ms-4 group">
@@ -134,7 +170,9 @@ const Footer = () => {
       </div>
       
       <div className="container mx-auto px-4 mt-10 relative z-10">
-        <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mb-6"></div>
+         <div className="mt-6 flex justify-center">
+    <div className="w-full h-1 mb-2 bg-gradient-to-r from-blue-900 to-purple-700 rounded-full"></div>
+  </div>
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
           <p className="mb-2 md:mb-0">© Copyright 2025 || Developed By Vikas Bind</p>
           <div className="flex space-x-6">

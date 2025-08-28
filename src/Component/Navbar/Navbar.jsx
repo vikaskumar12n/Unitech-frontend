@@ -56,16 +56,43 @@ const Navbar = () => {
       li: <FaSortDown />,
       // icon: <FaBoxOpen className="inline-block mb-1 text-sm text-blue-600" />,
       dropdown: [
-
-        { name: "Room Air Conditioners", link: "/product" },
-        { name: "Cassette Air Conditioner", link: "/" },
-        { name: "Verticool Air Conditioner", link: "/" },
-        { name: "Central Air Conditioner", link: "/" },
-        { name: "Heat Pumps", link: "/" },
-        { name: "Commercial Refrigrater", link: "/" },
-        { name: "Cold Storage", link: "/" },
-        { name: "Water Coolers", link: "/" },
-        { name: "Speciality Product", link: "/" },
+        {
+          name: "Room Air Conditioners",
+          link: "/product"
+        },
+        {
+          name: "Air Coolers",
+          link: "/aircooler"
+        },
+        {
+          name: "Refrigeration",
+          link: "/refrigeration"
+        }, {
+          name: "Cassette Air Conditioners",
+          link: "/cassetteairconditioners"
+        }, {
+          name: "Verticool Air Conditioners",
+          link: "/refrigeration"
+        }
+        , {
+          name: "Central Air Conditioning",
+          link: "/refrigeration"
+        }
+        , {
+          name: "Heat Pumps",
+          link: "/refrigeration"
+        }
+        , {
+          name: "Cold Storages",
+          link: "/refrigeration"
+        }
+        , {
+          name: "Water Coolers",
+          link: "/refrigeration"
+        }, {
+          name: "Speciality Products",
+          link: "/refrigeration"
+        }
       ],
     },
     // {
@@ -149,160 +176,155 @@ const Navbar = () => {
 
       {/* MenuBar */}
       <div
-  className={`fixed w-full py-4 z-50 transition-all duration-500 ease-in-out backdrop-blur-lg ${
-    mobileMenuOpen 
-      ? "bg-gradient-to-r from-blue-900/95 to-indigo-900/95 shadow-2xl" 
-      : "bg-transparent"
-  } ${isDesktop ? "menu" : ""}`}
->
-  <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
-    {/* Logo Section */}
-    <div className="flex items-center space-x-3 group">
-      <div className="relative">
-        <div className="w-12 h-12 bg-gradient-to-r bg-color rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-          <span className="text-white font-bold text-xl">U</span>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-      </div>
-      <h2 className="text-3xl font-bold  text-color text-transparent bg-gradient-to-r .">
-        Unitech
-      </h2>
-    </div>
-
-    {/* Desktop Menu */}
-    <ul className="hidden md:flex space-x-8">
-      {menuItems.map((item, index) => (
-        <li
-          key={index}
-          className="relative group"
-          onMouseEnter={() => setOpenDropdown(index)}
-          onMouseLeave={() => setOpenDropdown(false)}
-        >
-          {item.link ? (
-            <Link
-              to={item.link}
-              className="relative flex items-center space-x-1 py-2 text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-300"
-            >
-              <span>{item.icon}</span>
-              <span>{item.name}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ) : (
-            <button className="flex items-center space-x-1 py-2 text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-300">
-              <span>{item.icon}</span>
-              <span>{item.name}</span>
-              <span>{item.li}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-300 group-hover:w-full"></span>
-            </button>
-          )}
-
-          {/* Dropdown Menu */}
-          {item.dropdown && (
-            <div
-              className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 transform ${
-                openDropdown === index
-                  ? "opacity-100 translate-y-0 visible"
-                  : "opacity-0 -translate-y-2 invisible"
-              }`}
-            >
-              <div className="py-2">
-                {item.dropdown.map((subItem, subIndex) => (
-                  <Link
-                    key={subIndex}
-                    to={subItem.link || "/"}
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-colors duration-200"
-                  >
-                    {subItem.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-        </li>
-      ))}
-    </ul>
-
-    {/* Mobile Menu Button */}
-    <div className="md:hidden">
-      <button
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className={`p-2 rounded-lg transition-all duration-300 ${
-          mobileMenuOpen
-            ? "bg-white/20 text-white"
-            : "text-gray-700 hover:bg-gray-100"
-        }`}
+        className={`fixed w-full py-4 z-50 transition-all duration-500 ease-in-out backdrop-blur-lg ${mobileMenuOpen
+            ? "bg-gradient-to-r from-blue-900/95 to-indigo-900/95 shadow-2xl"
+            : "bg-transparent"
+          } ${isDesktop ? "menu" : ""}`}
       >
-        {mobileMenuOpen ? (
-          <FaTimes className="text-xl" />
-        ) : (
-          <FaBars className="text-xl" />
-        )}
-      </button>
-    </div>
-  </div>
-
-  {/* Mobile Menu */}
-  <div
-    className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-      mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-    }`}
-  >
-    <div className="px-4 pt-2 pb-4 space-y-1">
-      {menuItems.map((item, index) => (
-        <div key={index} className="py-1">
-          {item.link ? (
-            <Link
-              to={item.link}
-              className="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-colors duration-200"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <div className="flex items-center space-x-3">
-                <span>{item.icon}</span>
-                <span>{item.name}</span>
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
+          {/* Logo Section */}
+          <div className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="w-12 h-12 bg-gradient-to-r bg-color rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white font-bold text-xl">U</span>
               </div>
-            </Link>
-          ) : (
-            <>
-              <button
-                className="w-full flex justify-between items-center px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-colors duration-200"
-                onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+            </div>
+            <h2 className="text-3xl font-bold  text-color text-transparent bg-gradient-to-r .">
+              Unitech
+            </h2>
+          </div>
+
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex space-x-8">
+            {menuItems.map((item, index) => (
+              <li
+                key={index}
+                className="relative group"
+                onMouseEnter={() => setOpenDropdown(index)}
+                onMouseLeave={() => setOpenDropdown(false)}
               >
-                <div className="flex items-center space-x-3">
-                  <span>{item.icon}</span>
-                  <span>{item.name}</span>
-                </div>
-                <span>{item.li}</span>
-              </button>
-              {item.dropdown && (
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openDropdown === index ? "max-h-96" : "max-h-0"
-                  }`}
-                >
-                  <div className="pl-8 py-2 space-y-1">
-                    {item.dropdown.map((subItem, subIndex) => (
-                      <Link
-                        key={subIndex}
-                        to={subItem.link || "/"}
-                        className="block px-4 py-2 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-colors duration-200"
-                        onClick={() => {
-                          setOpenDropdown(null);
-                          setMobileMenuOpen(false);
-                        }}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
+                {item.link ? (
+                  <Link
+                    to={item.link}
+                    className="relative flex items-center space-x-1 py-2 text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-300"
+                  >
+                    <span>{item.icon}</span>
+                    <span>{item.name}</span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                ) : (
+                  <button className="flex items-center space-x-1 py-2 text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-300">
+                    <span>{item.icon}</span>
+                    <span>{item.name}</span>
+                    <span>{item.li}</span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-300 group-hover:w-full"></span>
+                  </button>
+                )}
+
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <div
+                    className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 transform ${openDropdown === index
+                        ? "opacity-100 translate-y-0 visible"
+                        : "opacity-0 -translate-y-2 invisible"
+                      }`}
+                  >
+                    <div className="py-2">
+                      {item.dropdown.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          to={subItem.link || "/"}
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-colors duration-200"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className={`p-2 rounded-lg transition-all duration-300 ${mobileMenuOpen
+                  ? "bg-white/20 text-white"
+                  : "text-gray-700 hover:bg-gray-100"
+                }`}
+            >
+              {mobileMenuOpen ? (
+                <FaTimes className="text-xl" />
+              ) : (
+                <FaBars className="text-xl" />
               )}
-            </>
-          )}
+            </button>
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            }`}
+        >
+          <div className="px-4 pt-2 pb-4 space-y-1">
+            {menuItems.map((item, index) => (
+              <div key={index} className="py-1">
+                {item.link ? (
+                  <Link
+                    to={item.link}
+                    className="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-colors duration-200"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <span>{item.icon}</span>
+                      <span>{item.name}</span>
+                    </div>
+                  </Link>
+                ) : (
+                  <>
+                    <button
+                      className="w-full flex justify-between items-center px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-colors duration-200"
+                      onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
+                    >
+                      <div className="flex items-center space-x-3">
+                        <span>{item.icon}</span>
+                        <span>{item.name}</span>
+                      </div>
+                      <span>{item.li}</span>
+                    </button>
+                    {item.dropdown && (
+                      <div
+                        className={`overflow-hidden transition-all duration-300 ${openDropdown === index ? "max-h-96" : "max-h-0"
+                          }`}
+                      >
+                        <div className="pl-8 py-2 space-y-1">
+                          {item.dropdown.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              to={subItem.link || "/"}
+                              className="block px-4 py-2 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-colors duration-200"
+                              onClick={() => {
+                                setOpenDropdown(null);
+                                setMobileMenuOpen(false);
+                              }}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

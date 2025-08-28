@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaBuilding, FaLightbulb, FaUsers, FaIndustry, FaGlobe, FaAward, FaCog, FaChevronRight } from "react-icons/fa";
 import FounderSection from "./FounderDetails";
+import SectionHeading from "../../../../Services/HeadingSection/Heading";
 const CompanyDetails = () => {
     const [isVisible, setIsVisible] = useState(false);
     
@@ -64,7 +65,7 @@ const CompanyDetails = () => {
                 {/* Hero Header Section */}
                 <div className={`text-center mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                     <div className="relative inline-block">
-                        <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 bg-clip-text text-transparent mb-6 tracking-tight">
+                        <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r text-color bg-clip-text text-transparent mb-6 tracking-tight">
                            UNITECH
                         </h1>
                         <div className="absolute -inset-4 bg-gradient-to-r from-blue-200/50 to-purple-200/50 blur-2xl rounded-full -z-10"></div>
@@ -171,9 +172,14 @@ const CompanyDetails = () => {
 
                 {/* Enhanced Core Values */}
                 <div className={`mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{transitionDelay: '600ms'}}>
-                    <h3 className="text-4xl font-bold text-center text-gray-800 mb-12">
-                        Core Values That Drive Us
-                    </h3>
+                    
+                     <div className="text-center mb-16" data-aos="fade-down">
+                              <SectionHeading
+                                title="Core Values That Drive Us"
+                                className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r bg-color text-2xl md:text-3xl lg:text-4xl mb-4"
+                              />
+                               
+                            </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {coreValues.map((value, index) => (
                             <div 

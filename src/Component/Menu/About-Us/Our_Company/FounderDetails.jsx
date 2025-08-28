@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaCalendarAlt, FaBuilding, FaHeart, FaLightbulb, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-
+import SectionHeading from "../../../../Services/HeadingSection/Heading";
 const FounderSection = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true, easing: "ease-out-cubic" });
@@ -23,36 +23,38 @@ const FounderSection = () => {
     { icon: <FaBuilding className="text-xl" />, title: "Professional", description: "Committed to quality and customer satisfaction" },
   ];
 
-   const images = [
-{
-  id:1,
-  img:'/Air-Cooler.jpg'
-} ,
-{
-  id:2,
-  img:'/11781.jpg'
-} ,
-{
-  id:3,
-  img:'/Water-Purifier.jpg'
-} ,
-{
-  is:4,
-  img:'/public/Air-Cooler.jpg'
-}  ];
+  const images = [
+    {
+      id: 1,
+      img: '/Air-Cooler.jpg'
+    },
+    {
+      id: 2,
+      img: '/11781.jpg'
+    },
+    {
+      id: 3,
+      img: '/Water-Purifier.jpg'
+    },
+    {
+      is: 4,
+      img: '/public/Air-Cooler.jpg'
+    }];
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-cyan-50 py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Header Section */}
-        <div className="text-center mb-16">
-           <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 bg-clip-text text-transparent mb-6 tracking-tight">
-                           OUR FOUNDER
-                        </h1>
-                        <div className="mt-8 flex justify-center">
-                        <div className="w-24 h-1 bg-gradient-to-r bg-color rounded-full"></div>
-                    </div>
-          <p className="text-gray-600 max-w-2xl mx-auto">The visionary leader who built a legacy of excellence</p>
+        
+          <div className="text-center mb-16" data-aos="fade-down">
+            <SectionHeading
+              title="Our Founder"
+              className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r bg-color text-2xl md:text-3xl lg:text-4xl mb-4"
+            />
+
+    
+          
+          <p className="text-black max-w-2xl mx-auto">The visionary leader who built a legacy of excellence</p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
@@ -69,9 +71,9 @@ const FounderSection = () => {
                 </div>
                 <div className="absolute -bottom-12 left-8">
                   <div className="w-24 h-24 rounded-full border-4 border-white shadow-lg overflow-hidden">
-                    <img 
-                      src="/water-coolers.png" 
-                      alt="Founder Name" 
+                    <img
+                      src="/water-coolers.png"
+                      alt="Founder Name"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -102,7 +104,7 @@ const FounderSection = () => {
                   <div className="relative">
                     {/* Timeline line */}
                     <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-700"></div>
-                    
+
                     <div className="space-y-8">
                       {milestones.map((milestone, index) => (
                         <div key={index} className="relative flex items-start">
@@ -136,7 +138,7 @@ const FounderSection = () => {
                 {/* Memoir Link */}
                 <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-900" data-aos="fade-up" data-aos-delay="300">
                   <p className="text-blue-700 font-medium">
-                    To view e-version of this Memoir, 
+                    To view e-version of this Memoir,
                     <a href="#" className="underline hover:text-blue-900 transition-colors duration-200 ml-1">
                       please click here.
                     </a>
@@ -178,8 +180,8 @@ const FounderSection = () => {
                     &quot;Where others saw just a few bamboo sticks, he envisioned a world-class engineering business.&quot;
                   </p>
                 </div>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="inline-flex items-center px-4 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors duration-300"
                 >
                   <span>View Full Story</span>
@@ -196,16 +198,16 @@ const FounderSection = () => {
                 <h3 className="text-lg font-bold">Historical Gallery</h3>
               </div>
               <div className="p-4">
-                <img 
-                  src="/water-coolers.png" 
-                  alt="Historical Image" 
+                <img
+                  src="/water-coolers.png"
+                  alt="Historical Image"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
                 <div className="grid grid-cols-2 gap-2">
                   {images.map((item) => (
                     <div key={item} className="aspect-square bg-gray-200 rounded-lg overflow-hidden">
                       <div className="w-full h-full bg-gradient-to-br from-blue-900 to-cyan-900 flex items-center justify-center text-gray-500">
-                       <img src={item.img}/>
+                        <img src={item.img} />
                       </div>
                     </div>
                   ))}

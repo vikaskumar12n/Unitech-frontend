@@ -238,7 +238,7 @@ const Product = () => {
         
         {/* Banner Content */}
         <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">Room Air Conditioner</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">Room <span className="text-blue-500"> Air</span> Conditioner</h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl drop-shadow-md">The indoor and outdoor units work together to ensure efficient cooling.</p>
         </div>
         
@@ -250,17 +250,16 @@ const Product = () => {
           </div>
         </div>
       </div>
-    <div className="min-h-screen  bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+  <div className="min-h-screen item-center pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/10 to-pink-300/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
       </div>
-
       {/* Header Section */}
       <div className={`text-center pt-20 pb-10 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-        <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 bg-clip-text text-transparent mb-6">
-          Premium Cooling Solutions
+        <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-black via-black to-black bg-clip-text text-transparent mb-6">
+          Premium <span className="text-blue-900"> Cooling</span> Solutions
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl text-justify mx-auto mb-8">
           Discover our range of energy-efficient air conditioners designed for every space and need
@@ -284,7 +283,6 @@ const Product = () => {
           ))}
         </div>
       </div>
-
       {/* Hero Image Section */}
       <div className={`relative mx-4 md:mx-8 mb-16 overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
         <img
@@ -304,17 +302,14 @@ const Product = () => {
           </div>
         </div>
       </div>
-
       {/* Products Grid */}
-      <div className="relative z-10 px-4 pb-20">
+      <div className="relative z-10 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">  
             {getCurrentProducts().map((product, index) => (
               <div
                 key={product.id}
-                className={`transform transition-all duration-700 ${
-                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
+                className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} 
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <ProductCard
@@ -330,9 +325,8 @@ const Product = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
-        <div className="max-w-4xl mx-auto mt-20 text-center">
+        <div className="max-w-4xl mx-auto mt-20 text-center ">
           <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
             <div className="relative z-10">
