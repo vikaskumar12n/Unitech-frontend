@@ -21,39 +21,45 @@ body {
     color: black;
 }
 
-/* testmonial */
- .custom-dots {
-          bottom: -50px;
-        }
-        .custom-dots li button:before {
-          font-size: 12px;
-          color: rgba(255, 255, 255, 0.5);
-          opacity: 1;
-        }
-        .custom-dots li.slick-active button:before {
-          color: #60a5fa;
-          opacity: 1;
+.testimonial-slider .slick-dots {
+          bottom: -40px;
+          margin-bottom: 0;
         }
 
-
-
-         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.8s ease-out forwards;
+        .testimonial-slider .slick-dots li {
+          margin: 0 2px;
         }
 
-
-
-        /* testmonial css*/
-          .custom-dots li button:before {
-          color: #818cf8;
+        .testimonial-slider .slick-dots li button:before {
+          font-size: 8px;
+          color: #3b82f6;
           opacity: 0.5;
-          font-size: 10px;
         }
-        .custom-dots li.slick-active button:before {
-          color: #4f46e5;
+
+        .testimonial-slider .slick-dots li.slick-active button:before {
           opacity: 1;
+          color: #3b82f6;
+        }
+
+        @media (max-width: 640px) {
+          .testimonial-slider .slick-dots {
+            bottom: -30px;
+          }
+          
+          .testimonial-slider .slick-dots li button:before {
+            font-size: 6px;
+          }
+        }
+
+        /* Ensure proper spacing between slides on mobile */
+        @media (max-width: 768px) {
+          .testimonial-slider .slick-slide > div {
+            padding: 0 8px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .testimonial-slider .slick-slide > div {
+            padding: 0 4px;
+          }
         }
