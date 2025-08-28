@@ -2,6 +2,7 @@ import SectionHeading from "../../Helpers/Heading";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   useEffect(() => {
@@ -126,10 +127,14 @@ const Product = () => {
 
         {/* Section Heading */}
         <div className="text-center mb-16" data-aos="fade-down">
-          <SectionHeading
-            title="Our Product"
-            className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r text-color text-2xl md:text-3xl lg:text-4xl mb-4"
-          />
+          <div
+              className="font-extrabold text-black   bg-clip-text bg-gradient-to-r text-2xl md:text-3xl lg:text-4xl mb-4"
+          >
+            Our <span className="text-color">Product</span>
+            <SectionHeading/>
+          </div>
+          
+         
           <p className="text-black text-lg max-w-2xl mx-auto leading-relaxed">
             Discover our comprehensive range of premium products designed for modern living
           </p>
@@ -164,15 +169,15 @@ const Product = () => {
                 <p className="text-black text-sm mb-4 leading-relaxed line-clamp-3">
                   {product.desc}
                 </p>
-                <a
-                  href={product.link}
+                <Link
+                  to={product.link}
                   className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${product.gradient} text-white font-semibold rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 group-hover:shadow-xl`}
                 >
                   {product.linkText}
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -180,10 +185,12 @@ const Product = () => {
 
         {/* Section Heading: Products We Deal In */}
         <div className="text-center mb-16" data-aos="fade-down">
-          <SectionHeading
-            title="Product We Deal In"
-            className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r bg-color text-2xl md:text-3xl lg:text-4xl mb-4"
-          />
+           <div
+              className="font-extrabold text-black   bg-clip-text bg-gradient-to-r text-2xl md:text-3xl lg:text-4xl mb-4"
+          >
+            Product <span className="text-color">We </span>Deal In
+            <SectionHeading/>
+          </div>
           <p className="text-black text-lg max-w-2xl mx-auto leading-relaxed">
             Explore our specialized dealership products and services          </p>
         </div>

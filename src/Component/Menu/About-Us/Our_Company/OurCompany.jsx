@@ -35,15 +35,16 @@ const OurCompany = () => {
 
   return (
     <>
+    <div className="overflow-hidden">
       {/* Banner */}
-      <div className="relative w-full h-[500px] overflow-hidden">
+      <div className="relative  w-full h-[500px] overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute  top-0 left-0 w-full h-full object-cover"
         >
           <source src="/hero-video.webm" type="video/webm" />
           <source src="/hero-video.mp4" type="video/mp4" />
@@ -53,15 +54,15 @@ const OurCompany = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         
         {/* Banner Content */}
-        <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">Our Company</h1>
+        <div className="absolute  inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">About Us</h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl drop-shadow-md">Discover our journey, values, and commitment to excellence</p>
         </div>
         
         {/* Menu Toggle */}
-          <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
+          <div className="absolute  bottom-0 left-0 w-[50%] md:w-[30%] px-4">
           <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
-            <h2 className="text-base md:text-lg font-semibold">OUR COMPANY</h2>
+            <h2 className="text-base md:text-lg font-semibold">ABOUT US</h2>
             <button
               className="text-lg md:text-xl px-2 py-1 rounded"
               onClick={() => setExpanded(!expanded)}
@@ -96,7 +97,7 @@ const OurCompany = () => {
       </div>
       
       {/* Enhanced Breadcrumb */}
-      <nav className="flex items-center p-4 bg-gray-100 border-b border-gray-200">
+      <nav className="flex  items-center p-4 bg-gray-100 border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex items-center text-sm">
             <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium flex items-center transition-colors duration-300">
@@ -119,6 +120,7 @@ const OurCompany = () => {
         <div className={`transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
           {currentContent}
         </div>
+      </div>
       </div>
     </>
   );

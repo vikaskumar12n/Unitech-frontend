@@ -43,13 +43,8 @@ const Navbar = () => {
     },
     {
       name: "ABOUT US",
-      li: <FaSortDown />,
-      // icon: <FaInfoCircle className="inline-block mb-1 text-sm text-blue-600" />,
-      dropdown: [
-        { name: "Our Company", link: "/about-us" },
-        { name: "Governance Structure", link: "/governance-structure" },
-        // { name: "Guiding Policies", link: "/guiding-policies" },
-      ],
+      li: <FaSortDown />, 
+      link: "/about-us" 
     },
     {
       name: "PRODUCTS",
@@ -95,19 +90,7 @@ const Navbar = () => {
         }
       ],
     },
-    // {
-    //   name: "CUSTOMER SERVICE",
-    //   li: <FaSortDown />,
-    //   // icon: <FaHeadset className="inline-block mb-1 text-sm text-blue-600" />,
-    //   dropdown: [
-    //     { name: "Service Solution", link: "/" },
-    //     { name: "Certifications", link: "/" },
-    //     { name: "Warranty Registration", link: "/" },
-    //     { name: "Installation and Service Costs", link: "/" },
-    //     { name: "Buy Extended warranty & AMC", link: "/" },
-    //     { name: "Service Escalation", link: "/" },
-    //   ],
-    // },
+    
 
     {
       name: "SOLUTIONS",

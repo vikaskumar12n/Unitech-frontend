@@ -5,7 +5,7 @@ const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
  
   const handleScroll = () => {
-    // Show button when scrolled down 300px instead of 200px
+  
     if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
@@ -21,7 +21,7 @@ const ScrollToTopButton = () => {
   };
  
   useEffect(() => {
-    // Set initial visibility state
+  
     handleScroll();
     
     window.addEventListener('scroll', handleScroll);

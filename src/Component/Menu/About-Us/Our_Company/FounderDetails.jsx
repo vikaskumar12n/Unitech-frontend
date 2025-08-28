@@ -45,15 +45,18 @@ const FounderSection = () => {
     <div className="bg-gradient-to-br from-blue-50 to-cyan-50 py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Header Section */}
-        
-          <div className="text-center mb-16" data-aos="fade-down">
-            <SectionHeading
-              title="Our Founder"
-              className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r bg-color text-2xl md:text-3xl lg:text-4xl mb-4"
-            />
 
-    
-          
+        <div className="text-center mb-16" data-aos="fade-down">
+          <div
+            className="font-extrabold text-black   bg-clip-text bg-gradient-to-r text-2xl md:text-3xl lg:text-4xl mb-4"
+          >
+            Our  <span className="text-color">Founder </span>
+            <SectionHeading />
+          </div>
+
+
+
+
           <p className="text-black max-w-2xl mx-auto">The visionary leader who built a legacy of excellence</p>
         </div>
 

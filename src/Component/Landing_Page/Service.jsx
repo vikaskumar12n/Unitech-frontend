@@ -23,10 +23,12 @@ const Service = () => {
           {/* Section Heading */}
           
             <div className="text-center mb-16" data-aos="fade-down">
-          <SectionHeading
-            title="Our Services"
-            className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r text-color text-2xl md:text-3xl lg:text-4xl mb-4"
-          />
+           <div
+              className="font-extrabold text-black   bg-clip-text bg-gradient-to-r text-2xl md:text-3xl lg:text-4xl mb-4"
+          >
+            Our <span className="text-color">Services</span>
+            <SectionHeading/>
+          </div>
          
           <p className="text-black text-lg max-w-2xl mx-auto leading-relaxed">
               Professional HVAC solutions designed for your comfort and satisfaction
