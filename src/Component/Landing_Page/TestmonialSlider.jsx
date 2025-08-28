@@ -101,7 +101,7 @@ const TestimonialSlider = () => {
   return (
     <div className="relative w-full py-8 sm:py-12 lg:py-16 px-3 sm:px-4 lg:px-8 overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50">
      
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+      
       <div className="absolute bottom-0 right-0 w-16 sm:w-24 lg:w-32 h-16 sm:h-24 lg:h-32 bg-purple-200 rounded-full filter blur-3xl opacity-30"></div>
       <div className="absolute top-5 sm:top-10 left-5 sm:left-10 w-12 sm:w-18 lg:w-24 h-12 sm:h-18 lg:h-24 bg-blue-200 rounded-full filter blur-3xl opacity-30"></div>
       
