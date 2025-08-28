@@ -132,7 +132,7 @@ const TestimonialSlider = () => {
                   
                   {/* Feedback Text */}
                   <div className="mb-5 sm:mb-6 flex-1">
-                    <p className="text-gray-700 text-center leading-relaxed text-sm sm:text-base italic">
+                    <p className="text-gray-700 text-justify leading-relaxed text-sm sm:text-base italic">
                       &quot;{item.feedback}&quot;
                     </p>
                   </div>

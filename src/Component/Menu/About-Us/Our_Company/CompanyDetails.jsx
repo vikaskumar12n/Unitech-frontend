@@ -208,51 +208,51 @@ const CompanyDetails = () => {
                         <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-white/20 rounded-full"></div>
                     </div>
                     
-                    <div className="flex flex-col lg:flex-row items-center relative z-10">
-                        <div className="lg:w-2/3 mb-8 lg:mb-0">
-                            <div className="flex items-center mb-6">
-                                <div className="p-4 bg-white/20 rounded-full mr-4">
-                                    <FaCog className="text-white text-2xl animate-spin" style={{animationDuration: '8s'}} />
-                                </div>
-                                <h3 className="text-4xl font-bold">Manufacturing & Research Excellence</h3>
-                            </div>
-                            <div className="space-y-4">
-                                <p className="text-blue-100 text-lg leading-relaxed">
-                                    Our manufacturing footprint spans over <span className="font-bold text-white">1 lakh sq. m.</span> with 
-                                    cutting-edge facilities focused on energy-efficiency and sustainable innovation.
-                                </p>
-                                <p className="text-blue-100 text-lg leading-relaxed">
-                                    Unitech&apos;s robust R&D ecosystem drives continuous innovation, ensuring we stay ahead 
-                                    in India&apos;s competitive cooling solutions market.
-                                </p>
-                            </div>
-                            <div className="flex flex-wrap gap-4 mt-8">
-                                <div className="bg-white/20 px-4 py-2 rounded-full">
-                                    <span className="font-semibold">7 Manufacturing Facilities</span>
-                                </div>
-                                <div className="bg-white/20 px-4 py-2 rounded-full">
-                                    <span className="font-semibold">30+ Offices</span>
-                                </div>
-                                <div className="bg-white/20 px-4 py-2 rounded-full">
-                                    <span className="font-semibold">2,100+ Service Centers</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="lg:w-1/3 flex justify-center">
-                            <div className="relative">
-                                <div className="w-40 h-40 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-5xl font-black">R&D</div>
-                                        <div className="text-sm font-medium">Innovation Hub</div>
-                                    </div>
-                                </div>
-                                <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center animate-bounce">
-                                    <FaLightbulb className="text-white text-xl" />
-                                </div>
-                                <div className="absolute -bottom-4 -left-4 w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 animate-pulse"></div>
-                            </div>
-                        </div>
-                    </div>
+                   <div className="flex flex-col lg:flex-row items-center relative z-10">
+    <div className="lg:w-2/3 mb-8 lg:mb-0 w-full px-4">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
+            <div className="p-3 sm:p-4 bg-white/20 rounded-full mb-4 sm:mb-0 sm:mr-4">
+                <FaCog className="text-white text-xl sm:text-2xl animate-spin" style={{animationDuration: '8s'}} />
+            </div>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center sm:text-left">Manufacturing & Research Excellence</h3>
+        </div>
+        <div className="space-y-4">
+            <p className="text-blue-100 text-base sm:text-lg leading-relaxed">
+                Our manufacturing footprint spans over <span className="font-bold text-white">1 lakh sq. m.</span> with 
+                cutting-edge facilities focused on energy-efficiency and sustainable innovation.
+            </p>
+            <p className="text-blue-100 text-base sm:text-lg leading-relaxed">
+                Unitech&apos;s robust R&D ecosystem drives continuous innovation, ensuring we stay ahead 
+                in India&apos;s competitive cooling solutions market.
+            </p>
+        </div>
+        <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-4 mt-6 sm:mt-8">
+            <div className="bg-white/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
+                <span className="font-semibold text-sm sm:text-base">7 Manufacturing Facilities</span>
+            </div>
+            <div className="bg-white/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
+                <span className="font-semibold text-sm sm:text-base">30+ Offices</span>
+            </div>
+            <div className="bg-white/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
+                <span className="font-semibold text-sm sm:text-base">2,100+ Service Centers</span>
+            </div>
+        </div>
+    </div>
+    <div className="lg:w-1/3 w-full flex justify-center px-4">
+        <div className="relative">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center">
+                <div className="text-center">
+                    <div className="text-4xl sm:text-5xl font-black">R&D</div>
+                    <div className="text-xs sm:text-sm font-medium">Innovation Hub</div>
+                </div>
+            </div>
+            <div className="absolute -top-3 sm:-top-4 -right-3 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center animate-bounce">
+                <FaLightbulb className="text-white text-lg sm:text-xl" />
+            </div>
+            <div className="absolute -bottom-3 sm:-bottom-4 -left-3 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 animate-pulse"></div>
+        </div>
+    </div>
+</div>
                 </div>
             </div>
         </div>
