@@ -2,71 +2,71 @@ import { useEffect, useState } from "react";
 import VertiCoolCard from "../VerticoolAirCon/VertiCoolCard";
 import { Link } from "react-router-dom";
 import ProductCard from "../Room-air-con/ProductCard";
-import {    FaSnowflake, FaLeaf, FaShieldAlt } from 'react-icons/fa';
+import { FaSnowflake, FaLeaf, FaShieldAlt } from 'react-icons/fa';
 const WaterCooler = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         setIsVisible(true);
     }, []);
-  const Cards = [
-    {
-      id: 1,
-      title: "Top Loading Water Dispensers GA Series",
-      description: "Whether you want a cup of hot tea, a tall glass of cool lemonade or just plain water, our bottled water dispensers are designed to meet your drinking water",
-      image: "/Product/waterCooler/toploadingwaterdispenserse-eseries8_12_2016.jpg",
-      rating: 4,
-      price: "35,990",
-    //   badge: "BESTSELLER",
-      features: [
-        { icon: <FaSnowflake />, text: "3 Star" },
-        // { icon: <FaBolt />, text: "Inverter" },
-        { icon: <FaLeaf />, text: "Eco-friendly" }
-      ]
-    },
-    {
-      id: 2,
-      title: "Top Loading Water Dispensers GB Series",
-      description: "Perfect for all drinking water requirements these single faucet models provide pure water at hot, ambient and cold temperatures making it perfect for all seasons",
-      image: "/Product/waterCooler/gb.jpg",
-      rating: 5,
-      price: "22,990",
-    //   badge: "SMART",
-      features: [
-        { icon: <FaSnowflake />, text: "4 start" },
-        // { icon: <FaBolt />, text: "Inverter" },
-        { icon: <FaShieldAlt />, text: "5 Year Warranty" }
-      ]
-    },
-    {
-      id: 3,
-      title: "Storage Water Cooler - Warm & Cold",
-      description: "Several industries use cold storage services to preserve food items. Restaurants, food outlets, supermarkets and grocery shops are a few of these industries",
-      image: "/Product/waterCooler/storage-water-cooler-warm-cold-326x220.png",
-      rating: 4,
-      price: "59,990",
-      features: [
-        { icon: <FaSnowflake />, text: "Fast Cool" },
-        // { icon: <FaBolt />, text: "Inverter" },
-        { icon: <FaLeaf />, text: "Energy Saver" }
-      ]
-    },
-    {
-      id: 4,
-      title: "Storage Water Dispenser - Platinum Series",
-      description: " Platinum Series, a new range of Storage Water Dispensers that give you water that is hot, cold and just right. No matter what you choose,",
-      image: "/public/Product/waterCooler/storage-water-cooler-platinum-326x220.png",
-      rating: 4,
-      price: "49,990",
-      features: [
-        // { icon: <FaSnowflake />, text: "Window AC" },
-        { icon: <FaShieldAlt />, text: "Reliable" },
-        { icon: <FaLeaf />, text: "3 Star" }
-      ]
-    }
-  ];
+    const Cards = [
+        {
+            id: 1,
+            title: "Top Loading Water Dispensers GA Series",
+            description: "Whether you want a cup of hot tea, a tall glass of cool lemonade or just plain water, our bottled water dispensers are designed to meet your drinking water",
+            image: "/Product/waterCooler/toploadingwaterdispenserse-eseries8_12_2016.jpg",
+            rating: 4,
+            price: "35,990",
+            //   badge: "BESTSELLER",
+            features: [
+                { icon: <FaSnowflake />, text: "3 Star" },
+                // { icon: <FaBolt />, text: "Inverter" },
+                { icon: <FaLeaf />, text: "Eco-friendly" }
+            ]
+        },
+        {
+            id: 2,
+            title: "Top Loading Water Dispensers GB Series",
+            description: "Perfect for all drinking water requirements these single faucet models provide pure water at hot, ambient and cold temperatures making it perfect for all seasons",
+            image: "/Product/waterCooler/gb.jpg",
+            rating: 5,
+            price: "22,990",
+            //   badge: "SMART",
+            features: [
+                { icon: <FaSnowflake />, text: "4 start" },
+                // { icon: <FaBolt />, text: "Inverter" },
+                { icon: <FaShieldAlt />, text: "5 Year Warranty" }
+            ]
+        },
+        {
+            id: 3,
+            title: "Storage Water Cooler - Warm & Cold",
+            description: "Several industries use cold storage services to preserve food items. Restaurants, food outlets, supermarkets and grocery shops are a few of these industries",
+            image: "/Product/waterCooler/storage-water-cooler-warm-cold-326x220.png",
+            rating: 4,
+            price: "59,990",
+            features: [
+                { icon: <FaSnowflake />, text: "Fast Cool" },
+                // { icon: <FaBolt />, text: "Inverter" },
+                { icon: <FaLeaf />, text: "Energy Saver" }
+            ]
+        },
+        {
+            id: 4,
+            title: "Storage Water Dispenser - Platinum Series",
+            description: " Platinum Series, a new range of Storage Water Dispensers that give you water that is hot, cold and just right. No matter what you choose,",
+            image: "/public/Product/waterCooler/storage-water-cooler-platinum-326x220.png",
+            rating: 4,
+            price: "49,990",
+            features: [
+                // { icon: <FaSnowflake />, text: "Window AC" },
+                { icon: <FaShieldAlt />, text: "Reliable" },
+                { icon: <FaLeaf />, text: "3 Star" }
+            ]
+        }
+    ];
 
-    
+
     const products = [
         {
             badgeText: "BESTSELLER",
@@ -99,7 +99,7 @@ const WaterCooler = () => {
             subtitle: "Say goodbye to lifting cumbersome and heavy water bottles every time",
             gradientFrom: "from-indigo-700",
             gradientTo: "to-blue-900",
-             imgSrc: "/Product/waterCooler/bottomloadingdispensers.jpg",
+            imgSrc: "/Product/waterCooler/bottomloadingdispensers.jpg",
             imgAlt: "Ducted AC",
             details: [
                 { label: "Type", value: "Inverter" },
@@ -126,19 +126,27 @@ const WaterCooler = () => {
 
 
             <div className="relative w-full h-[500px] overflow-hidden">
-                <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover">
-                    <source src="/hero-video.webm" type="video/webm" />
-                    <source src="/hero-video.mp4" type="video/mp4" />
-                </video>
+                {/* Responsive Image */}
+                <img
+                    src="/watercoolerbanner.avif"
+                    alt="Water Cooler"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                />
+
+                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+
+                {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-                        Water<span className="text-blue-500"> Cooler</span>
+                        Water<span className="text-blue-500">Cooler</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-200 mb-8">
-                        Advanced cooling technology for commercial and residential spaces
+                        Stay refreshed with pure, cool water for homes, offices, and public spaces
                     </p>
                 </div>
+
+                {/* Bottom Label */}
                 <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
                     <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
                         <h2 className="text-base md:text-lg font-semibold">Water Cooler</h2>
@@ -200,27 +208,27 @@ const WaterCooler = () => {
 
 
                 </div>
-                 <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">  
-            {Cards?.map((product, index) => (
-              <div
-                key={product.id}
-                className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} 
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <ProductCard
-                  title={product.title}
-                  description={product.description}
-                  image={product.image}
-                  rating={product.rating}
-                  price={product.price}
-                  badge={product.badge}
-                  features={product.features}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">
+                        {Cards?.map((product, index) => (
+                            <div
+                                key={product.id}
+                                className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                                style={{ transitionDelay: `${index * 100}ms` }}
+                            >
+                                <ProductCard
+                                    title={product.title}
+                                    description={product.description}
+                                    image={product.image}
+                                    rating={product.rating}
+                                    price={product.price}
+                                    badge={product.badge}
+                                    features={product.features}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
                 <div className="max-w-4xl mx-auto mt-16 px-4 relative z-10">
                     <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
                         <div className="text-center">

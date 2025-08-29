@@ -8,7 +8,7 @@ const ProductCard = ({ title, description, image, features, rating, price, badge
   
   return (
     <div 
-      className="group relative bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 overflow-hidden transform transition-all duration-500 hover:scale-[1.02] hover:shadow-xl max-w-sm"
+      className="group relative bg-white/90 backdrop-blur-sm rounded shadow-lg border border-white/50 overflow-hidden transform transition-all duration-500 hover:scale-[1.02] hover:shadow-xl max-w-sm"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

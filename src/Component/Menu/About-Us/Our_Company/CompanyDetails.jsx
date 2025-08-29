@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { FaBuilding, FaLightbulb, FaUsers, FaIndustry, FaGlobe, FaAward, FaCog, FaChevronRight } from "react-icons/fa";
 import FounderSection from "./FounderDetails";
 import SectionHeading from "../../../../Helpers/Heading";
+import CountUp from "react-countup";
+ 
 const CompanyDetails = () => {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -11,10 +13,10 @@ const CompanyDetails = () => {
 
     // Key statistics for the company
     const stats = [
-        { icon: <FaBuilding className="text-3xl" />, value: "80+", label: "Years of Experience", color: "bg-color" },
-        { icon: <FaUsers className="text-3xl" />, value: "3,000+", label: "Employees", color: "bg-color" },
+        { icon: <FaBuilding className="text-3xl" />, value: "80",suffix:"+" ,label: "Years of Experience", color: "bg-color" },
+        { icon: <FaUsers className="text-3xl" />, value: "3000", suffix:"+", label: "Employees", color: "bg-color" },
         { icon: <FaIndustry className="text-3xl" />, value: "7", label: "Manufacturing Facilities", color: "bg-color" },
-        { icon: <FaGlobe className="text-3xl" />, value: "900+", label: "Towns in India", color: "bg-color" },
+        { icon: <FaGlobe className="text-3xl" />, value: "900",suffix:"+", label: "Towns in India", color: "bg-color" },
     ];
 
     // Core values of the company
@@ -101,7 +103,14 @@ const CompanyDetails = () => {
                                     </div>
 
                                     {/* Value */}
-                                    <div className="text-4xl font-black text-gray-800 mb-2 relative z-10">{stat.value}</div>
+                                    <div className="text-4xl font-black text-gray-800 mb-2 relative z-10"> <CountUp
+                                                start={0}
+                                                end={stat.value}
+                                                duration={3}
+                                                suffix={stat.suffix}
+                                                enableScrollSpy={true}
+                                                scrollSpyOnce={true}
+                                            /></div>
                                     <div className="text-gray-600 font-medium relative z-10">{stat.label}</div>
 
                                     {/* Hover Effect */}

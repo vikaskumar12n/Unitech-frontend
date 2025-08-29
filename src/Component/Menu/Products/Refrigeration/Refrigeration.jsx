@@ -252,36 +252,34 @@ const Refrigeration = () => {
 
     return (
         <>
-            <div className="relative w-full h-[500px] overflow-hidden">
-                {/* Background Video */}
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute top-0 left-0 w-full h-full object-cover"
-                >
-                    <source src="/hero-video.webm" type="video/webm" />
-                    <source src="/hero-video.mp4" type="video/mp4" />
-                </video>
-
-                {/* Enhanced Overlay with Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-
-                {/* Banner Content */}
-                <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">Refrigeration</h1>
-                    <p className="text-xl md:text-2xl text-gray-200 max-w-2xl drop-shadow-md">The indoor and outdoor units work together to ensure efficient cooling.</p>
-                </div>
-
-                {/* Menu Toggle */}
-                <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
-                    <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
-                        <h2 className="text-base md:text-lg font-semibold">Refrigeration</h2>
-
-                    </div>
-                </div>
-            </div>
+ <div className="relative w-full h-[500px] overflow-hidden">
+  {/* Responsive Image */}
+  <img 
+    src="/ref.jpg" 
+    alt="Water Cooler" 
+    className="absolute top-0 left-0 w-full h-full object-cover"
+  />
+  
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+  
+  {/* Content */}
+  <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
+    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+      Ref<span className="text-blue-500">rige</span>ration
+    </h1>
+    <p className="text-xl md:text-2xl text-gray-200 mb-8">
+      Reliable refrigeration for fresh and long-lasting storage.
+    </p>
+  </div>
+  
+  {/* Bottom Label */}
+  <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
+    <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
+      <h2 className="text-base md:text-lg font-semibold">Refrigeration</h2>
+    </div>
+  </div>
+</div>
              <nav className="text-gray-600 text-sm my-4">
                   <ol className="flex items-center space-x-2">
                     <li>

@@ -84,10 +84,7 @@ const Navbar = () => {
         , {
           name: "Water Coolers",
           link: "/watercooler"
-        }, {
-          name: "Speciality Products",
-          link: "/refrigeration"
-        }
+        }, 
       ],
     },
     

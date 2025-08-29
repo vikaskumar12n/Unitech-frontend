@@ -16,7 +16,7 @@ const Product = () => {
       img: "/Room-AC.jpg",
       alt: "Room Air Conditioner",
       title: "ROOM AIR CONDITIONERS",
-      desc: "The most technologically advanced and energy-efficient air conditioning.",
+      // desc: "The most technologically advanced and energy-efficient air conditioning.",
       link: "/product",
       linkText: "View Product",
       gradient: "bg-color"
@@ -25,7 +25,7 @@ const Product = () => {
       img: "/Product/AirCooler/Epicool-54-1.webp",
       alt: "Air Coolers",
       title: "AIR COOLERS",
-      desc: "Presenting a range of water coolers, obsessed with purity.",
+      // desc: "Presenting a range of water coolers, obsessed with purity.",
       link: "/aircooler",
       linkText: "View Product",
       gradient: "bg-color"
@@ -34,7 +34,7 @@ const Product = () => {
       img: "/Product/Refrigrator/re.webp",
       alt: "Refrigeration",
       title: "REFRIGERATION",
-      desc: "An array of purifiers built with superior technology for cooling.",
+      // desc: "An array of purifiers built with superior technology for cooling.",
       link: "/refrigeration",
       linkText: "View Product",
       gradient: "bg-color"
@@ -43,7 +43,7 @@ const Product = () => {
       img: "/Product/fcq71_img.png",
       alt: "Cassette Air Conditioner",
       title:"CASSETTE AIR ",
-      desc: "Sleek and elegant air coolers packed with smart features.",
+      // desc: "Sleek and elegant air coolers packed with smart features.",
       link: "/Cassetteairconditioners",
       linkText: "View Product",
       gradient: "bg-color"
@@ -52,7 +52,7 @@ const Product = () => {
       img: "/Product/pexels-siddanthsawant-33590889.jpg",
       alt: "verticool air condiioner",
       title: "VERTICOOL AIR ",
-      desc: "Reliable solutions to store perishables safely and maintain freshness.",
+      // desc: "Reliable solutions to store perishables safely and maintain freshness.",
       link: "/verticoolair",
       linkText: "View Product",
       gradient: "bg-color"
@@ -61,7 +61,7 @@ const Product = () => {
       img: "/11781.jpg",
       alt: "CENTRAL AIR  CONDITIONER",
       title: "CENTRAL AIR CONDITIONER",
-      desc: "Efficient and sleek water coolers for homes and offices.",
+      // desc: "Efficient and sleek water coolers for homes and offices.",
       link: "/centralairconditioner",
       linkText: "View Product",
       gradient: "bg-color"
@@ -70,7 +70,7 @@ const Product = () => {
       img: "/Product/istockphoto-2209841249-612x612.jpg",
       alt: "COLD STORAGES",
       title: "COLD STORAGES",
-      desc: "Designed for maximum cooling and energy efficiency.",
+      // desc: "Designed for maximum cooling and energy efficiency.",
       link: "/coldstorage",
       linkText: "View Product",
       gradient: "bg-color"
@@ -79,7 +79,7 @@ const Product = () => {
       img: "/Product/water1144648102-612x612.jpg",
       alt: "WATER COOLERS",
       title: "WATER COOLERS",
-      desc: "Leaders in commercial refrigeration with freezers.",
+      // desc: "Leaders in commercial refrigeration with freezers.",
       link: "/watercooler",
       linkText: "View Product",
       gradient: "bg-color"
@@ -90,7 +90,7 @@ const Product = () => {
     {
       img: "/Domestic-ac.jpg",
       title: "Domestic Air-Conditioners",
-      desc: "We are an authorized dealer of Samsung and Voltas commercial.",
+      // desc: "We are an authorized dealer of Samsung and Voltas commercial.",
       link: "#",
       linkText: "Join Now",
       gradient: "bg-color"
@@ -98,7 +98,7 @@ const Product = () => {
     {
       img: "/commercial-ac.jpg",
       title: "CommercialAir-Conditioners",
-      desc: "We have authorized dealerships of brands like Samsung and Voltas.",
+      // desc: "We have authorized dealerships of brands like Samsung and Voltas.",
       link: "#",
       linkText: "Read More",
       gradient: "bg-color"
@@ -106,7 +106,7 @@ const Product = () => {
     {
       img: "/Ventilation-systems.jpg",
       title: "Ventilation Systems",
-      desc: "Ventilation systems can be forced systems by using devices.",
+      // desc: "Ventilation systems can be forced systems by using devices.",
       link: "#",
       linkText: "Read More",
       gradient: "bg-color"
@@ -114,7 +114,7 @@ const Product = () => {
     {
       img: "/Cold-Rooms.jpg",
       title: "Cold-Rooms",
-      desc: "Contributing to society's welfare beyond profits.",
+      // desc: "Contributing to society's welfare beyond profits.",
       link: "#",
       linkText: "Read More",
       gradient: "bg-color"
@@ -145,7 +145,7 @@ const Product = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="group bg-white/80 backdrop-blur-sm rounded-3xl border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden relative"
+              className="group bg-white/80 backdrop-blur-sm rounded-xl border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden relative"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -200,7 +200,7 @@ const Product = () => {
           {dealInProducts.map((product, index) => (
             <div
               key={index}
-              className="group bg-white/80 backdrop-blur-sm rounded-3xl border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden relative"
+              className="group bg-white/80 backdrop-blur-sm rounded-xl border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden relative"
               data-aos="fade-up"
               data-aos-delay={index * 150}
             >

@@ -126,25 +126,33 @@ const ColdStorage = () => {
 
 
             <div className="relative w-full h-[500px] overflow-hidden">
-                <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover">
-                    <source src="/hero-video.webm" type="video/webm" />
-                    <source src="/hero-video.mp4" type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-                <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-                        Cold<span className="text-blue-500"> Storage</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl text-gray-200 mb-8">
-                        Advanced cooling technology for commercial and residential spaces
-                    </p>
-                </div>
-                <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
-                    <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
-                        <h2 className="text-base md:text-lg font-semibold">Cold Storage</h2>
-                    </div>
-                </div>
-            </div>
+  {/* Responsive Image */}
+  <img 
+    src="/cold.jpg" 
+    alt="Water Cooler" 
+    className="absolute top-0 left-0 w-full h-full object-cover"
+  />
+  
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+  
+  {/* Content */}
+  <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
+    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+      Water<span className="text-blue-500">Cooler</span>
+    </h1>
+    <p className="text-xl md:text-2xl text-gray-200 mb-8">
+      Keep your products fresh and safe with advanced cold storage solutions.
+    </p>
+  </div>
+  
+  {/* Bottom Label */}
+  <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
+    <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
+      <h2 className="text-base md:text-lg font-semibold">Water Cooler</h2>
+    </div>
+  </div>
+</div>
 
             <nav className="text-gray-600 text-sm my-4">
                 <ol className="flex items-center space-x-2">

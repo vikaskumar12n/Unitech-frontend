@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+ 
 import CompanyDetails from "./CompanyDetails";
 import FounderSection from "./FounderDetails";
 import { Link } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
-
+ 
 const OurCompany = () => {
   const [expanded, setExpanded] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Company Profile");
@@ -37,42 +37,34 @@ const OurCompany = () => {
     <>
     <div className="overflow-hidden">
       {/* Banner */}
-      <div className="relative  w-full h-[500px] overflow-hidden">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute  top-0 left-0 w-full h-full object-cover"
-        >
-          <source src="/hero-video.webm" type="video/webm" />
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Enhanced Overlay with Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-        
-        {/* Banner Content */}
-        <div className="absolute  inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">About Us</h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl drop-shadow-md">Discover our journey, values, and commitment to excellence</p>
-        </div>
-        
-        {/* Menu Toggle */}
-          <div className="absolute  bottom-0 left-0 w-[50%] md:w-[30%] px-4">
-          <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
-            <h2 className="text-base md:text-lg font-semibold">ABOUT US</h2>
-            <button
-              className="text-lg md:text-xl px-2 py-1 rounded"
-              onClick={() => setExpanded(!expanded)}
-            >
-              {expanded ? <AiOutlineClose /> : <AiOutlineMenu />}
-            </button>
-          </div>
-        </div>
-      </div>
-      
+     <div className="relative w-full h-[500px] overflow-hidden">
+  {/* Responsive Image */}
+  <img 
+    src="/about.jpg" 
+    alt="Water Cooler" 
+    className="absolute top-0 left-0 w-full h-full object-cover"
+  />
+  
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+  
+  {/* Content */}
+  <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
+    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+      About<span className="text-blue-500">Us</span>
+          </h1>
+    <p className="text-xl md:text-2xl text-gray-200 mb-8">
+      Delivering quality with trust and innovation
+    </p>
+  </div>
+  
+  {/* Bottom Label */}
+  <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
+    <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
+      <h2 className="text-base md:text-lg font-semibold">About Us</h2>
+    </div>
+  </div>
+</div>
       {/* Enhanced Dropdown Menu */}
       <div
         className={`overflow-hidden w-full bg-gradient-to-r from-blue-700 to-cyan-700 text-gray-200 transition-all duration-500 ease-in-out ${expanded ? "max-h-[500px] py-6 shadow-lg" : "max-h-0 py-0"}`}
