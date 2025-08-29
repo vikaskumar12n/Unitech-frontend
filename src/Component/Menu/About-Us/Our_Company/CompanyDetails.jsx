@@ -67,7 +67,7 @@ const CompanyDetails = () => {
                     {/* Hero Header Section */}
                     <div className={`text-center mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                         <div className="relative inline-block">
-                            <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r text-color bg-clip-text text-transparent mb-6 tracking-tight">
+                            <h1 className="text-3xl mt-5 md:text-4xl font-black bg-gradient-to-r text-color bg-clip-text text-transparent mb-6 tracking-tight">
                                 Unitech
                             </h1>
                             <div className="absolute -inset-4 bg-gradient-to-r from-blue-200/50 to-purple-200/50 blur-2xl rounded-full -z-10"></div>
@@ -147,7 +147,7 @@ const CompanyDetails = () => {
                                         <h3 className="text-3xl font-bold text-gray-800">Our Philosophy</h3>
                                     </div>
                                     <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-500">
-                                        <p className="text-gray-700 leading-relaxed text-lg">
+                                        <p className="text-gray-700 text-justify leading-relaxed text-lg">
                                             Unitech &apos;s philosophy is rooted in the principles of
                                             <span className="font-bold text-color px-2 py-1 rounded mx-1">&apos;Trust&apos;</span>
                                             and
@@ -235,11 +235,11 @@ const CompanyDetails = () => {
                                     <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center sm:text-left">Manufacturing & Research Excellence</h3>
                                 </div>
                                 <div className="space-y-4">
-                                    <p className="text-blue-100 text-base sm:text-lg leading-relaxed">
+                                    <p className="text-blue-100  text-justify text-base sm:text-lg leading-relaxed">
                                         Our manufacturing footprint spans over <span className="font-bold text-white">1 lakh sq. m.</span> with
                                         cutting-edge facilities focused on energy-efficiency and sustainable innovation.
                                     </p>
-                                    <p className="text-blue-100 text-base sm:text-lg leading-relaxed">
+                                    <p className="text-blue-100 text-justify text-base sm:text-lg leading-relaxed">
                                         Unitech&apos;s robust R&D ecosystem drives continuous innovation, ensuring we stay ahead
                                         in India&apos;s competitive cooling solutions market.
                                     </p>

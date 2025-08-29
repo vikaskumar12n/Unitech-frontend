@@ -1,6 +1,6 @@
   // VertiCoolCard.js
   // eslint-disable-next-line react/prop-types, no-undef
-  const VertiCoolCard = ({   badgeText, badgeColor = "bg-blue-100 text-blue-800", title, subtitle,   gradientFrom = "from-blue-500", gradientTo = "to-blue-600", imgSrc, imgAlt,  price,   priceNote,   button1 = "Buy Now"  }) => {
+  const VertiCoolCard = ({   badgeText, badgeColor = "bg-blue-100 text-blue-800", title, subtitle,   gradientFrom = "from-[#282086]", gradientTo = "to-[#282086]", imgSrc, imgAlt,  price,   priceNote,   button1 = "Buy Now"  }) => {
   return (
     <div className="group bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 w-full  flex flex-col border border-gray-200/50 hover:border-white overflow-hidden relative">
       

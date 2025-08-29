@@ -110,7 +110,7 @@ const Service = () => {
       <div>
         <p className="font-semibold">Email Us</p>
         <p className="text-sm opacity-90">
-          <a href="mailto:care@blowair.in" className="hover:underline">care@blowair.in</a>
+          <a href="mailto:care@blowair.in" className="hover:underline">codecrafter@gmail.com</a>
         </p>
       </div>
     </div>

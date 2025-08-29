@@ -96,7 +96,7 @@ const WaterCooler = () => {
             badgeText: "BESTSELLER",
             badgeColor: "bg-red-200 text-orange-700",
             title: "Bottom Loading Dispensers",
-            subtitle: "Say goodbye to lifting cumbersome and heavy water bottles every time",
+            subtitle: "Say goodbye to lifting cumbersome and heavy water bottles every ",
             gradientFrom: "from-indigo-700",
             gradientTo: "to-blue-900",
             imgSrc: "/Product/waterCooler/bottomloadingdispensers.jpg",

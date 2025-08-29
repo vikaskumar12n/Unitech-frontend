@@ -97,10 +97,10 @@ const FounderSection = () => {
                     <FaQuoteLeft className="text-color text-xl mr-3 mt-1" />
                     <h3 className="text-2xl font-bold text-gray-800">The Journey</h3>
                   </div>
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-gray-700  text-justify leading-relaxed mb-4">
                     In September 1943, at the age of 30, Mr Founder Name founded Blue Star Engineering Company with just two employees and a modest capital of two thousand rupees. Amid the turmoil of World War II, it was his unwavering confidence and ambition that propelled him through adversity. Seeing opportunity where others saw difficulty, he built a company that was progressive and adaptable.
                   </p>
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-gray-700 text-justify leading-relaxed mb-4">
                     Under his visionary leadership, Blue Star Engineering Company pioneered the manufacture of water coolers in India. With a sharp instinct for marketing and a deep understanding of the Indian market, he transformed the Company into a successful manufacturing powerhouse.
                   </p>
                 </div>
@@ -137,10 +137,10 @@ const FounderSection = () => {
                     <FaQuoteRight className="text-color text-xl mr-3 mt-1" />
                     <h3 className="text-2xl font-bold text-gray-800">Enduring Legacy</h3>
                   </div>
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-gray-700 text-justify leading-relaxed mb-4">
                     A large-hearted man who loved life with passion, Mr Founder Name was a natural leader, inspiring great devotion in his staff and instilling a progressive work culture. His personal business ethic was imbued with professionalism, a commitment to quality and customer satisfaction, a sense of corporate social responsibility, and consideration for employees—long before these became fashionable buzzwords.
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 text-justify leading-relaxed">
                     Decades after his demise, his legacy continues to grow from strength to strength. To commemorate his birth centenary on November 11, 2012, a pictorial tribute titled <em>Remembering Mohan T. Advani: The Man and His Legacy</em> was published.
                   </p>
                 </div>
@@ -186,7 +186,7 @@ const FounderSection = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Visionary Quote</h3>
                 <div className="bg-white/20 p-4 rounded-lg mb-4">
-                  <p className="italic">
+                  <p className="italic text-justify">
                     &quot;Where others saw just a few bamboo sticks, he envisioned a world-class engineering business.&quot;
                   </p>
                 </div>

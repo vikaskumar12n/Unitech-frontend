@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Slider.css";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -126,10 +127,12 @@ const Slider = () => {
             <span className="relative z-10">READ MORE</span>
             <div className="absolute inset-0 bg-gradient-to-r from-bg-color to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
-          <button className="relative overflow-hidden bg-transparent text-white font-bold px-8 py-3 rounded-lg border-2 border-white transition-all duration-300 transform hover:scale-105 hover:bg-blue-900 group">
+         <Link to="/contactus">
+           <button className="relative overflow-hidden bg-transparent text-white font-bold px-8 py-3 rounded-lg border-2 border-white transition-all duration-300 transform hover:scale-105 hover:bg-blue-900 group">
             <span className="relative z-10">Contact Us</span>
             <div className="absolute inset-0 bg-gradient-to-r from-bg-color to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
+         </Link>
         </div>
       </div>
 

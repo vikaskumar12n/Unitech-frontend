@@ -43,6 +43,20 @@ const  Product=[
      name:"Water Coolers" ,
      link:"/watercooler"
     } 
+  ] 
+  const Footer=[
+    {
+      name:"About",
+      link:"/about-us"
+    },
+      {
+      name:"Help Desk",
+      link:"/contactus"
+    },
+      {
+      name:"Privacy Policy",
+      link:"/"
+    }
   ]
 
   const  Services=[
@@ -187,15 +201,15 @@ const  Product=[
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
           <p className="mb-2 md:mb-0">© Copyright 2025 || Developed By Vikas Bind</p>
           <div className="flex space-x-6">
-            {["About", "Help Desk", "Privacy Policy"].map((item, index) => (
-              <a 
+            {Footer?.map((item, index) => (
+              <Link
                 key={index} 
-                href="#" 
+                to={item.link} 
                 className="hover:text-white transition-colors duration-300 relative group"
               >
-                {item}
+                {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
