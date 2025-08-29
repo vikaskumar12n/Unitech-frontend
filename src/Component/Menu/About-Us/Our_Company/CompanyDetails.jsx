@@ -3,7 +3,7 @@ import { FaBuilding, FaLightbulb, FaUsers, FaIndustry, FaGlobe, FaAward, FaCog, 
 import FounderSection from "./FounderDetails";
 import SectionHeading from "../../../../Helpers/Heading";
 import CountUp from "react-countup";
- 
+
 const CompanyDetails = () => {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -13,10 +13,10 @@ const CompanyDetails = () => {
 
     // Key statistics for the company
     const stats = [
-        { icon: <FaBuilding className="text-3xl" />, value: "80",suffix:"+" ,label: "Years of Experience", color: "bg-color" },
-        { icon: <FaUsers className="text-3xl" />, value: "3000", suffix:"+", label: "Employees", color: "bg-color" },
+        { icon: <FaBuilding className="text-3xl" />, value: "80", suffix: "+", label: "Years of Experience", color: "bg-color" },
+        { icon: <FaUsers className="text-3xl" />, value: "3000", suffix: "+", label: "Employees", color: "bg-color" },
         { icon: <FaIndustry className="text-3xl" />, value: "7", label: "Manufacturing Facilities", color: "bg-color" },
-        { icon: <FaGlobe className="text-3xl" />, value: "900",suffix:"+", label: "Towns in India", color: "bg-color" },
+        { icon: <FaGlobe className="text-3xl" />, value: "900", suffix: "+", label: "Towns in India", color: "bg-color" },
     ];
 
     // Core values of the company
@@ -55,11 +55,12 @@ const CompanyDetails = () => {
 
     return (
         <>
-<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">                 
+            <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute -top-40 -right-40 w-100 h-100  bg-gradient-to-br from-blue-300/20 to-cyan-300/20 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-gradient-to-br from-indigo-300/10 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
+                    <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+
                 </div>
 
                 <div className="container mx-auto max-w-7xl px-4 relative z-10">
@@ -103,14 +104,14 @@ const CompanyDetails = () => {
                                     </div>
 
                                     {/* Value */}
-                                    <div className="text-4xl font-black text-gray-800 mb-2 relative z-10"> <CountUp
-                                                start={0}
-                                                end={stat.value}
-                                                duration={3}
-                                                suffix={stat.suffix}
-                                                enableScrollSpy={true}
-                                                scrollSpyOnce={true}
-                                            /></div>
+                                    <div className="text-4xl font-black text-justify text-gray-800 mb-2 relative z-10"> <CountUp
+                                        start={0}
+                                        end={stat.value}
+                                        duration={3}
+                                        suffix={stat.suffix}
+                                        enableScrollSpy={true}
+                                        scrollSpyOnce={true}
+                                    /></div>
                                     <div className="text-gray-600 font-medium relative z-10">{stat.label}</div>
 
                                     {/* Hover Effect */}
