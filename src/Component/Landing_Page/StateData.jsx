@@ -51,12 +51,12 @@ const StatsSection = () => {
             <div 
                 className="absolute inset-0 bg-fixed bg-center bg-cover"
                 style={{
-                    backgroundImage: "url('/state banner.jpg')",
+                    backgroundImage: "url('/banner.jpg')",
                 }}
             ></div>
             
             {/* Enhanced Overlay with Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-black/60"></div>
             
             {/* Animated Background Elements */}
             <div className="absolute top-10 left-10 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>

@@ -1,5 +1,7 @@
 import HVACDesignCard from './Solution';
 import ServiceSlider from './SolutionSlideParent';
+import SectionHeading from '../../../Helpers/Heading';
+import { Link } from 'react-router-dom';
 const HVACShowcase = () => {
   const sampleCards = [
     {
@@ -129,14 +131,34 @@ const HVACShowcase = () => {
            
           </div>
         </div>
-      </div>
-  
-    <div className="min-h-screen mt-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 py-16">
+      </div> 
+<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">                 
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute -top-40 -right-40 w-100 h-100  bg-gradient-to-br from-blue-300/20 to-cyan-300/20 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-gradient-to-br from-indigo-300/10 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+                </div>
+     <nav className="text-gray-600 text-sm my-4">
+                <ol className="flex items-center space-x-2">
+                    <li>
+                        <Link to="/" className="text-blue-600 hover:underline font-bold ms-10">
+                            Home
+                        </Link>
+                    </li>
+                    <li>/</li>
+                    <li className="text-gray-500 font-bold">Services</li>
+                </ol>
+            </nav>
+    <div className="min-h-screen  bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 py-16">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold bg-gradient-to-r text-color bg-clip-text text-transparent mb-4">
-            Our HVAC Services
-          </h2>
+         <div
+            className="font-extrabold text-black   bg-clip-text bg-gradient-to-r text-2xl md:text-3xl lg:text-4xl mb-4"
+          >
+            Our  <span className="text-color">Services </span>
+            <SectionHeading />
+          </div>
+
           <p className="text-black max-w-2xl mx-auto">
             Professional heating, ventilation, and air conditioning solutions tailored to your needs
           </p>
@@ -154,6 +176,7 @@ const HVACShowcase = () => {
           />
         ))}
       </div>
+    </div>
     </div>
     <ServiceSlider/>
       </>

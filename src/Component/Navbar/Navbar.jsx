@@ -71,19 +71,19 @@ const Navbar = () => {
         }
         , {
           name: "Central Air Conditioning",
-          link: "/refrigeration"
+          link: "/centralairconditioner"
         }
         , {
           name: "Heat Pumps",
-          link: "/refrigeration"
+          link: "/heatpump"
         }
         , {
           name: "Cold Storages",
-          link: "/refrigeration"
+          link: "/coldstorage"
         }
         , {
           name: "Water Coolers",
-          link: "/refrigeration"
+          link: "/watercooler"
         }, {
           name: "Speciality Products",
           link: "/refrigeration"

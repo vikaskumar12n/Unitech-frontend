@@ -18,6 +18,10 @@ import AirCooler from './Component/Menu/Products/Air-Cooler/AirCooler';
 import Refrigeration from './Component/Menu/Products/Refrigeration/Refrigeration';
 import CassetteAirConditioners from './Component/Menu/Products/CassetteAirCon/CassetteAirConditioners';
 import VertiCoolProduct from './Component/Menu/Products/VerticoolAirCon/VertiCoolAir';
+import CentralAirConditioner from './Component/Menu/Products/Central-Air-Conditioner/CentralAirCon';
+import HeatPump from './Component/Menu/Products/Heat-pump/HeatPump';
+import ColdStorage from './Component/Menu/Products/Cold-Storage/ColdStorage';
+import WaterCooler from './Component/Menu/Products/Water-Coller/WaterCooler';
 function App() {
   return (
     <> 
@@ -35,6 +39,10 @@ function App() {
       <Route path='/contactus' element={<ContactUsPage/>}/>
       <Route path='/solution' element={<HVACDesign/>}/>
       <Route path='/verticoolair' element={<VertiCoolProduct/>}/>
+      <Route path='/centralairconditioner' element={<CentralAirConditioner/>}/>
+      <Route path='/heatpump' element={<HeatPump/>}/>
+      <Route path='/coldstorage' element={<ColdStorage/>}/>
+      <Route path='/watercooler' element={<WaterCooler/>}/>
      
 
        

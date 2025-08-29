@@ -22,65 +22,65 @@ const Product = () => {
       gradient: "bg-color"
     },
     {
-      img: "/Water-Purifier.jpg",
-      alt: "Water Purifier",
-      title: "WATER PURIFIERS",
-      desc: "Presenting a range of water purifiers, obsessed with purity.",
-      link: "/water-purifier",
-      linkText: "View Product",
-      gradient: "bg-color"
-    },
-    {
-      img: "/Air-Purifier.jpg",
-      alt: "Air Purifier",
-      title: "AIR PURIFIERS",
-      desc: "An array of purifiers built with superior technology for clean air.",
-      link: "/air-purifier",
-      linkText: "View Product",
-      gradient: "bg-color"
-    },
-    {
-      img: "/Air-Cooler.jpg",
-      alt: "Air Cooler",
+      img: "/Product/AirCooler/Epicool-54-1.webp",
+      alt: "Air Coolers",
       title: "AIR COOLERS",
+      desc: "Presenting a range of water coolers, obsessed with purity.",
+      link: "/aircooler",
+      linkText: "View Product",
+      gradient: "bg-color"
+    },
+    {
+      img: "/Product/Refrigrator/re.webp",
+      alt: "Refrigeration",
+      title: "REFRIGERATION",
+      desc: "An array of purifiers built with superior technology for cooling.",
+      link: "/refrigeration",
+      linkText: "View Product",
+      gradient: "bg-color"
+    },
+    {
+      img: "/Product/fcq71_img.png",
+      alt: "Cassette Air Conditioner",
+      title:"CASSETTE AIR ",
       desc: "Sleek and elegant air coolers packed with smart features.",
-      link: "/air-cooler",
+      link: "/Cassetteairconditioners",
       linkText: "View Product",
       gradient: "bg-color"
     },
     {
-      img: "/cold storage.jpg",
-      alt: "Cold Storage",
-      title: "COLD STORAGE",
+      img: "/Product/pexels-siddanthsawant-33590889.jpg",
+      alt: "verticool air condiioner",
+      title: "VERTICOOL AIR ",
       desc: "Reliable solutions to store perishables safely and maintain freshness.",
-      link: "/cold-storage",
-      linkText: "View Product",
-      gradient: "bg-color"
-    },
-    {
-      img: "/water-coolers.png",
-      alt: "Water Cooler",
-      title: "WATER COOLER",
-      desc: "Efficient and sleek water coolers for homes and offices.",
-      link: "/water-cooler",
+      link: "/verticoolair",
       linkText: "View Product",
       gradient: "bg-color"
     },
     {
       img: "/11781.jpg",
-      alt: "Verticool AC",
-      title: "AIR CONDITIONER",
-      desc: "Smart air conditioners designed for maximum cooling and energy efficiency.",
-      link: "/products/verticool-ac",
+      alt: "CENTRAL AIR  CONDITIONER",
+      title: "CENTRAL AIR CONDITIONER",
+      desc: "Efficient and sleek water coolers for homes and offices.",
+      link: "/centralairconditioner",
       linkText: "View Product",
       gradient: "bg-color"
     },
     {
-      img: "/product-thumb-4.jpg",
-      alt: "Refrigerator",
-      title: "REFRIGERATOR",
+      img: "/Product/istockphoto-2209841249-612x612.jpg",
+      alt: "COLD STORAGES",
+      title: "COLD STORAGES",
+      desc: "Designed for maximum cooling and energy efficiency.",
+      link: "/coldstorage",
+      linkText: "View Product",
+      gradient: "bg-color"
+    },
+    {
+      img: "/Product/water1144648102-612x612.jpg",
+      alt: "WATER COOLERS",
+      title: "WATER COOLERS",
       desc: "Leaders in commercial refrigeration with freezers.",
-      link: "/refrigerator",
+      link: "/watercooler",
       linkText: "View Product",
       gradient: "bg-color"
     },

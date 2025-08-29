@@ -22,26 +22,26 @@ const  Product=[
      link:"/refrigeration"
     }, {
      name:"Cassette Air Conditioners" ,
-     link:"/refrigeration"
+     link:"/cassetteairconditioners"
     } ,{
      name:"Verticool Air Conditioners" ,
-     link:"/refrigeration"
+     link:"/verticoolair"
     }
      ,{
      name:"Central Air Conditioning" ,
-     link:"/refrigeration"
+     link:"/centralairconditioner"
     }
      ,{
      name:"Heat Pumps" ,
-     link:"/refrigeration"
+     link:"/heatpump"
     }
 ,{
      name:"Cold Storages" ,
-     link:"/refrigeration"
+     link:"/coldstorage"
     } 
     ,{
      name:"Water Coolers" ,
-     link:"/refrigeration"
+     link:"/watercooler"
     } 
   ]
 

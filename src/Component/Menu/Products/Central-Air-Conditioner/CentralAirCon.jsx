@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import VertiCoolCard from "../VerticoolAirCon/VertiCoolCard";
 import { Link } from "react-router-dom";
 
-const VertiCoolProduct = () => {
+const CentralAirConditioner = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -13,11 +13,11 @@ const products = [
   {
     badgeText: "BESTSELLER",
     badgeColor: "bg-red-200 text-orange-700",
-    title: "Cassette ACs",
-    subtitle: "Ceiling-mounted cooling solutions",
+    title: "VRF Systems ",
+    subtitle: "High ambient temperature operation up to 52°C",
     gradientFrom: "from-blue-900",
     gradientTo: "to-indigo-700",
-    imgSrc: "/Product/client_cassette-front-copy.png",
+    imgSrc: "/Product/v-plus-units.png",
     imgAlt: "Cassette AC",
     details: [
       { label: "Type", value: "Inverter" },
@@ -28,7 +28,7 @@ const products = [
       { label: "Air Distribution", value: "360° Uniform", color: "" },
       { label: "Operation", value: "Silent", color: "text-blue-600" },
     ],
-    price: "₹45,000",
+    price: "₹20,000",
     priceNote: "*Price varies by capacity & features",
     priceBg: "from-blue-50 to-indigo-50 border border-blue-100",
     button1: "View Details",
@@ -37,11 +37,11 @@ const products = [
   {
     badgeText: "PREMIUM",
     badgeColor: "bg-green-100 text-green-800",
-    title: "Ducted ACs",
-    subtitle: "Concealed cooling with zone control",
+    title: "Ducted System",
+    subtitle: "Long refrigerant piping for better building aesthetics",
     gradientFrom: "from-indigo-700",
     gradientTo: "to-blue-900",
-    imgSrc: "/Product/images (1).jpeg",
+    imgSrc: "/Product/inverter-packaged-ducted-01.jpg",
     imgAlt: "Ducted AC",
     details: [
       { label: "Type", value: "Inverter" },
@@ -52,7 +52,7 @@ const products = [
       { label: "Air Distribution", value: "Zone Control", color: "" },
       { label: "Operation", value: "Ultra Silent", color: "text-blue-600" },
     ],
-    price: "₹65,000",
+    price: "₹30,000",
     priceNote: "*Price varies by capacity & features",
     priceBg: "from-green-50 to-teal-50 border border-green-100",
     button1: "View Details",
@@ -75,7 +75,7 @@ const products = [
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-            Cassette<span className="text-blue-500"> Air</span> Conditioners
+            Central<span className="text-blue-500"> Air</span> Conditioners
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8">
             Advanced cooling technology for commercial and residential spaces
@@ -83,7 +83,7 @@ const products = [
         </div>
         <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
           <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
-            <h2 className="text-base md:text-lg font-semibold">Cassette Air Conditioners</h2>
+            <h2 className="text-base md:text-lg font-semibold">Central Air Conditioners</h2>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ const products = [
                     <li>/</li>
                     <li className="text-gray-500 font-bold">Product</li>
                     <li>/</li>
-                    <li className="text-gray-500 font-bold">Cassette Air Conditioners</li>
+                    <li className="text-gray-500 font-bold">Central Air Conditioners</li>
                 </ol>
             </nav>
       {/* Main Section */}
@@ -166,4 +166,4 @@ const products = [
   );
 };
 
-export default VertiCoolProduct;
+export default CentralAirConditioner;

@@ -52,7 +52,7 @@ const ProductCard = ({ title, description, image, features, rating, price, badge
         </h3>
 
         {/* Description - Shorter */}
-        <p className="text-gray-600 mb-3 line-clamp-2 text-sm">
+        <p className="text-gray-600 text-justify mb-3 line-clamp-2 text-sm">
           {description}
         </p>
 

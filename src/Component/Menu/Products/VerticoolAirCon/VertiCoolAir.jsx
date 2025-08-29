@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import VertiCoolCard from "./VertiCoolCard";
+import { Link } from "react-router-dom";
 
 const VertiCoolProduct = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,9 +9,61 @@ const VertiCoolProduct = () => {
     setIsVisible(true);
   }, []);
 
+const vertiCoolData = [
+  {
+    badgeText: "BESTSELLER",
+    badgeColor: "bg-red-200 text-orange-700",
+    title: "G Series",
+    subtitle: "Anti-Corrosive Gold Fins in Indoor & Blue Fins",
+    gradientFrom: "from-blue-900",
+    gradientTo: "to-indigo-700",
+    imgSrc: "/Product/verti.jpg",
+    imgAlt: "Cassette AC",
+    details: [
+      { label: "Type", value: "Inverter" },
+      { label: "Mount", value: "Ceiling" },
+    ],
+    features: [
+      { label: "Energy Rating", value: "5 Star", color: "text-blue-600" },
+      { label: "Air Distribution", value: "360° Uniform", color: "" },
+      { label: "Operation", value: "Silent", color: "text-blue-600" },
+    ],
+    price: "₹70,000",
+    priceNote: "*Price varies by capacity & features",
+    button1: "View Details",
+    button2: "Get Quote",
+  },
+  {
+    badgeText: "PREMIUM",
+    badgeColor: "bg-green-100 text-green-800",
+    title: "Verticool Air Conditioners",
+    subtitle: "Buy Unitech Verticool AC | 4 Ton | Floor Standing ",
+    gradientFrom: "from-indigo-700",
+    gradientTo: "to-blue-900",
+    imgSrc: "/Product/verti2.jpeg",
+    imgAlt: "Ducted AC",
+    details: [
+      { label: "Type", value: "Inverter" },
+      { label: "Mount", value: "Concealed" },
+    ],
+    features: [
+      { label: "Energy Rating", value: "5 Star", color: "text-blue-600" },
+      { label: "Air Distribution", value: "Zone Control", color: "" },
+      { label: "Operation", value: "Ultra Silent", color: "text-blue-600" },
+    ],
+    price: "₹85,000",
+    priceNote: "*Price varies by capacity & features",
+    button1: "View Details",
+    button2: "Get Quote",
+  }
+];
+
   return (
     <>
       {/* Hero Section */}
+
+  
+
       <div className="relative w-full h-[500px] overflow-hidden">
         <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover">
           <source src="/hero-video.webm" type="video/webm" />
@@ -31,13 +84,27 @@ const VertiCoolProduct = () => {
           </div>
         </div>
       </div>
-
+    
+   <nav className="text-gray-600 text-sm my-4">
+                <ol className="flex items-center space-x-2">
+                    <li>
+                        <Link to="/" className="text-blue-600 hover:underline font-bold ms-10">
+                            Home
+                        </Link>
+                    </li>
+                    <li>/</li>
+                    <li className="text-gray-500 font-bold">Product</li>
+                    <li>/</li>
+                    <li className="text-gray-500 font-bold">Verticool Air Conditioners</li>
+                </ol>
+            </nav>
       {/* Main Section */}
-      <div className="min-h-screen py-16 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/10 to-pink-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
+       <div className="min-h-screen pb-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">                 
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute -top-40 -right-40 w-100 h-100  bg-gradient-to-br from-blue-300/20 to-cyan-300/20 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-gradient-to-br from-indigo-300/10 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+                </div>
 
         <div className={`text-center pt-10 pb-16 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -50,53 +117,27 @@ const VertiCoolProduct = () => {
 
         {/* Cards */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4 pb-20 relative z-10 max-w-6xl mx-auto">
-          <VertiCoolCard
-            badgeText="BESTSELLER"
-            badgeColor="bg-red-200 text-orange-700"
-            title="G Series"
-            subtitle="Anti-Corrosive Gold Fins in Indoor & Blue Fins in Outdoor for Protection"
-            gradientFrom="from-blue-900"
-            gradientTo="to-indigo-700"
-            imgSrc="/Product/verti.jpg"
-            imgAlt="Cassette AC"
-            details={[
-              { label: "Type", value: "Inverter" },
-              { label: "Mount", value: "Ceiling" },
-            ]}
-            features={[
-              { label: "Energy Rating", value: "5 Star", color: "text-blue-600" },
-              { label: "Air Distribution", value: "360° Uniform", color: "" },
-              { label: "Operation", value: "Silent", color: "text-blue-600" },
-            ]}
-            price="₹70,000"
-            priceNote="*Price varies by capacity & features"
-            button1="View Details"
-            button2="Get Quote"
-          />
+         {vertiCoolData.map((item, index) => (
+  <VertiCoolCard
+    key={index}
+    badgeText={item.badgeText}
+    badgeColor={item.badgeColor}
+    title={item.title}
+    subtitle={item.subtitle}
+    gradientFrom={item.gradientFrom}
+    gradientTo={item.gradientTo}
+    imgSrc={item.imgSrc}
+    imgAlt={item.imgAlt}
+    details={item.details}
+    features={item.features}
+    price={item.price}
+    priceNote={item.priceNote}
+    button1={item.button1}
+    button2={item.button2}
+  />
+))}
 
-          <VertiCoolCard
-            badgeText="PREMIUM"
-            badgeColor="bg-green-100 text-green-800"
-            title="Verticool Air Conditioners"
-            subtitle="Buy Unitech Verticool AC | 4 Ton | Floor Standing "
-            gradientFrom="from-indigo-700"
-            gradientTo="to-blue-900"
-            imgSrc="/Product/verti2.jpeg"
-            imgAlt="Ducted AC"
-            details={[
-              { label: "Type", value: "Inverter" },
-              { label: "Mount", value: "Concealed" },
-            ]}
-            features={[
-              { label: "Energy Rating", value: "5 Star", color: "text-blue-600" },
-              { label: "Air Distribution", value: "Zone Control", color: "" },
-              { label: "Operation", value: "Ultra Silent", color: "text-blue-600" },
-            ]}
-            price="₹85,000"
-            priceNote="*Price varies by capacity & features"
-            button1="View Details"
-            button2="Get Quote"
-          />
+          
         </div>
           <div className="max-w-4xl mx-auto mt-16 px-4 relative z-10">
                     <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
@@ -117,6 +158,7 @@ const VertiCoolProduct = () => {
                     </div>
                 </div>
       </div>
+       
     </>
   );
 };

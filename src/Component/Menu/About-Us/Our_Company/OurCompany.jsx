@@ -75,9 +75,9 @@ const OurCompany = () => {
       
       {/* Enhanced Dropdown Menu */}
       <div
-        className={`overflow-hidden bg-gradient-to-r from-blue-700 to-cyan-700 text-gray-200 transition-all duration-500 ease-in-out ${expanded ? "max-h-[500px] py-6 shadow-lg" : "max-h-0 py-0"}`}
+        className={`overflow-hidden w-full bg-gradient-to-r from-blue-700 to-cyan-700 text-gray-200 transition-all duration-500 ease-in-out ${expanded ? "max-h-[500px] py-6 shadow-lg" : "max-h-0 py-0"}`}
       >
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto w-full px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {menuItems.map((item, idx) => (
               <button
@@ -116,11 +116,13 @@ const OurCompany = () => {
       </nav>
       
       {/* Dynamic Content with Animation */}
-      <div className="container mx-auto px-4 py-10">
-        <div className={`transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
-          {currentContent}
-        </div>
-      </div>
+     <div className="w-screen px-4 ">
+  <div className="max-w-8xl mx-auto">
+    <div className={`transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+      {currentContent}
+    </div>
+  </div>
+</div>
       </div>
     </>
   );
