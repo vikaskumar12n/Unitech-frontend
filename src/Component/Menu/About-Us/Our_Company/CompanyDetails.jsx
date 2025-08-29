@@ -68,7 +68,7 @@ const CompanyDetails = () => {
                     <div className={`text-center mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                         <div className="relative inline-block">
                             <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r text-color bg-clip-text text-transparent mb-6 tracking-tight">
-                                UNITECH
+                                Unitech
                             </h1>
                             <div className="absolute -inset-4 bg-gradient-to-r from-blue-200/50 to-purple-200/50 blur-2xl rounded-full -z-10"></div>
                         </div>
