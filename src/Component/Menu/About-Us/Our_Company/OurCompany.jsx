@@ -108,7 +108,7 @@ const OurCompany = () => {
       </nav>
       
       {/* Dynamic Content with Animation */}
-     <div className="w-screen px-4 ">
+     <div className="w-screen   ">
   <div className="max-w-8xl mx-auto">
     <div className={`transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
       {currentContent}
