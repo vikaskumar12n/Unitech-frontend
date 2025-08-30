@@ -207,7 +207,7 @@ const Navbar = () => {
     }`}
     style={{ maxHeight: "250px" }} 
   >
-    <div className="py-2 overflow-y-auto max-h-64">  
+    <div className="py-2 overflow-hidden max-h-64">  
       {item.dropdown.map((subItem, subIndex) => (
         <Link
           key={subIndex}
@@ -245,7 +245,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`md:hidden overflow-y-auto transition-all duration-500 ease-in-out ${mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
             }`}
         >
           <div className="px-4 pt-2 pb-4 space-y-1">
