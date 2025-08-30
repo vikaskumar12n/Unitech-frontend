@@ -9,9 +9,9 @@ const VertiCoolCard = ({badgeText,badgeColor = "bg-gray-200 text-gray-700", titl
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-100 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans">
+    <div className="relative w-100 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans px-4 py-6">
       {/* Product Image Section - Purple Background */}
-      <div className="relative bg-gray-800 h-64 flex items-center justify-center p-4">
+      <div className="relative bg-gray-800 rounded-lg h-64 flex items-center justify-center p-4">
         {/* Heart icon for wishlist */}
         <button className="absolute top-3 right-3 text-white hover:text-red-500 transition-colors duration-200 focus:outline-none">
                  <FaHeart className="h-5 w-5" />

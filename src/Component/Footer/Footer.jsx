@@ -92,7 +92,7 @@ const  Product=[
             <div className="relative"> 
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
-             <img src="/public/unitect_logo.PNG" alt="Unitech Aircon" className="h-12" />
+             <img src="/unitect_logo.PNG" alt="Unitech Aircon" className="h-12" />
           </div>
 
           <p className="text-sm leading-relaxed text-justify mb-6 text-gray-300">

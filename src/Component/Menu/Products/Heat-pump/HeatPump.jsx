@@ -227,7 +227,7 @@ const HeatPump = () => {
 
 
                 </div>
- <div className=" relative z-10 px-6 md:px-8 lg:px-12 py-8"> {/* Added horizontal padding here */}
+ <div className=" relative z-10 px-4 md:px-8 lg:px-12 py-6"> {/* Added horizontal padding here */}
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
     {Cards.map((product, index) => (
       <ProductCard

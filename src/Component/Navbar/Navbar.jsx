@@ -110,7 +110,7 @@ const Navbar = () => {
         }`}
     >
       {/* Top Navbar */}
-      <div className="top_section h-9 text-xs py-2 px-4 flex justify-between items-center relative overflow-hidden sticky top-0 z-50"
+      <div className="top_section h-9 text-xs py-2 px-4 flex justify-between items-center relative overflow-y-auto sticky top-0 z-50"
       >
         {/* Background Layers */}
         <div className="absolute top-0 left-0 w-1/2 h-full bg-white"></div>
@@ -167,7 +167,7 @@ const Navbar = () => {
             <div className="relative"> 
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
-             <img src="/public/unitect_logo.PNG" alt="Unitech Aircon" className="h-12" />
+             <img src="/unitect_logo.PNG" alt="Unitech Aircon" className="h-12" />
           </div>
 
           {/* Desktop Menu */}
@@ -197,27 +197,30 @@ const Navbar = () => {
                   </button>
                 )}
 
-                {/* Dropdown Menu */}
-                {item.dropdown && (
-                  <div
-                    className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 transform ${openDropdown === index
-                        ? "opacity-100 translate-y-0 visible"
-                        : "opacity-0 -translate-y-2 invisible"
-                      }`}
-                  >
-                    <div className="py-2">
-                      {item.dropdown.map((subItem, subIndex) => (
-                        <Link
-                          key={subIndex}
-                          to={subItem.link || "/"}
-                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-colors duration-200"
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
+          {/* Dropdown Menu */}
+{item.dropdown && (
+  <div
+    className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 transform ${
+      openDropdown === index
+        ? "opacity-100 translate-y-0 visible"
+        : "opacity-0 -translate-y-2 invisible"
+    }`}
+    style={{ maxHeight: "250px" }} 
+  >
+    <div className="py-2 overflow-y-auto max-h-64">  
+      {item.dropdown.map((subItem, subIndex) => (
+        <Link
+          key={subIndex}
+          to={subItem.link || "/"}
+          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-colors duration-200"
+        >
+          {subItem.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+)}
+
               </li>
             ))}
           </ul>
@@ -273,7 +276,7 @@ const Navbar = () => {
                     </button>
                     {item.dropdown && (
                       <div
-                        className={`overflow-hidden transition-all duration-300 ${openDropdown === index ? "max-h-96" : "max-h-0"
+                        className={`overflow-y-auto transition-all duration-300 ${openDropdown === index ? "max-h-96" : "max-h-0"
                           }`}
                       >
                         <div className="pl-8 py-2 space-y-1">

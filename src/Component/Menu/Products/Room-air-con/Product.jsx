@@ -273,7 +273,7 @@ const Product = () => {
           <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-black via-black to-black bg-clip-text text-transparent mb-6">
             Premium <span className="text-blue-900"> Cooling</span> Solutions
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl text-justify mx-auto mb-8">
+          <p className="text-xl p-5 text-gray-600 max-w-2xl text-justify mx-auto mb-8">
             Discover our range of energy-efficient air conditioners designed for every space and need
           </p>
 

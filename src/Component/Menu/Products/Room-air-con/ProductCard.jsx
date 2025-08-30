@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const ProductCard = ({ title, description, image }) => {
   return (
-    <div className="relative w-100 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans py-6">
+    <div className="relative w-100 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans py-6 px-4">
       {/* Product Image Section - Dark Background */}
-      <div className="relative bg-gray-700 h-64 flex items-center justify-center p-4 rounded-lg">
+      <div className="relative bg-gray-700 h-64 flex items-center justify-center   rounded-lg">
         {/* Heart icon for wishlist */}
         <button className="absolute top-3 right-3 text-white hover:text-red-500 transition-colors duration-200 focus:outline-none">
           <FaHeart className="h-5 w-5" />
