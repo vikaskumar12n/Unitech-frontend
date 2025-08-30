@@ -163,16 +163,11 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo Section */}
-          <div className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-r bg-color rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-xl">U</span>
-              </div>
+          <div className="flex items-center space-x-0 group">
+            <div className="relative"> 
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
-            <h2 className="text-3xl font-bold  text-color text-transparent bg-gradient-to-r .">
-              Unitech
-            </h2>
+             <img src="/public/unitect_logo.PNG" alt="Unitech Aircon" className="h-12" />
           </div>
 
           {/* Desktop Menu */}

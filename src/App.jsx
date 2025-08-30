@@ -9,7 +9,7 @@ import ScrollToTopButton from './Helpers/ScrollButton'
 // import GovernanceStructure from './Component/Menu/About-Us/Governance_Structure/GovernanceStructure'
 // import GuidingPolicies from './Component/Menu/About-Us/Guiding_Policies/GuidingPolicies';
 // import Overview from './Component/Menu/Products/OverView/OverView';
-import MouseFollower from './Helpers/MouseFollow';
+// import MouseFollower from './Helpers/MouseFollow';
 import ScrollToTop from './Helpers/ScrollbarToTop';
 import Product from './Component/Menu/Products/Room-air-con/Product';
 import ContactUsPage from './Component/Menu/ContactUs/ContactUsPage';
@@ -28,7 +28,7 @@ function App() {
     <BrowserRouter>
     <Navbar />
      <ScrollToTop />
-    <MouseFollower/>
+    {/* <MouseFollower/> */}
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/about-us' element={<OurCompany/>}/>
@@ -43,6 +43,8 @@ function App() {
       <Route path='/heatpump' element={<HeatPump/>}/>
       <Route path='/coldstorage' element={<ColdStorage/>}/>
       <Route path='/watercooler' element={<WaterCooler/>}/>
+      
+      
      
 
        

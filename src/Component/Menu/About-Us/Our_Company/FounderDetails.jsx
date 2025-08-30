@@ -204,7 +204,7 @@ const FounderSection = () => {
 
             {/* Image Gallery */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden" data-aos="fade-left" data-aos-delay="200">
-              <div className="p-4 bg-color text-white">
+              <div className="p-4 bg-[#124a70] text-white">
                 <h3 className="text-lg font-bold">Historical Gallery</h3>
               </div>
               <div className="p-4">

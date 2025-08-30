@@ -14,7 +14,7 @@
   overflow: hidden;         
 }
 
-/* 🔥 Overlay added */
+ 
 .slider-container::before {
   content: "";
   position: absolute;
@@ -26,7 +26,7 @@
 
 .slider-container > div {
   position: relative;
-  z-index: 2;   /* overlay ke upar */
+  z-index: 2;    
 }
 
 @media (max-width: 768px) {

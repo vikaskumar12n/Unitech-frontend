@@ -22,10 +22,7 @@ const ServicesSection = () => {
       ></div>
       
       {/* Background Decorations */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-blue-50/60 to-white/80"></div>
-      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-400/15 to-teal-400/15 rounded-full blur-3xl animate-pulse delay-500"></div>
+     
 
       <div className="relative max-w-7xl mx-auto text-black z-10">
         
@@ -158,7 +155,7 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-blue-100">
+                <div className="group bg-white/90 mt-4 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-blue-100">
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                       <svg className="w-5 h-5 text-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,19 +169,7 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-blue-100">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-5 h-5 text-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h5 className="font-bold text-lg text-gray-800">Top Rated Brand 2022</h5>
-                      <p className="text-sm text-gray-600">Customer Choice Award</p>
-                    </div>
-                  </div>
-                </div>
+               
               </div>
             </div>
           </div>

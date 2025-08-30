@@ -55,13 +55,8 @@ const CompanyDetails = () => {
 
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
-                    <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
-
-                </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-10 via-blue-10 to-indigo-50 relative overflow-hidden">
+     
 
                 <div className="container mx-auto max-w-7xl px-4 relative z-10">
                     {/* Hero Header Section */}

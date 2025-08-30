@@ -31,8 +31,8 @@ const products = [
     price: "₹45,000",
     priceNote: "*Price varies by capacity & features",
     priceBg: "from-blue-50 to-indigo-50 border border-blue-100",
-    button1: "View Details",
-    button2: "Get Quote",
+    button1: "Enquiry",
+    
   },
   {
     badgeText: "PREMIUM",
@@ -55,9 +55,33 @@ const products = [
     price: "₹65,000",
     priceNote: "*Price varies by capacity & features",
     priceBg: "from-green-50 to-teal-50 border border-green-100",
-    button1: "View Details",
-    button2: "Get Quote",
-  }
+     button1: "Enquiry",
+    
+  },
+    {
+    badgeText: "BESTSELLER",
+    badgeColor: "bg-red-200 text-orange-700",
+    title: "Air Cooler ACs",
+    subtitle: "Ceiling-mounted cooling solutions",
+    gradientFrom: "from-blue-900",
+    gradientTo: "to-indigo-700",
+    imgSrc: "/Product/AirCooler/6.webp",
+    imgAlt: "Cassette AC",
+    details: [
+      { label: "Type", value: "Inverter" },
+      { label: "Mount", value: "Ceiling" },
+    ],
+    features: [
+      { label: "Energy Rating", value: "5 Star", color: "text-blue-600" },
+      { label: "Air Distribution", value: "360° Uniform", color: "" },
+      { label: "Operation", value: "Silent", color: "text-blue-600" },
+    ],
+    price: "₹45,000",
+    priceNote: "*Price varies by capacity & features",
+    priceBg: "from-blue-50 to-indigo-50 border border-blue-100",
+    button1: "Enquiry",
+    
+  },
 ];
 
 
@@ -91,7 +115,7 @@ const products = [
   {/* Bottom Label */}
   <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
     <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
-      <h2 className="text-base md:text-lg font-semibold">Refrigeration</h2>
+      <h2 className="text-base md:text-lg font-semibold">Cassette Air Conditioner</h2>
     </div>
   </div>
 </div>
@@ -110,12 +134,8 @@ const products = [
                 </ol>
             </nav>
       {/* Main Section */}
-       <div className="min-h-screen pb-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">                 
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute -top-40 -right-40 w-100 h-100  bg-gradient-to-br from-blue-300/20 to-cyan-300/20 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-gradient-to-br from-indigo-300/10 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
-                </div>
+      <div className="min-h-screen pb-15 bg-gradient-to-br from-slate-10 via-blue-10 to-indigo-50 relative overflow-hidden">
+               
 
         <div className={`text-center pt-10 pb-16 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -127,7 +147,7 @@ const products = [
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4 pb-20 relative z-10 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4 pb-20 relative z-10 max-w-7xl mx-auto">
          {products?.map((item, index) => (
   <VertiCoolCard
     key={index}

@@ -58,7 +58,7 @@ const AirCooler = () => {
     },
     {
       id: 4,
-      title: "MAXIMA|DESERT COOLER|75 LITRES",
+      title: "MAXIMA | DESERT COOLER | 75 LITRES",
       description: "Compact window AC with steady cooling performance, perfect for smaller spaces and budget-conscious users.",
       image: "/Product/AirCooler/4.webp",
       rating: 4,
@@ -71,7 +71,7 @@ const AirCooler = () => {
     },
     {
       id: 5,
-      title: "ULTIMA|DESERT COOLER|20 LITRES",
+      title: "ULTIMA | DESERT COOLER | 20 LITTRES",
       description: "Compact window AC with steady cooling performance, perfect for smaller spaces and budget-conscious users.",
       image: "/Product/AirCooler/5.webp",
       rating: 4,
@@ -126,6 +126,18 @@ const AirCooler = () => {
         { icon: <FaShieldAlt />, text: "TowerAir Use" }
       ]
     },
+     {
+      id: 3,
+      title: " TOWER COOLER|27 LITRES",
+      description: "Industrial-grade performance with energy-efficient inverter technology for TowerAir applications.",
+      image: "/Product/AirCooler/p1.webp", 
+      badge: "BestSeller",
+      features: [
+        { icon: <FaBolt />, text: "Capacity:37 L" },
+        { icon: <FaShieldAlt />, text: "Compare" },
+        { icon: <FaLeaf />, text: " 1 Year Standard Warranty (T&Cs)" }
+      ]
+    },
     
   ];
 
@@ -158,7 +170,18 @@ const AirCooler = () => {
         { icon: <FaSnowflake />, text: " 1 Year Standard Warranty (T&Cs)" }
       ]
     },
-    
+      {
+      id: 3,
+      title: " TOWER COOLER|27 LITRES",
+      description: "Industrial-grade performance with energy-efficient inverter technology for TowerAir applications.",
+      image: "/Product/AirCooler/p1.webp", 
+      badge: "BestSeller",
+      features: [
+        { icon: <FaBolt />, text: "Capacity:37 L" },
+        { icon: <FaShieldAlt />, text: "Compare" },
+        { icon: <FaLeaf />, text: " 1 Year Standard Warranty (T&Cs)" }
+      ]
+    },
   ];
 
   const categories = [
@@ -293,28 +316,27 @@ Affordable, portable, and energy-efficient cooling for every home.
       </div>
 
       {/* Products Grid */}
-      <div className="relative z-10 px-4">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">
-                            {getCurrentProducts().map((product, index) => (
-                                <div
-                                    key={product.id}
-                                    className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                                    style={{ transitionDelay: `${index * 100}ms` }}
-                                >
-                                    <ProductCard
-                                        title={product.title}
-                                        description={product.description}
-                                        image={product.image}
-                                        rating={product.rating}
-                                        price={product.price}
-                                        badge={product.badge}
-                                        features={product.features}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+      <div className="relative z-10 px-6 md:px-8 lg:px-12 py-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center">
+  {getCurrentProducts().map((product, index) => (
+    <div
+      key={product.id}
+      className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <ProductCard
+        title={product.title}
+        description={product.description}
+        image={product.image}
+        rating={product.rating}
+        price={product.price}
+        badge={product.badge}
+        features={product.features}
+      />
+    </div>
+  ))}
+</div>
+
                     {/* CTA Section */}
                     <div className="max-w-4xl mx-auto mt-20  text-center ">
                         <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">

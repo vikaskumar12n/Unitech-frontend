@@ -88,12 +88,13 @@ const  Product=[
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
         {/* Company Info */}
         <div className="flex flex-col items-start">
-          <div className="mb-4 flex items-center">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
-              <span className="text-white font-bold text-xl">U</span>
+         <div className="flex items-center pb-5 space-x-0 group">
+            <div className="relative"> 
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
-            <h2 className="text-xl font-bold text-white">Unitech</h2>
+             <img src="/public/unitect_logo.PNG" alt="Unitech Aircon" className="h-12" />
           </div>
+
           <p className="text-sm leading-relaxed text-justify mb-6 text-gray-300">
             Unitec limited is a lucknow based specialist organisation and Service provider of
             Heating, Ventilation, Air conditioning and refrigeration (HVACR) solutions Started in the year 2018.

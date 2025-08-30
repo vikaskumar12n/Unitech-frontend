@@ -176,7 +176,7 @@ const Refrigeration = () => {
         },
         {
             id: 2,
-            title: "GA Series With Refrigerator-White Floor Standing | Bottled Water Dispenser",
+            title: "GA Series With Refrigerator-White Floor Standing | Bottled Water ",
             description: "Sturdy compressor along with eco-friendly operation results in low power consumption and thus savings in power bills.",
             image: "/Product/Refrigrator/b2.webp",
             rating: 5,
@@ -190,7 +190,7 @@ const Refrigeration = () => {
         },
         {
             id: 3,
-            title: "GA Series With Refrigerator-Grey Floor Standing | Bottled Water Dispenser",
+            title: "GA Series With Refrigerator-Grey Floor Standing | Bottled Water  ",
             description: "Sturdy compressor along with eco-friendly operation results in low power consumption and thus savings in power bills.",
             image: "/Product/Refrigrator/b3.webp",
             rating: 5,
@@ -203,7 +203,7 @@ const Refrigeration = () => {
         },
         {
             id: 4,
-            title: "GA Series With Refrigerator-Maroon Floor Standing | Bottled Water Dispenser",
+            title: "GA Series With Refrigerator-Maroon Floor Standing | Bottled Water  ",
             description: "Sturdy compressor along with eco-friendly operation results in low power consumption and thus savings in power bills.",
             image: "/Product/Refrigrator/b4.webp",
             rating: 5,
@@ -348,28 +348,27 @@ const Refrigeration = () => {
                 </div>
 
                 {/* Products Grid */}
-                <div className="relative z-10 px-4">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">
-                            {getCurrentProducts().map((product, index) => (
-                                <div
-                                    key={product.id}
-                                    className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                                    style={{ transitionDelay: `${index * 100}ms` }}
-                                >
-                                    <ProductCard
-                                        title={product.title}
-                                        description={product.description}
-                                        image={product.image}
-                                        rating={product.rating}
-                                        price={product.price}
-                                        badge={product.badge}
-                                        features={product.features}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                <div className="relative z-10 px-6 md:px-8 lg:px-12 py-8 ">
+                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center">
+  {getCurrentProducts().map((product, index) => (
+    <div
+      key={product.id}
+      className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <ProductCard
+        title={product.title}
+        description={product.description}
+        image={product.image}
+        rating={product.rating}
+        price={product.price}
+        badge={product.badge}
+        features={product.features}
+      />
+    </div>
+  ))}
+</div>
+
                     {/* CTA Section */}
                     <div className="max-w-4xl mx-auto mt-20  text-center ">
                         <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">

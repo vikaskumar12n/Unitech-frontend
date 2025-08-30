@@ -53,7 +53,7 @@ const HeatPump = () => {
     },
     {
       id: 4,
-      title: "Universal Side Discharge Outdoor Units",
+      title: "Universal Side Discharge Outdoor  ",
       description: "Optimises the system’s performance when combined with any indoor unit R454B refrigerant Quiet operation",
       image: "/public/Product/heat pump/universal-side-discharge.png",
       rating: 4,
@@ -115,7 +115,31 @@ const HeatPump = () => {
             priceBg: "from-green-50 to-teal-50 border border-green-100",
             button1: "View Details",
             button2: "Get Quote",
-        }
+        },
+         {
+            badgeText: "PREMIUM",
+            badgeColor: "bg-green-200 text-green-700",
+            title: "Swimming-pool-heaters",
+            subtitle: "Natural refrigerant",
+            gradientFrom: "from-blue-900",
+            gradientTo: "to-indigo-700",
+            imgSrc: "/public/Product/heat pump/swimming-pool-heaters.png",
+            imgAlt: "Cassette AC",
+            details: [
+                { label: "Type", value: "Inverter" },
+                { label: "Mount", value: "Ceiling" },
+            ],
+            features: [
+                { label: "Energy Rating", value: "5 Star", color: "text-blue-600" },
+                { label: "Air Distribution", value: "360° Uniform", color: "" },
+                { label: "Operation", value: "Silent", color: "text-blue-600" },
+            ],
+            price: "₹20,000",
+            priceNote: "*Price varies by capacity & features",
+            priceBg: "from-blue-50 to-indigo-50 border border-blue-100",
+            button1: "View Details",
+            button2: "Get Quote",
+        },
     ];
 
 
@@ -167,12 +191,8 @@ const HeatPump = () => {
                 </ol>
             </nav>
             {/* Main Section */}
-            <div className="min-h-screen pb-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute -top-40 -right-40 w-100 h-100  bg-gradient-to-br from-blue-300/20 to-cyan-300/20 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-gradient-to-br from-indigo-300/10 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
-                </div>
+      <div className="min-h-screen pb-10 bg-gradient-to-br from-slate-10 via-blue-10 to-indigo-50 relative overflow-hidden">
+                
 
                 <div className={`text-center pt-10 pb-16 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -184,7 +204,7 @@ const HeatPump = () => {
                 </div>
 
                 {/* Cards */}
-                <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4 pb-20 relative z-10 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4   relative z-10 max-w-7xl mx-auto">
                     {products?.map((item, index) => (
                         <VertiCoolCard
                             key={index}
@@ -207,27 +227,19 @@ const HeatPump = () => {
 
 
                 </div>
-                 <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">  
-            {Cards?.map((product, index) => (
-              <div
-                key={product.id}
-                className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} 
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <ProductCard
-                  title={product.title}
-                  description={product.description}
-                  image={product.image}
-                  rating={product.rating}
-                  price={product.price}
-                  badge={product.badge}
-                  features={product.features}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+ <div className=" relative z-10 px-6 md:px-8 lg:px-12 py-8"> {/* Added horizontal padding here */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    {Cards.map((product, index) => (
+      <ProductCard
+        key={index}
+        title={product.title}
+        description={product.description}
+        image={product.image}
+      />
+    ))}
+  </div>
+</div>
+
                 <div className="max-w-4xl mx-auto mt-16 px-4 relative z-10">
                     <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
                         <div className="text-center">

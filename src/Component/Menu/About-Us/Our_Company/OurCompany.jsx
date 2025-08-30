@@ -26,6 +26,7 @@ const OurCompany = () => {
       }, 300);
       return () => clearTimeout(timer);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedItem]);
 
   const handleMenuItemClick = (itemName) => {

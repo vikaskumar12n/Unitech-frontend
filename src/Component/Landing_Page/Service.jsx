@@ -1,4 +1,3 @@
-import './Service.css';
 import SectionHeading from '../../Helpers/Heading';
 import { useEffect } from 'react';
 import AOS from "aos";
@@ -12,11 +11,9 @@ const Service = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-10 via-blue-10 to-indigo-50 relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+         
         
         <div className="container mx-auto px-4 py-8 relative z-10">
           
@@ -44,7 +41,7 @@ const Service = () => {
               <div className="relative">
                 <h1 className="text-3xl  md:text-4xl lg:text-5xl font-bold bg-gradient-to-r bg-black bg-clip-text text-transparent leading-tight mb-6">
                   We&apos;re Glad You&apos;re Here – 
-                  <span className="block bg-gradient-to-r from-bg-color to-cyan-600 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-bg-color to-black bg-clip-text text-transparent">
                     Let&apos;s Keep You Comfortable Year-Round!
                   </span>
                 </h1>
@@ -60,7 +57,7 @@ const Service = () => {
                       <circle cx="12" cy="15" r="3" />
                     </svg>
                   </div>
-                  <div className="ml-4">
+                  <div className="ml-4 mt-7">
                     <h3 className="font-bold text-xl text-gray-800 group-hover:text-blue-900 transition-colors duration-300">Skilled HVAC Engineers</h3>
                     <p className="text-gray-600 text-sm mt-1">Expert technicians with years of experience</p>
                   </div>

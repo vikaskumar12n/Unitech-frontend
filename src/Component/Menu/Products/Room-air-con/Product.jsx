@@ -17,7 +17,7 @@ const Product = () => {
   const products = [
     {
       id: 1,
-      title: "INDUS Fxi 3 Star Split Inverter AC",
+      title: "INDUS Fxi 3 Star Split Inverter AC Inverter",
       description: "High performance AC with energy-efficient technology for superior cooling comfort and reduced power consumption.",
       image: "/Product/room_air_condi/1_14_3.jpg",
       rating: 4,
@@ -74,7 +74,7 @@ const Product = () => {
   const heavyDutyProducts = [
     {
       id: 1,
-      title: "HEAVY DUTY INVERTER AC | D SERIES",
+      title: "HEAVY DUTY INVERTER AC | D SERIES | 1.9 TON",
       description: "Industrial-grade performance with energy-efficient inverter technology for commercial applications.",
       image: "/Product/room_air_condi/IC324DCUHD.webp",
       rating: 5,
@@ -262,7 +262,7 @@ const Product = () => {
           <li className="text-gray-500 font-bold">Room Air Conditioners</li>
         </ol>
       </nav>
-      <div className="min-h-screen item-center pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+      <div className="min-h-screen item-center pb-20 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/10 rounded-full blur-3xl animate-pulse"></div>
@@ -314,28 +314,29 @@ const Product = () => {
           </div>
         </div>
         {/* Products Grid */}
-        <div className="relative z-10 px-4">
+        <div className="relative z-10 px-4 md:px-8 lg:px-12 py-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">
-              {getCurrentProducts().map((product, index) => (
-                <div
-                  key={product.id}
-                  className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <ProductCard
-                    title={product.title}
-                    description={product.description}
-                    image={product.image}
-                    rating={product.rating}
-                    price={product.price}
-                    badge={product.badge}
-                    features={product.features}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center">
+  {getCurrentProducts().map((product, index) => (
+    <div
+      key={product.id}
+      className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <ProductCard
+        title={product.title}
+        description={product.description}
+        image={product.image}
+        rating={product.rating}
+        price={product.price}
+        badge={product.badge}
+        features={product.features}
+      />
+    </div>
+  ))}
+</div>
+
+</div>
           {/* CTA Section */}
           <div className="max-w-4xl mx-auto mt-20 text-center ">
             <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">

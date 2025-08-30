@@ -11,9 +11,9 @@ const slides = [
     subheading: "We Build Your Dream",
     description:
       "Fabair Cooling Solutions is a Bangalore based specialist organisation and service provider of HVACR solutions started in 2018.",
-    subheadingColor: "text-white",
-    headingColor: "text-white font-extrabold text-shadow-lg",
-    descriptionColor: "text-white",
+    subheadingColor: "text-white text-shadow-lg font-serif",
+    headingColor: "text-white font-extrabold text-shadow-lg font-serif",
+    descriptionColor: "text-white font-serif",
   },
   {
     image: "/slide12.jpg",
@@ -21,9 +21,9 @@ const slides = [
     subheading: "We Create Comfort",
     description:
       "Delivering innovative HVAC solutions with advanced technology.",
-    subheadingColor: "text-white text-shadow-lg",
-    headingColor: "text-white font-extrabold text-shadow-lg",
-    descriptionColor: "text-white",
+    subheadingColor: "text-white text-shadow-lg font-serif",
+    headingColor: "text-white font-extrabold text-shadow-lg font-serif",
+    descriptionColor: "text-white font-serif",
   },
   {
     image: "/fabairbanner.jpg",
@@ -31,9 +31,9 @@ const slides = [
     subheading: "Trusted Since 2018",
     description:
       "Providing professional and trusted services to clients across Bangalore.",
-    subheadingColor: "text-white font-bold text-shadow-lg",
-    headingColor: "text-white font-extrabold text-shadow-lg",
-    descriptionColor: "text-white",
+    subheadingColor: "text-white font-bold text-shadow-lg font-serif",
+    headingColor: "text-white font-extrabold text-shadow-lg font-serif",
+    descriptionColor: "text-white font-serif",
   },
 ];
 
