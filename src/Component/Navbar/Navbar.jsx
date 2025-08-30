@@ -110,7 +110,7 @@ const Navbar = () => {
         }`}
     >
       {/* Top Navbar */}
-      <div className="top_section h-9 text-xs py-2 px-4 flex justify-between items-center relative overflow-y-auto sticky top-0 z-50"
+      <div className="top_section h-9 text-xs py-2 px-4 flex justify-between items-center relative overflow-hidden sticky top-0 z-50"
       >
         {/* Background Layers */}
         <div className="absolute top-0 left-0 w-1/2 h-full bg-white"></div>
@@ -276,7 +276,7 @@ const Navbar = () => {
                     </button>
                     {item.dropdown && (
                       <div
-                        className={`overflow-y-auto transition-all duration-300 ${openDropdown === index ? "max-h-96" : "max-h-0"
+                        className={`overflow-hidden transition-all duration-300 ${openDropdown === index ? "max-h-96" : "max-h-0"
                           }`}
                       >
                         <div className="pl-8 py-2 space-y-1">
