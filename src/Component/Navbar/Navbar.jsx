@@ -200,14 +200,14 @@ const Navbar = () => {
           {/* Dropdown Menu */}
 {item.dropdown && (
   <div
-    className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 transform ${
+    className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl   transition-all duration-300 transform ${
       openDropdown === index
         ? "opacity-100 translate-y-0 visible"
-        : "opacity-0 -translate-y-2 invisible"
+        : "opacity-0 -translate-y-0 invisible"
     }`}
     style={{ maxHeight: "250px" }} 
   >
-    <div className="py-2 overflow-hidden max-h-64">  
+    <div className="py-2  max-h-64">  
       {item.dropdown.map((subItem, subIndex) => (
         <Link
           key={subIndex}

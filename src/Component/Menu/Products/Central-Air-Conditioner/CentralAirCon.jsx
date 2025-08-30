@@ -167,7 +167,7 @@ const products = [
 
           
         </div>
-          <div className="max-w-4xl mx-auto mt-16 px-4 relative z-10">
+          <div className="px-4 py-6 relative z-10">
                     <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
                         <div className="text-center">
                             <h3 className="text-2xl md:text-3xl font-bold mb-4">Need Help Choosing?</h3>

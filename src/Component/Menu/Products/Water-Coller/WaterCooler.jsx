@@ -230,7 +230,7 @@ const WaterCooler = () => {
 
                 </div>
                     
-<div className="px-4 md:px-4 lg:px-12 py-6"> {/* Added horizontal padding here */}
+<div className=" relative z-10 px-4  py-6"> {/* Added horizontal padding here */}
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {Cards.map((product, index) => (
       <ProductCard
@@ -243,7 +243,7 @@ const WaterCooler = () => {
   </div>
 </div>
 
-                <div className="max-w-4xl mx-auto mt-16 px-4 relative z-10">
+                <div className="py-6 mt-16 px-4 relative z-10">
                     <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
                         <div className="text-center">
                             <h3 className="text-2xl md:text-3xl font-bold mb-4">Need Help Choosing?</h3>

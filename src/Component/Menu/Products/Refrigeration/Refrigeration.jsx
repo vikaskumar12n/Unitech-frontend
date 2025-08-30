@@ -348,7 +348,7 @@ const Refrigeration = () => {
                 </div>
 
                 {/* Products Grid */}
-                <div className="relative z-10 px-6 md:px-8 lg:px-12 py-8 ">
+                <div className="relative z-10 px-4 py-6 ">
                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center">
   {getCurrentProducts().map((product, index) => (
     <div
