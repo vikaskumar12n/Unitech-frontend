@@ -61,7 +61,7 @@ const AboutUsPage=() =>{
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <div className="mb-6">
+              <div className="mb-2">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
                   Cooling Solutions 
                   <span className="bg-gradient-to-r from-[#393185] to-[#393185] bg-clip-text text-transparent"> Redefined</span>
@@ -100,7 +100,7 @@ const AboutUsPage=() =>{
 
             {/* Interactive Features */}
             <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200">
+              <div className="bg-white rounded-3xl p-2 shadow-2xl border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">Why Choose Unitech?</h3>
                 
                 <div className="space-y-6">
@@ -110,12 +110,12 @@ const AboutUsPage=() =>{
                     return (
                       <div
                         key={index}
-                        className={`p-6 rounded-2xl transition-all duration-500 cursor-pointer ${
+                        className={`p-2 rounded-2xl transition-all duration-500 cursor-pointer ${
                           'bg-gray-50 hover:bg-gray-100 text-gray-800'
                         }`}
                         
                       >
-                        <div className="flex items-start gap-4">
+                        <div className="flex items-start gap-2">
                           <div className={`rounded-full p-3  `}>
                             <IconComponent className={`w-6 h-6  text-blue-900`} />
                           </div>
@@ -151,7 +151,7 @@ const AboutUsPage=() =>{
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
             {/* Innovation */}
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border border-blue-100 hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-r from-[#383185] to-cyan-500 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
