@@ -118,37 +118,46 @@ const Navbar = () => {
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-color rounded-full"></div>
 
         {/* Left Section - Contact Info */}
-        <div className="flex items-center space-x-4 relative z-10">
+       <div className="flex items-center space-x-4 relative z-10">
+  {/* Phone Call */}
+  <a href="tel:+919890989098" className="flex items-center">
+    <FaPhoneAlt className="text-color mr-1 text-2xl" />
+    <span>+919890989098</span>
+  </a>
 
-          <Link href="tel:+919890989098" className="flex items-center">
-            <FaPhoneAlt className="text-color mr-1  text-2xl" />
-            <span>+919890989098</span>
-          </Link>
-          <span className="h-4 border-l border-gray-600"></span>
+  <span className="h-4 border-l border-gray-600"></span>
 
-          <Link href="mailto:info@myholidays.com" className="flex  items-center">
-            <FaEnvelope className="text-color mr-2 text-2xl" />
-            <span>info@myholidays.com</span>
-          </Link>
-        </div>
+  {/* Email */}
+  <a
+    href="mailto:hr.codecrafter@gmail.com"
+    className="flex items-center"
+  >
+    <FaEnvelope className="text-color mr-2 text-2xl" />
+    <span>info@myholidays.com</span>
+  </a>
+</div>
+
 
         {/* Right Section - Social Links */}
         <div className="hidden sm:flex items-center space-x-4 relative z-10">
-          <a href="#" className="flex items-center text-white hover:text-white">
+          <Link to="https://www.linkedin.in/" target="_blank"
+    rel="noopener noreferrer" className="flex items-center text-white hover:text-white">
             <span className="h-4 border-l border-white mr-4"></span>
             <FaLinkedin className="text-white mr-1" />
             <span className="hidden sm:inline">LinkedIn</span>
-          </a>
-          <a href="#" className="flex items-center text-white hover:text-white">
+          </Link>
+          <Link to="https://www.facebook.com/" target="_blank"
+    rel="noopener noreferrer" className="flex items-center text-white hover:text-white">
             <span className="h-4 border-l border-white mr-4"></span>
             <FaFacebook className="text-white mr-1" />
             <span className="hidden sm:inline">Facebook</span>
-          </a>
-          <a href="#" className="flex items-center text-white hover:text-white">
+          </Link>
+          <Link to="https://www.instagram.com/" target="_blank"
+    rel="noopener noreferrer" className="flex items-center text-white hover:text-white">
             <span className="h-4 border-l border-white mr-4"></span>
             <FaInstagram className="text-white mr-1" />
             <span className="hidden sm:inline">Instagram</span>
-          </a>
+          </Link>
         </div>
       </div>
 

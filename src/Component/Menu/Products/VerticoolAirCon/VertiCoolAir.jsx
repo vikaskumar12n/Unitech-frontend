@@ -129,7 +129,7 @@ const vertiCoolData = [
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4 pb-20 relative z-10 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 px-4   relative z-10 max-w-7xl mx-auto">
          {vertiCoolData.map((item, index) => (
   <VertiCoolCard
     key={index}
@@ -152,24 +152,25 @@ const vertiCoolData = [
 
           
         </div>
-          <div className="max-w-4xl mx-auto mt-16 px-4 relative z-10">
-                    <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
-                        <div className="text-center">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-4">Need Help Choosing?</h3>
-                            <p className="text-lg  text-justify text-blue-100 mb-8 max-w-2xl mx-auto">
-                                Our cooling experts are here to help you find the perfect AC for your space
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105">
-                                    Get Expert Advice
-                                </button>
-                                <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
-                                    Schedule Site Visit
-                                </button>
+          <div className="max-w-4xl mx-auto mt-20  text-center ">
+                        <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">
+                            <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
+                            <div className="relative z-10">
+                                <h3 className="text-3xl font-bold mb-4">Need Help Choosing?</h3>
+                                <p className="text-xl text-blue-100 mb-8">
+                                    Our cooling experts are here to help you find the perfect AC for your space
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105">
+                                        Get Expert Advice
+                                    </button>
+                                    <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                                        Schedule Site Visit
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
       </div>
        
     </>

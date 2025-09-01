@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {   FaWifi, FaSnowflake, FaBolt, FaLeaf, FaShieldAlt } from 'react-icons/fa';
+import { FaWifi, FaSnowflake, FaBolt, FaLeaf, FaShieldAlt } from 'react-icons/fa';
 import ProductCard from '../Room-air-con/ProductCard';
 import { Link } from 'react-router-dom';
 // Enhanced ProductCard component
@@ -34,7 +34,7 @@ const AirCooler = () => {
       title: "AURA NEO| DESERT COOLER|45 LITRES",
       description: "Smart AC with Wi-Fi connectivity, advanced cooling features, and intelligent climate control.",
       image: "/Product/AirCooler/2.webp",
-       rating: 5,
+      rating: 5,
       price: "8,990",
       badge: "SMART",
       features: [
@@ -82,7 +82,7 @@ const AirCooler = () => {
         { icon: <FaLeaf />, text: "3 Star" }
       ]
     },
- {
+    {
       id: 6,
       title: "MEGA|HIGH CAPACITY DESERT COOLER|120LITRES",
       description: "Compact window AC with steady cooling performance, perfect for smaller spaces and budget-conscious users.",
@@ -126,11 +126,11 @@ const AirCooler = () => {
         { icon: <FaShieldAlt />, text: "TowerAir Use" }
       ]
     },
-     {
+    {
       id: 3,
       title: " TOWER COOLER|27 LITRES",
       description: "Industrial-grade performance with energy-efficient inverter technology for TowerAir applications.",
-      image: "/Product/AirCooler/p1.webp", 
+      image: "/Product/AirCooler/p1.webp",
       badge: "BestSeller",
       features: [
         { icon: <FaBolt />, text: "Capacity:37 L" },
@@ -138,7 +138,7 @@ const AirCooler = () => {
         { icon: <FaLeaf />, text: " 1 Year Standard Warranty (T&Cs)" }
       ]
     },
-    
+
   ];
 
   const PernalAirColler = [
@@ -170,11 +170,11 @@ const AirCooler = () => {
         { icon: <FaSnowflake />, text: " 1 Year Standard Warranty (T&Cs)" }
       ]
     },
-      {
+    {
       id: 3,
       title: " TOWER COOLER|27 LITRES",
       description: "Industrial-grade performance with energy-efficient inverter technology for TowerAir applications.",
-      image: "/Product/AirCooler/p1.webp", 
+      image: "/Product/AirCooler/p1.webp",
       badge: "BestSeller",
       features: [
         { icon: <FaBolt />, text: "Capacity:37 L" },
@@ -185,13 +185,13 @@ const AirCooler = () => {
   ];
 
   const categories = [
-    { id: 'Desert', name: 'Desert Air Coolers',   },
-    { id: 'TowerAir', name: 'Tower Air Coolers',  },
-    { id: 'Persnal', name: 'Persnal Air Coolers',  }
+    { id: 'Desert', name: 'Desert Air Coolers', },
+    { id: 'TowerAir', name: 'Tower Air Coolers', },
+    { id: 'Persnal', name: 'Persnal Air Coolers', }
   ];
 
   const getCurrentProducts = () => {
-    switch(activeSection) {
+    switch (activeSection) {
       case 'Desert': return products;
       case 'TowerAir': return TowerAirCooler;
       case 'Persnal': return PernalAirColler;
@@ -200,7 +200,7 @@ const AirCooler = () => {
   };
 
   const getHeroImage = () => {
-    switch(activeSection) {
+    switch (activeSection) {
       case 'Desert': return "/Product/AirCooler/Desert-ACR-LP-1800x473.webp";
       case 'TowerAir': return "/Product/AirCooler/Tower-ACR-LP-1800x473.webp";
       case 'Persnal': return "/Product/AirCooler/Personal-ACR-LP-1800x473.webp";
@@ -209,7 +209,7 @@ const AirCooler = () => {
   };
 
   const getSectionTitle = () => {
-    switch(activeSection) {
+    switch (activeSection) {
       case 'Desert': return "Desert Air Coolers";
       case 'TowerAir': return "Tower Air Coolers";
       case 'Persnal': return "Persnal Air Coolers";
@@ -219,156 +219,154 @@ const AirCooler = () => {
 
   return (
     <>
-               <div className="relative w-full h-[500px] overflow-hidden">
-  {/* Responsive Image */}
-  <img 
-    src="/public/aircoolerbanner.jpg" 
-    alt="Water Cooler" 
-    className="absolute top-0 left-0 w-full h-full object-cover"
-  />
-  
-  {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-  
-  {/* Content */}
-  <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
-    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-      Air<span className="text-blue-500"> Cooler</span>
-    </h1>
-    <p className="text-xl md:text-2xl text-gray-200 mb-8">
-Affordable, portable, and energy-efficient cooling for every home.
-    </p>
-  </div>
-  
-  {/* Bottom Label */}
-  <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
-    <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
-      <h2 className="text-base md:text-lg font-semibold">Air Cooler</h2>
-    </div>
-  </div>
-</div>
-        <nav className="text-gray-600 text-sm my-4">
-      <ol className="flex items-center space-x-2">
-        <li>
-          <Link to="/" className="text-blue-600 hover:underline font-bold ms-10">
-            Home
-          </Link>
-        </li>
-        <li>/</li>
-        <li className="text-gray-500 font-bold">Product</li>
-        <li>/</li>
-        <li className="text-gray-500 font-bold">Air Coolers</li>
-      </ol>
-    </nav>
-    <div className="min-h-screen pb-20  bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/10 to-pink-300/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
-      </div>
+      <div className="relative w-full h-[500px] overflow-hidden">
+        {/* Responsive Image */}
+        <img
+          src="/public/aircoolerbanner.jpg"
+          alt="Water Cooler"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
 
-      {/* Header Section */}
-      <div className={`text-center pt-20 pb-10 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-        <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-black   via-black to-black bg-clip-text text-transparent mb-6">
-          Air <span className="text-blue-900"> Cooling</span> Solutions
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl text-justify mx-auto mb-8">
-          Discover our range of energy-efficient air conditioners designed for every space and need
-        </p>
-        
-        {/* Category Tabs */}
-        <div className="flex justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveSection(category.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeSection === category.id
-                  ? 'bg-gradient-to-r bg-color text-white shadow-lg scale-105'
-                  : 'bg-white/80 text-gray-700 hover:bg-white hover:shadow-md'
-              }`}
-            >
-              <span className="text-xl">{category.icon}</span>
-              {category.name}
-            </button>
-          ))}
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+
+        {/* Content */}
+        <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 z-10">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+            Air<span className="text-blue-500"> Cooler</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-200 mb-8">
+            Affordable, portable, and energy-efficient cooling for every home.
+          </p>
+        </div>
+
+        {/* Bottom Label */}
+        <div className="absolute bottom-0 left-0 w-[50%] md:w-[30%] px-4">
+          <div className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#2d3e50]/70 text-white">
+            <h2 className="text-base md:text-lg font-semibold">Air Cooler</h2>
+          </div>
         </div>
       </div>
+      <nav className="text-gray-600 text-sm my-4">
+        <ol className="flex items-center space-x-2">
+          <li>
+            <Link to="/" className="text-blue-600 hover:underline font-bold ms-10">
+              Home
+            </Link>
+          </li>
+          <li>/</li>
+          <li className="text-gray-500 font-bold">Product</li>
+          <li>/</li>
+          <li className="text-gray-500 font-bold">Air Coolers</li>
+        </ol>
+      </nav>
+      <div className="min-h-screen pb-20  bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/10 to-pink-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
 
-      {/* Hero Image Section */}
-   <div
-  className={`relative mx-2 sm:mx-4 md:mx-8 mb-10 sm:mb-16 overflow-hidden rounded-xl sm:rounded-2xl shadow-xl transform transition-all duration-700 ${
-    isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-  }`}
->
-  {/* Hero Image */}
-  <img
-    src={getHeroImage()}
-    alt="Product Hero"
-    className="w-full h-48 sm:h-64 md:h-80 lg:h-[450px] object-cover transition-all duration-500"
-  />
+        {/* Header Section */}
+        <div className={`text-center pt-20 pb-10 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-black   via-black to-black bg-clip-text text-transparent mb-6">
+            Air <span className="text-blue-900"> Cooling</span> Solutions
+          </h1>
+          <p className="text-xl px-4 text-black max-w-2xl text-justify mx-auto mb-8">
+            Discover our range of energy-efficient air conditioners designed for every space and need
+          </p>
 
-  {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+          {/* Category Tabs */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveSection(category.id)}
+                className={`flex items-center gap-1 sm:gap-2 px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full font-medium sm:font-semibold text-sm sm:text-base transition-all duration-300 ${activeSection === category.id
+                    ? "bg-gradient-to-r bg-color text-white shadow-lg scale-105"
+                    : "bg-white/80 text-gray-700 hover:bg-white hover:shadow-md"
+                  }`}
+              >
+                <span className="text-lg sm:text-xl">{category.icon}</span>
+                {category.name}
+              </button>
+            ))}
+          </div>
 
-  {/* Text Content */}
-  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
-    <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 max-w-full sm:max-w-md">
-      <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-1 sm:mb-2">
-        {getSectionTitle()}
-      </h2>
-      <p className="text-sm sm:text-base md:text-lg text-gray-600">
-        Experience the perfect blend of comfort, efficiency, and innovation
-      </p>
-    </div>
-  </div>
-</div>
+        </div>
+
+        {/* Hero Image Section */}
+        <div
+          className={`relative mx-2 sm:mx-4 md:mx-8 mb-10 sm:mb-16 overflow-hidden rounded-xl sm:rounded-2xl shadow-xl transform transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
+        >
+          {/* Hero Image */}
+          <img
+            src={getHeroImage()}
+            alt="Product Hero"
+            className="w-full h-32 sm:h-48 md:h-60 lg:h-[400px] object-cover transition-all duration-500" />
+
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+          {/* Text Content */}
+          <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 max-w-full sm:max-w-md">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-1 sm:mb-2">
+                {getSectionTitle()}
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg text-gray-600">
+                Experience the perfect blend of comfort, efficiency, and innovation
+              </p>
+            </div>
+          </div>
+        </div>
 
 
-      {/* Products Grid */}
-      <div className="relative z-10 px-4  py-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center">
-  {getCurrentProducts().map((product, index) => (
-    <div
-      key={product.id}
-      className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-    >
-      <ProductCard
-        title={product.title}
-        description={product.description}
-        image={product.image}
-        rating={product.rating}
-        price={product.price}
-        badge={product.badge}
-        features={product.features}
-      />
-    </div>
-  ))}
-</div>
+        {/* Products Grid */}
+        <div className="relative z-10 px-4  py-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center">
+            {getCurrentProducts().map((product, index) => (
+              <div
+                key={product.id}
+                className={`transform transition-all duration-700 w-full max-w-md ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <ProductCard
+                  title={product.title}
+                  description={product.description}
+                  image={product.image}
+                  rating={product.rating}
+                  price={product.price}
+                  badge={product.badge}
+                  features={product.features}
+                />
+              </div>
+            ))}
+          </div>
 
-                    {/* CTA Section */}
-                    <div className="max-w-4xl mx-auto mt-20  text-center ">
-                        <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">
-                            <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
-                            <div className="relative z-10">
-                                <h3 className="text-3xl font-bold mb-4">Need Help Choosing?</h3>
-                                <p className="text-xl text-blue-100 mb-8">
-                                    Our cooling experts are here to help you find the perfect AC for your space
-                                </p>
-                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105">
-                                        Get Expert Advice
-                                    </button>
-                                    <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
-                                        Schedule Site Visit
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          {/* CTA Section */}
+          <div className="max-w-4xl mx-auto mt-20  text-center ">
+            <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">
+              <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
+              <div className="relative z-10">
+                <h3 className="text-3xl font-bold mb-4">Need Help Choosing?</h3>
+                <p className="text-xl text-blue-100 mb-8">
+                  Our cooling experts are here to help you find the perfect AC for your space
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105">
+                    Get Expert Advice
+                  </button>
+                  <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                    Schedule Site Visit
+                  </button>
                 </div>
-    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

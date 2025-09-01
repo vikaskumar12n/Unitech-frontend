@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// VertiCoolCard.js
 import { FaHeart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -16,7 +15,7 @@ const VertiCoolCard = ({
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full max-w-xs md:max-w-sm bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans py-4 sm:py-6 px-3 sm:px-4">
+    <div className="relative w-full max-w-xs md:max-w-sm bg-white  rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans py-4 sm:py-6 px-3 sm:px-4 h-full">
       {/* Product Image Section */}
       <div className="relative bg-gray-700 h-40 sm:h-52 md:h-64 flex items-center justify-center rounded-lg">
         {/* Heart icon */}
@@ -31,7 +30,7 @@ const VertiCoolCard = ({
       </div>
 
       {/* Product Details Section */}
-      <div className="p-3 sm:p-5 bg-white space-y-3 sm:space-y-4">
+      <div className="p-2 sm:p-2 bg-white space-y-1 sm:space-y-1">
         <h2 className="text-lg sm:text-xl font-bold text-gray-900">{title}</h2>
 
         {/* Badges */}

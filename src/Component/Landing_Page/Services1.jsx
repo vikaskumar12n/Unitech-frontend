@@ -59,7 +59,7 @@ const ServicesSection = () => {
                     Our Mission
                   </h3>
                 </div>
-                <p className="text-black leading-relaxed text-lg">
+                <p className="text-black text-justify leading-relaxed text-lg">
                   To deliver high-quality products that simplify and enhance the lives of our customers while maintaining eco-friendly practices and setting new standards in innovation.
                 </p>
               </div>
@@ -80,7 +80,7 @@ const ServicesSection = () => {
                     Our Vision
                   </h3>
                 </div>
-                <p className="text-black leading-relaxed text-lg">
+                <p className="text-black text-justify leading-relaxed text-lg">
                   To become a global leader in innovative solutions and build a brand trusted for excellence, sustainability, and reliability across all markets.
                 </p>
               </div>
@@ -113,8 +113,9 @@ const ServicesSection = () => {
                 <h4 className="text-2xl font-bold mb-6 bg-gradient-to-r from-cyan-900 to-blue-900 bg-clip-text text-transparent">
                   Excellence in Innovation
                 </h4>
-                <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                  At <span className="font-semibold text-color">YourCompany</span>, we believe in combining innovation, quality, and sustainability to provide the best products for our customers. Since our founding in 2015, we have strived to bring excellence in every product we deliver.
+                <p className="text-gray-700 leading-relaxed text-justify text-lg mb-6">
+                  At <span className="font-semibold   text-color">
+                  YourCompany</span>, we believe in combining innovation, quality, and sustainability to provide the best products for our customers. Since our founding in 2015, we have strived to bring excellence in every product we deliver.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 text-sm text-black">

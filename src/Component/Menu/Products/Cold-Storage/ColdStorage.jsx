@@ -206,7 +206,7 @@ const ColdStorage = () => {
                 </div>
 
                 {/* Cards */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4   relative z-10 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 px-4   relative z-10 max-w-7xl mx-auto">
                     {products?.map((item, index) => (
                         <VertiCoolCard
                             key={index}
@@ -230,8 +230,8 @@ const ColdStorage = () => {
 
                 </div>
  
-<div className="relative z-10 px-4  py-6"> {/* Added horizontal padding  md:px-8 lg:px-12 here */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className=" relative z-10 px-4 py-6"> {/* Added horizontal padding here */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
     {Cards.map((product, index) => (
       <ProductCard
         key={index}

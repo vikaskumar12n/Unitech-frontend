@@ -8,91 +8,91 @@ const Footer = () => {
 
 
 
-const  Product=[
+  const Product = [
     {
-     name:"Room Air Conditioners" ,
-     link:"/product"
+      name: "Room Air Conditioners",
+      link: "/product"
     },
-     {
-     name:"Air Coolers" ,
-     link:"/aircooler"
+    {
+      name: "Air Coolers",
+      link: "/aircooler"
     },
-     {
-     name:"Refrigeration" ,
-     link:"/refrigeration"
+    {
+      name: "Refrigeration",
+      link: "/refrigeration"
     }, {
-     name:"Cassette Air Conditioners" ,
-     link:"/cassetteairconditioners"
-    } ,{
-     name:"Verticool Air Conditioners" ,
-     link:"/verticoolair"
+      name: "Cassette Air Conditioners",
+      link: "/cassetteairconditioners"
+    }, {
+      name: "Verticool Air Conditioners",
+      link: "/verticoolair"
     }
-     ,{
-     name:"Central Air Conditioning" ,
-     link:"/centralairconditioner"
+    , {
+      name: "Central Air Conditioning",
+      link: "/centralairconditioner"
     }
-     ,{
-     name:"Heat Pumps" ,
-     link:"/heatpump"
+    , {
+      name: "Heat Pumps",
+      link: "/heatpump"
     }
-,{
-     name:"Cold Storages" ,
-     link:"/coldstorage"
-    } 
-    ,{
-     name:"Water Coolers" ,
-     link:"/watercooler"
-    } 
-  ] 
-  const Footer=[
+    , {
+      name: "Cold Storages",
+      link: "/coldstorage"
+    }
+    , {
+      name: "Water Coolers",
+      link: "/watercooler"
+    }
+  ]
+  const Footer = [
     {
-      name:"About",
-      link:"/about-us"
+      name: "About",
+      link: "/about-us"
     },
-      {
-      name:"Help Desk",
-      link:"/contactus"
+    {
+      name: "Help Desk",
+      link: "/contactus"
     },
-      {
-      name:"Privacy Policy",
-      link:"/"
+    {
+      name: "Privacy Policy",
+      link: "/"
     }
   ]
 
-  const  Services=[
-  {
-     name:"HVAC Designing" , 
-    } ,
-     {
-     name:"Residential Cooling Solutions" , 
-    } ,
-     {
-     name:"Commercial HVAC Systems" , 
-    } ,
-     {
-     name:"Sales" , 
-    } ,
-     {
-     name:"Retrofit" , 
-    } ,
-     {
-     name:"Maintenance Contract" , 
-    }  
+  const Services = [
+    {
+      name: "HVAC Designing",
+    },
+    {
+      name: "Residential Cooling Solutions",
+    },
+    {
+      name: "Commercial HVAC Systems",
+    },
+    {
+      name: "Sales",
+    },
+    {
+      name: "Retrofit",
+    },
+    {
+      name: "Maintenance Contract",
+    }
 
   ]
   return (
     <footer className="bg-gradient-to-br from-[#1f1f1f] to-[#1f1f1f] text-gray-200 py-5  relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxZTI5N2IiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-20"></div>
-      
+
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
         {/* Company Info */}
         <div className="flex flex-col items-start">
-         <div className="flex items-center pb-5 space-x-0 group">
-            <div className="relative"> 
+          <div className="flex items-center pb-5 space-x-0 group">
+            <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
-             <img src="/unitect_logo.PNG" alt="Unitech Aircon" className="h-12" />
+            <img src="/unitect_logo.PNG" alt="Unitech Aircon" className="h-11" />
           </div>
 
           <p className="text-sm leading-relaxed text-justify mb-6 text-gray-300">
@@ -100,27 +100,31 @@ const  Product=[
             Heating, Ventilation, Air conditioning and refrigeration (HVACR) solutions Started in the year 2018.
           </p>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 text-2xl">
+            <Link to="https://www.facebook.com/" target="_blank"
+              rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 text-2xl">
               <FaFacebook />
-            </a>
-            <a href="#" className="text-gray-300 hover:text-pink-500 transition-all duration-300 transform hover:scale-110 text-2xl">
+            </Link>
+            <Link to="https://www.instagram.com/" target="_blank"
+              rel="noopener noreferrer" className="text-gray-300 hover:text-pink-500 transition-all duration-300 transform hover:scale-110 text-2xl">
               <FaInstagramSquare />
-            </a>
-            <a href="#" className="text-gray-300 hover:text-blue-300 transition-all duration-300 transform hover:scale-110 text-2xl">
+            </Link>
+            <Link to="https://www.linkedin.com/" target="_blank"
+              rel="noopener noreferrer" className="text-gray-300 hover:text-blue-300 transition-all duration-300 transform hover:scale-110 text-2xl">
               <FaLinkedin />
-            </a>
-            <a href="#" className="text-gray-300 hover:text-green-400 transition-all duration-300 transform hover:scale-110 text-2xl">
+            </Link>
+            <Link to="#" target="_blank"
+              rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition-all duration-300 transform hover:scale-110 text-2xl">
               <FaWhatsappSquare />
-            </a>
+            </Link>
           </div>
         </div>
         {/* Services */}
-        <div className="p-5">
+        <div className="p-1">
           <h3 className="text-lg font-bold text-white mb-4">
             OUR SERVICES
           </h3>
           <ul className="space-y-3">
-              {Services?.map((service, index) => (
+            {Services?.map((service, index) => (
               <li key={index}>
                 <Link to="/solution" className="hover:text-blue-300 flex items-center group transition-all duration-300">
                   <FaChevronRight className="text-blue-500 text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -131,24 +135,24 @@ const  Product=[
           </ul>
         </div>
         {/* Products */}
-        <div className="p-5">
+        <div className="p-1">
           <h3 className="text-lg font-bold text-white mb-4">
             PRODUCTS
           </h3>
           <ul className="space-y-3">
             {
               Product?.map((item, index) => (
-              <li key={index}>
-                <Link to={item.link} className="hover:text-blue-300 flex items-center group transition-all duration-300">
-                  <FaChevronRight className="text-blue-500 text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  <span className="group-hover:underline">{item.name}</span>
-                </Link>
-              </li>
-            ))}
+                <li key={index}>
+                  <Link to={item.link} className="hover:text-blue-300 flex items-center group transition-all duration-300">
+                    <FaChevronRight className="text-blue-500 text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <span className="group-hover:underline">{item.name}</span>
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
         {/* Contact */}
-        <div className="p-5">
+        <div className="p-1">
           <h3 className="text-lg font-bold text-white mb-4">
             CONTACT US
           </h3>
@@ -194,18 +198,18 @@ const  Product=[
           </ul>
         </div>
       </div>
-      
+
       <div className="container mx-auto px-4 mt-10 relative z-10">
-         <div className="mt-6 flex justify-center">
-    <div className="w-full h-1 mb-2 bg-gradient-to-r from-[#383086] to-[#383086] rounded-full"></div>
-  </div>
+        <div className="mt-6 flex justify-center">
+          <div className="w-full h-1 mb-2 bg-gradient-to-r from-[#383086] to-[#383086] rounded-full"></div>
+        </div>
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
           <p className="mb-2 md:mb-0">© Copyright 2025 || Developed By Vikas Bind</p>
           <div className="flex space-x-6">
             {Footer?.map((item, index) => (
               <Link
-                key={index} 
-                to={item.link} 
+                key={index}
+                to={item.link}
                 className="hover:text-white transition-colors duration-300 relative group"
               >
                 {item.name}
