@@ -156,7 +156,7 @@ const vertiCoolData = [
                     <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
                         <div className="text-center">
                             <h3 className="text-2xl md:text-3xl font-bold mb-4">Need Help Choosing?</h3>
-                            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+                            <p className="text-lg  text-justify text-blue-100 mb-8 max-w-2xl mx-auto">
                                 Our cooling experts are here to help you find the perfect AC for your space
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

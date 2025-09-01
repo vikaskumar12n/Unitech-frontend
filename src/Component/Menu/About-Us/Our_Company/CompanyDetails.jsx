@@ -55,8 +55,8 @@ const CompanyDetails = () => {
 
     return (
         <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-10 via-blue-10 to-indigo-50 relative overflow-hidden">
-     
+            <div className="min-h-screen bg-gradient-to-br from-slate-10 via-blue-10 to-indigo-50 relative overflow-hidden">
+
 
                 <div className="container mx-auto max-w-7xl px-4 relative z-10">
                     {/* Hero Header Section */}
@@ -141,15 +141,20 @@ const CompanyDetails = () => {
                                         </div>
                                         <h3 className="text-3xl font-bold text-gray-800">Our Philosophy</h3>
                                     </div>
-                                    <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-500">
-                                        <p className="text-gray-700 text-justify leading-relaxed text-lg">
-                                            Unitech &apos;s philosophy is rooted in the principles of
-                                            <span className="font-bold text-color px-2 py-1 rounded mx-1">&apos;Trust&apos;</span>
+                                    <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 sm:p-6 md:p-8 border-l-4 border-blue-500">
+                                        <p className="text-gray-700 text-justify leading-relaxed text-base sm:text-lg md:text-xl">
+                                            Unitech&apos;s philosophy is rooted in the principles of
+                                            <span className="font-bold text-color px-1 sm:px-2 py-0.5 sm:py-1 rounded mx-1">
+                                                &apos;Trust&apos;
+                                            </span>
                                             and
-                                            <span className="font-bold text-color px-2 py-1 rounded mx-1">&apos;Excellence&apos;</span>
+                                            <span className="font-bold text-color px-1 sm:px-2 py-0.5 sm:py-1 rounded mx-1">
+                                                &apos;Excellence&apos;
+                                            </span>
                                             which have served as the guiding force behind our remarkable journey of growth.
                                         </p>
                                     </div>
+
                                 </div>
 
                                 {/* Solutions Grid */}

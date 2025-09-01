@@ -123,7 +123,7 @@ const FounderSection = () => {
                           </div>
                           <div className="ml-12 bg-blue-50 rounded-lg p-4 flex-1">
                             <h4 className="font-bold text-black">{milestone.title}</h4>
-                            <p className="text-black text-sm mt-1">{milestone.description}</p>
+                            <p className="text-black  text-justify text-sm mt-1">{milestone.description}</p>
                           </div>
                         </div>
                       ))}

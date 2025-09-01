@@ -296,24 +296,34 @@ Affordable, portable, and energy-efficient cooling for every home.
       </div>
 
       {/* Hero Image Section */}
-      <div className={`relative mx-4 md:mx-8 mb-16 overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-        <img
-          src={getHeroImage()}
-          alt="Product Hero"
-          className="w-full h-auto object-cover transition-all duration-500"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 p-8">
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 max-w-md">
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">
-              {getSectionTitle()}
-            </h2>
-            <p className="text-gray-600">
-              Experience the perfect blend of comfort, efficiency, and innovation
-            </p>
-          </div>
-        </div>
-      </div>
+   <div
+  className={`relative mx-2 sm:mx-4 md:mx-8 mb-10 sm:mb-16 overflow-hidden rounded-xl sm:rounded-2xl shadow-xl transform transition-all duration-700 ${
+    isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+  }`}
+>
+  {/* Hero Image */}
+  <img
+    src={getHeroImage()}
+    alt="Product Hero"
+    className="w-full h-48 sm:h-64 md:h-80 lg:h-[450px] object-cover transition-all duration-500"
+  />
+
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+  {/* Text Content */}
+  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
+    <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 max-w-full sm:max-w-md">
+      <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-1 sm:mb-2">
+        {getSectionTitle()}
+      </h2>
+      <p className="text-sm sm:text-base md:text-lg text-gray-600">
+        Experience the perfect blend of comfort, efficiency, and innovation
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {/* Products Grid */}
       <div className="relative z-10 px-4  py-6">

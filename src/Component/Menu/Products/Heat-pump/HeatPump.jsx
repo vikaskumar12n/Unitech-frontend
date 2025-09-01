@@ -14,7 +14,7 @@ const HeatPump = () => {
       id: 1,
       title: "Air-to-Water Monobloc R290",
       description: "R290 natural refrigerant Ultra low sound levels 75°C flow temperature Heating at low outdoor temperature",
-      image: "/public/Product/heat pump/hybrid-monobloc.png",
+      image: "/Product/heat pump/hybrid-monobloc.png",
       rating: 4,
       price: "15,990",
     //   badge: "BESTSELLER",
@@ -28,7 +28,7 @@ const HeatPump = () => {
       id: 2,
       title: "Mini Splits Single Zone",
       description: "mini-splits heating and cooling devices, also known as duct-free-splits (DFS), are designed.",
-      image: "/public/Product/heat pump/mini-splits-single-zone.png",
+      image: "/Product/heat pump/mini-splits-single-zone.png",
       rating: 5,
       price: "12,990",
     //   badge: "SMART",
@@ -42,7 +42,7 @@ const HeatPump = () => {
       id: 3,
       title: "Swimming Pool Heaters",
       description: "swimming pool heat pumps are designed and engineered with the latest technology.",
-      image: "/public/Product/heat pump/swimming-pool-heaters.png",
+      image: "/Product/heat pump/swimming-pool-heaters.png",
       rating: 4,
       price: "17,990",
       features: [
@@ -55,7 +55,7 @@ const HeatPump = () => {
       id: 4,
       title: "Universal Side Discharge Outdoor  ",
       description: "Optimises the system’s performance when combined with any indoor unit R454B refrigerant Quiet operation",
-      image: "/public/Product/heat pump/universal-side-discharge.png",
+      image: "/Product/heat pump/universal-side-discharge.png",
       rating: 4,
       price: "19,990",
       features: [
@@ -123,7 +123,7 @@ const HeatPump = () => {
             subtitle: "Natural refrigerant",
             gradientFrom: "from-blue-900",
             gradientTo: "to-indigo-700",
-            imgSrc: "/public/Product/heat pump/swimming-pool-heaters.png",
+            imgSrc: "/Product/heat pump/swimming-pool-heaters.png",
             imgAlt: "Cassette AC",
             details: [
                 { label: "Type", value: "Inverter" },
@@ -244,7 +244,7 @@ const HeatPump = () => {
                     <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
                         <div className="text-center">
                             <h3 className="text-2xl md:text-3xl font-bold mb-4">Need Help Choosing?</h3>
-                            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+                            <p className="text-lg  text-justify text-blue-100 mb-8 max-w-2xl mx-auto">
                                 Our cooling experts are here to help you find the perfect AC for your space
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
