@@ -119,7 +119,7 @@ const vertiCoolData = [
       <div className="min-h-screen pb-15 bg-gradient-to-br from-slate-10 via-blue-10 to-indigo-50 relative overflow-hidden">
                
 
-        <div className={`text-center pt-10 pb-16 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`text-center pt-5 pb-10 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Our <span className="text-color">Premium</span> Cooling Solutions
           </h2>
@@ -152,7 +152,7 @@ const vertiCoolData = [
 
           
         </div>
-          <div className="max-w-4xl mx-auto mt-20  text-center ">
+          <div className="max-w-4xl mx-auto mt-10 text-center ">
                         <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">
                             <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
                             <div className="relative z-10">

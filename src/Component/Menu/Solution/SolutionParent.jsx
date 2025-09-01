@@ -147,9 +147,9 @@ const HVACShowcase = () => {
                     <li className="text-gray-500 font-bold">Services</li>
                 </ol>
             </nav>
-    <div className="min-h-screen  bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 py-16">
+    <div className="min-h-screen  bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 ">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
          <div
             className="font-extrabold text-black   bg-clip-text bg-gradient-to-r text-2xl md:text-3xl lg:text-4xl mb-4"
           >

@@ -107,7 +107,7 @@ const TestimonialSlider = () => {
                     <div className="absolute -bottom-40 -left-40 w-full h-80 bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
                     <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-gradient-to-br from-indigo-300/10 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
                 </div>
-    <div className="relative w-full py-8 sm:py-12 lg:py-16 px-3 sm:px-4 lg:px-8 overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div className="relative w-full pb-5 sm:pb-5 lg:pb-10 px-3 sm:px-4 lg:px-8 overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50">
 
 
       <div className="absolute bottom-0 right-0 w-16 sm:w-24 lg:w-32 h-16 sm:h-24 lg:h-32 bg-purple-200 rounded-full filter blur-3xl opacity-30"></div>

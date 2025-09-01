@@ -46,7 +46,7 @@ const StatsSection = () => {
     }, []);
 
     return (
-        <div className="relative w-full py-20 px-4 sm:px-8 overflow-hidden">
+        <div className="relative w-full py-5 px-4 sm:px-8 overflow-hidden">
             {/* Enhanced Background */}
             <div 
                 className="absolute inset-0 bg-fixed bg-center bg-cover"
@@ -67,7 +67,7 @@ const StatsSection = () => {
             <div className="relative z-10 container mx-auto max-w-7xl">
                 
                 {/* Section Header */}
-                <div className="text-center mb-16" data-aos="fade-down">
+                <div className="text-center mb-5" data-aos="fade-down">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white mb-4">
                         Our Achievements
                     </h2>
@@ -105,7 +105,7 @@ const StatsSection = () => {
                                     </div>
 
                                     {/* Counter */}
-                                    <div className="mb-4">
+                                    <div className="mb-2">
                                         <h3 className={`text-5xl md:text-6xl font-bold bg-gradient-to-r text-white bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300`}>
                                             <CountUp
                                                 start={0}
@@ -136,7 +136,7 @@ const StatsSection = () => {
                 </div>
 
                 {/* Bottom CTA Section */}
-                <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="800">
+                <div className="text-center mt-8" data-aos="fade-up" data-aos-delay="800">
                     <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl max-w-4xl mx-auto">
                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                             Ready to Be Part of Our Success Story?

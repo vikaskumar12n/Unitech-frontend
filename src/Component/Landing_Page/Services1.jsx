@@ -28,7 +28,7 @@ const ServicesSection = () => {
         
         {/* Section Heading */}
         
-          <div className="text-center mb-16" data-aos="fade-down">
+          <div className="text-center " data-aos="fade-down">
            <div
               className="font-extrabold text-black   bg-clip-text bg-gradient-to-r text-2xl md:text-3xl lg:text-4xl mb-4"
           >
@@ -49,17 +49,17 @@ const ServicesSection = () => {
             <div className="group relative overflow-hidden bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
-                <div className="flex items-center mb-6">
+                <div className="flex items-center mb-2">
                   <div className="w-12 h-12 bg-gradient-to-br bg-color rounded-2xl flex items-center justify-center shadow-lg mr-4 group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r bg-black bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+                  <h3 className="text-lg font-bold bg-gradient-to-r bg-black bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
                     Our Mission
                   </h3>
                 </div>
-                <p className="text-black text-justify leading-relaxed text-lg">
+                <p className="text-black text-justify leading-relaxed text-md">
                   To deliver high-quality products that simplify and enhance the lives of our customers while maintaining eco-friendly practices and setting new standards in innovation.
                 </p>
               </div>
@@ -69,25 +69,25 @@ const ServicesSection = () => {
             <div className="group relative overflow-hidden bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20">
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
-                <div className="flex items-center mb-6">
+                <div className="flex items-center mb-3">
                   <div className="w-12 h-12 bg-gradient-to-br bg-color rounded-2xl flex items-center justify-center shadow-lg mr-4 group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r text-black bg-clip-text  group-hover:scale-105 transition-transform duration-300">
+                  <h3 className="text-lg font-bold bg-gradient-to-r text-black bg-clip-text  group-hover:scale-105 transition-transform duration-300">
                     Our Vision
                   </h3>
                 </div>
-                <p className="text-black text-justify leading-relaxed text-lg">
+                <p className="text-black text-justify leading-relaxed text-md">
                   To become a global leader in innovative solutions and build a brand trusted for excellence, sustainability, and reliability across all markets.
                 </p>
               </div>
             </div>
 
             {/* Stats Section */}
-            <div className="grid grid-cols-3 gap-4 mt-8">
+            <div className="grid grid-cols-3 gap-4 ">
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="zoom-in" data-aos-delay="800">
                 <div className="text-2xl font-bold  mb-1">2015</div>
                 <div className="text-sm text-gray-600">Founded</div>
@@ -104,7 +104,7 @@ const ServicesSection = () => {
           </div>
 
           {/* Right Column: Company Info & Certifications */}
-          <div className="space-y-8" data-aos="fade-left" data-aos-delay="600">
+          <div className="space-y-6" data-aos="fade-left" data-aos-delay="600">
             
             {/* Company Description */}
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
@@ -141,7 +141,7 @@ const ServicesSection = () => {
 
             {/* Certifications / Awards */}
             <div className="space-y-6">  
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 ">
                 <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-blue-100">
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -156,7 +156,7 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <div className="group bg-white/90 mt-4 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-blue-100">
+                <div className="group bg-white/90  backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-blue-100">
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                       <svg className="w-5 h-5 text-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,6 +169,7 @@ const ServicesSection = () => {
                     </div>
                   </div>
                 </div>
+                
 
                
               </div>

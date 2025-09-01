@@ -189,14 +189,14 @@ const WaterCooler = () => {
                 </ol>
             </nav>
             {/* Main Section */}
-            <div className="min-h-screen pb-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+            <div className="min-h-screen pb-10 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div className="absolute -top-40 -right-40 w-100 h-100  bg-gradient-to-br from-blue-300/20 to-cyan-300/20 rounded-full blur-3xl animate-pulse"></div>
                     <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
                     <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-gradient-to-br from-indigo-300/10 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
                 </div>
 
-                <div className={`text-center pt-10 pb-16 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                <div className={`text-center pt-5 pb-10 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                         Our <span className="text-color">Premium</span> Cooling Solutions
                     </h2>
@@ -243,7 +243,7 @@ const WaterCooler = () => {
   </div>
 </div>
 
-                <div className="py-6 mt-16 px-4 relative z-10">
+                 <div className="max-w-4xl mx-auto mt-10 px-4 relative z-10">
                     <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
                         <div className="text-center">
                             <h3 className="text-2xl md:text-3xl font-bold mb-4">Need Help Choosing?</h3>

@@ -60,7 +60,7 @@ const CompanyDetails = () => {
 
                 <div className="container mx-auto max-w-7xl px-4 relative z-10">
                     {/* Hero Header Section */}
-                    <div className={`text-center mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                    <div className={`text-center mb-5 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                         <div className="relative inline-block">
                             <h1 className="text-3xl mt-5 md:text-4xl font-black bg-gradient-to-r text-color bg-clip-text text-transparent mb-6 tracking-tight">
                                 Unitech
@@ -80,7 +80,7 @@ const CompanyDetails = () => {
                     </div>
 
                     {/* Enhanced Stats Section */}
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                         {stats.map((stat, index) => (
                             <div
                                 key={index}
@@ -182,7 +182,7 @@ const CompanyDetails = () => {
                     {/* Enhanced Core Values */}
                     <div className={`mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '600ms' }}>
 
-                        <div className="text-center mb-16" data-aos="fade-down">
+                        <div className="text-center mb-8" data-aos="fade-down">
 
                             <div
                                 className="font-extrabold text-black   bg-clip-text bg-gradient-to-r text-2xl md:text-3xl lg:text-4xl mb-4"

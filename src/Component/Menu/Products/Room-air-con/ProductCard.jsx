@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ title, description, image }) => {
   return (
-    <div className="px-4 sm:px-4 md:px-6 py-4">
-   <div className="relative w-[320px] md:w-[390px] bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans py-4 px-4 h-full">
+    <div className="px-4 sm:px-4 md:px-6">
+   <div className="relative w-[320px] md:w-[390px] bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans  px-4 h-full">
       {/* Product Image Section */}
       <div className="relative bg-gray-700 h-40 sm:h-52 md:h-64 flex items-center justify-center rounded-lg">
         {/* Heart icon */}

@@ -262,14 +262,14 @@ const Product = () => {
           <li className="text-gray-500 font-bold">Room Air Conditioners</li>
         </ol>
       </nav>
-      <div className="min-h-screen item-center pb-20 relative overflow-hidden">
+      <div className="min-h-screen item-center pb-10 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-300/10 to-pink-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
         {/* Header Section */}
-        <div className={`text-center pt-20 pb-10 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`text-center pt-5 pb-10 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h1 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-black via-black to-black bg-clip-text text-transparent mb-6">
             Premium <span className="text-blue-900"> Cooling</span> Solutions
           </h1>
@@ -323,7 +323,7 @@ const Product = () => {
         </div>
 
         {/* Products Grid */}
-        <div className=" relative z-10 px-4  py-6"> 
+        <div className=" relative z-10 px-4  py-4"> 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {getCurrentProducts().map((product, index) => (
               <div
@@ -347,7 +347,7 @@ const Product = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="max-w-4xl mx-auto mt-20  text-center ">
+          <div className="max-w-4xl mx-auto mt-10  text-center ">
             <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">
               <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
               <div className="relative z-10">

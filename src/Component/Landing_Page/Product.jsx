@@ -112,7 +112,7 @@ const Product = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-10 via-blue-10 to-indigo-50 relative overflow-hidden">
-      <div className="container mt-10 mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
+      <div className="container mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
         {/* Section Heading */}
         <div className="text-center mb-16" data-aos="fade-down">
           <div className="font-extrabold text-black bg-clip-text bg-gradient-to-r text-2xl md:text-3xl lg:text-4xl mb-4">
@@ -125,7 +125,7 @@ const Product = () => {
         </div>
         
         {/* Products Grid - Changed to show 3 cards per row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {products.map((product, index) => (
             <div
               key={index}

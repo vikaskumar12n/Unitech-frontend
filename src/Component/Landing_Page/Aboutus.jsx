@@ -56,7 +56,7 @@ const AboutUsPage=() =>{
 
     
       {/* Main About Content */}
-      <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="py-10 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
@@ -137,7 +137,7 @@ const AboutUsPage=() =>{
       </div>
 
       {/* Company Values Section */}
-      <div className="py-20 bg-white">
+      <div className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className={`text-center mb-16 transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                <div
@@ -146,7 +146,7 @@ const AboutUsPage=() =>{
                         Our <span className="text-color">Value</span>
                         <SectionHeading/>
                       </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-black max-w-3xl mx-auto">
               The principles that drive our commitment to excellence and customer satisfaction
             </p>
           </div>
@@ -193,7 +193,7 @@ const AboutUsPage=() =>{
 
       {/* Manufacturing Excellence */}
       {/* Call to Action */}
-      <div className="py-20 bg-gradient-to-r ">
+      <div className="py-10 bg-gradient-to-r ">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 delay-1900 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
