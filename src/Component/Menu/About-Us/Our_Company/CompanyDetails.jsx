@@ -146,7 +146,7 @@ const CompanyDetails = () => {
                                             Unitech &apos;s philosophy is rooted in the principles of
                                             <span className="font-bold text-color px-2 py-1 rounded mx-1">&apos;Trust&apos;</span>
                                             and
-                                            <span className="font-bold text-color px-2 py-1 rounded mx-1">&apos;Excellence&apos;</span>,
+                                            <span className="font-bold text-color px-2 py-1 rounded mx-1">&apos;Excellence&apos;</span>
                                             which have served as the guiding force behind our remarkable journey of growth.
                                         </p>
                                     </div>
@@ -203,7 +203,7 @@ const CompanyDetails = () => {
                                     <h4 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${value.gradient} bg-clip-text text-transparent relative z-10`}>
                                         {value.title}
                                     </h4>
-                                    <p className="text-gray-600 leading-relaxed relative z-10">{value.description}</p>
+                                    <p className="text-gray-600 leading-relaxed relative text-justify z-10">{value.description}</p>
 
                                     {/* Decorative Element */}
                                     <div className={`absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-to-br ${value.gradient} rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>

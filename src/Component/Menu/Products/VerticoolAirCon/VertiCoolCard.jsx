@@ -1,58 +1,63 @@
 /* eslint-disable react/prop-types */
 // VertiCoolCard.js
-import {FaHeart} from 'react-icons/fa'
+import { FaHeart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-// eslint-disable-next-line react/prop-types
-const VertiCoolCard = ({badgeText,badgeColor = "bg-gray-200 text-gray-700", title,subtitle,imgSrc,imgAlt,   button1 = "Add to cart", navigateTo = "/", // Changed default navigation
+const VertiCoolCard = ({
+  badgeText,
+  badgeColor = "bg-gray-200 text-gray-700",
+  title,
+  subtitle,
+  imgSrc,
+  imgAlt,
+  button1 = "Add to cart",
+  navigateTo = "/",
 }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-100 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans px-4 py-6">
-      {/* Product Image Section - Purple Background */}
-      <div className="relative bg-gray-800 rounded-lg h-64 flex items-center justify-center p-4">
-        {/* Heart icon for wishlist */}
-        <button className="absolute top-3 right-3 text-white hover:text-red-500 transition-colors duration-200 focus:outline-none">
-                 <FaHeart className="h-5 w-5" />
-               </button>
+    <div className="relative w-full max-w-xs md:max-w-sm bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden font-sans py-4 sm:py-6 px-3 sm:px-4">
+      {/* Product Image Section */}
+      <div className="relative bg-gray-700 h-40 sm:h-52 md:h-64 flex items-center justify-center rounded-lg">
+        {/* Heart icon */}
+        <button className="absolute top-2 right-2 sm:top-3 sm:right-3 text-white hover:text-red-500 transition-colors duration-200 focus:outline-none">
+          <FaHeart className="h-4 w-4 sm:h-5 sm:w-5" />
+        </button>
         <img
           src={imgSrc}
           alt={imgAlt}
-          className="max-h-full object-contain transform -rotate-5" /* Added rotation for the shoe effect */
+          className="max-h-full object-contain transform -rotate-3 sm:-rotate-5 transition-transform duration-300 hover:rotate-6 sm:hover:rotate-8"
         />
       </div>
 
       {/* Product Details Section */}
-      <div className="p-5 bg-white space-y-4">
-        <h2 className="text-xl font-bold text-gray-900">{title}</h2>
-        
-        {/* Badges/Variants - Using badgeText prop */}
+      <div className="p-3 sm:p-5 bg-white space-y-3 sm:space-y-4">
+        <h2 className="text-lg sm:text-xl font-bold text-gray-900">{title}</h2>
+
+        {/* Badges */}
         {badgeText && (
           <div className="flex flex-wrap gap-2">
-            {/* Assuming badgeText can be a single string or comma-separated for multiple badges */}
-            {badgeText.split(',').map((badge, index) => (
-              <span key={index} className={`text-xs font-semibold px-2 py-1 rounded border border-gray-300 ${badgeColor}`}>
+            {badgeText.split(",").map((badge, index) => (
+              <span
+                key={index}
+                className={`text-xs sm:text-sm font-semibold px-2 py-1 rounded border border-gray-300 ${badgeColor}`}
+              >
                 {badge.trim()}
               </span>
             ))}
           </div>
         )}
 
-        {/* Description - Using subtitle prop */}
-        <p className="text-sm text-justify text-black">{subtitle}</p>
-        
-        {/* Price and Button */}
-        <div className="flex items-end justify-between pt-4">
-          
-          
+        {/* Description */}
+        <p className="text-xs sm:text-sm text-justify text-black">{subtitle}</p>
+
+        {/* Button */}
+        <div className="flex items-end justify-between pt-2 sm:pt-4">
           <button
-            className="flex items-center space-x-2 px-6 py-3 bg-[#383587] text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+            className="flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 bg-[#383587] text-white text-xs sm:text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-200"
             onClick={() => navigate(navigateTo)}
           >
-            {/* Cart icon - assuming "Add to cart" is common */}
-             
-            <span className="text-sm">{button1}</span>
+            <span>{button1}</span>
           </button>
         </div>
       </div>

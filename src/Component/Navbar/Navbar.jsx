@@ -200,19 +200,19 @@ const Navbar = () => {
           {/* Dropdown Menu */}
 {item.dropdown && (
   <div
-    className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl   transition-all duration-300 transform ${
+    className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl transition-all duration-300 transform ${
       openDropdown === index
         ? "opacity-100 translate-y-0 visible"
         : "opacity-0 -translate-y-0 invisible"
     }`}
-    style={{ maxHeight: "250px" }} 
+    style={{ maxHeight: "300px" }}
   >
-    <div className="py-2  max-h-64">  
+    <div className="py-2 max-h-72 overflow-y-auto">  
       {item.dropdown.map((subItem, subIndex) => (
         <Link
           key={subIndex}
           to={subItem.link || "/"}
-          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-colors duration-200"
+          className="block px-4 py-3 text-sm text-black hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 transition-colors duration-200"
         >
           {subItem.name}
         </Link>

@@ -314,9 +314,8 @@ const Product = () => {
           </div>
         </div>
         {/* Products Grid */}
-        <div className="relative z-10 px-4 py-6">
-          <div className="max-w-7xl mx-auto">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center">
+<div className=" relative z-10 px-4  py-6"> {/* Added horizontal padding here */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
   {getCurrentProducts().map((product, index) => (
     <div
       key={product.id}
@@ -336,28 +335,27 @@ const Product = () => {
   ))}
 </div>
 
-</div>
-          {/* CTA Section */}
-          <div className="max-w-4xl mx-auto mt-20 text-center ">
-            <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">
-              <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-4">Need Help Choosing?</h3>
-                <p className="text-xl text-blue-100 mb-8">
-                  Our cooling experts are here to help you find the perfect AC for your space
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105">
-                    Get Expert Advice
-                  </button>
-                  <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
-                    Schedule Site Visit
-                  </button>
+                    {/* CTA Section */}
+                    <div className="max-w-4xl mx-auto mt-20  text-center ">
+                        <div className="bg-gradient-to-r from-blue-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">
+                            <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
+                            <div className="relative z-10">
+                                <h3 className="text-3xl font-bold mb-4">Need Help Choosing?</h3>
+                                <p className="text-xl text-blue-100 mb-8">
+                                    Our cooling experts are here to help you find the perfect AC for your space
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105">
+                                        Get Expert Advice
+                                    </button>
+                                    <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                                        Schedule Site Visit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );

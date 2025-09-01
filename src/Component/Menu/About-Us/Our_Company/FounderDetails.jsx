@@ -174,7 +174,7 @@ const FounderSection = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-800">{value.title}</h4>
-                      <p className="text-gray-600 text-sm">{value.description}</p>
+                      <p className="text-gray-600 text-justify text-sm">{value.description}</p>
                     </div>
                   </div>
                 ))}
